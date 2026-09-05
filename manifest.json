@@ -1,0 +1,44 @@
+{
+  "name": "VitaNova — Uganda Clinical Guidelines 2023",
+  "short_name": "VitaNova",
+  "description": "Comprehensive offline clinical decision support based on Uganda Clinical Guidelines 2023. Disease management, symptom checker, women's & children's health.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0d9488",
+  "background_color": "#0a0f1e",
+  "lang": "en",
+  "categories": ["health", "medical", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Search Disease",
+      "url": "./index.html#search",
+      "description": "Search for a disease or condition"
+    },
+    {
+      "name": "Symptom Checker",
+      "url": "./index.html#symptom-checker",
+      "description": "Check symptoms for diagnosis"
+    },
+    {
+      "name": "Women's Health",
+      "url": "./index.html#womens-health",
+      "description": "Women's health guidelines"
+    }
+  ]
+}

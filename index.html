@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="VitaNova — Uganda Clinical Guidelines 2023. Comprehensive offline medical reference for disease management, symptom checking, and clinical decision support." />
+  <title>VitaNova | Uganda Clinical Guidelines 2023</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ────────────── CONNECTIVITY BANNER ────────────── -->
+  <div id="connectivity-banner" class="connectivity-banner hidden"></div>
+
+  <!-- ────────────── APP SHELL ────────────── -->
+  <div id="app" class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="sidebar" role="navigation" aria-label="Main navigation">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" fill="url(#grad1)"/>
+              <path d="M20 10 L20 30 M10 20 L30 20" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="5" fill="white" opacity="0.3"/>
+              <defs>
+                <linearGradient id="grad1" x1="0" y1="0" x2="40" y2="40">
+                  <stop offset="0%" stop-color="#0d9488"/>
+                  <stop offset="100%" stop-color="#0891b2"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">VitaNova</span>
+            <span class="logo-sub">Clinical Guidelines</span>
+          </div>
+        </div>
+        <button id="sidebar-close" class="sidebar-close" aria-label="Close sidebar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="sidebar-search-wrap">
+        <div class="sidebar-search">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input id="main-search" type="search" placeholder="Search disease or condition..." autocomplete="off" aria-label="Search diseases" />
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#home" class="nav-item active" data-view="home" id="nav-home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="#search" class="nav-item" data-view="search" id="nav-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Disease Search</span>
+        </a>
+        <a href="#symptom-checker" class="nav-item" data-view="symptom-checker" id="nav-symptom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Symptom Checker</span>
+          <span class="nav-badge">AI</span>
+        </a>
+        <div class="nav-divider">Priority Sections</div>
+        <a href="#womens-health" class="nav-item nav-women" data-view="womens-health" id="nav-women">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M12 12v8M9 17h6"/><circle cx="12" cy="8" r="1" fill="currentColor"/></svg>
+          <span>Women's Health</span>
+          <span class="nav-badge priority-badge">Priority</span>
+        </a>
+        <a href="#childrens-health" class="nav-item nav-children" data-view="childrens-health" id="nav-children">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4M6.5 21a8.5 8.5 0 0 1 11 0"/><circle cx="12" cy="6" r="2" fill="currentColor"/></svg>
+          <span>Children's Health</span>
+          <span class="nav-badge child-badge">Priority</span>
+        </a>
+        <div class="nav-divider">Browse by Chapter</div>
+        <a href="#chapters" class="nav-item" data-view="chapters" id="nav-chapters">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>All Chapters</span>
+        </a>
+        <a href="#drug-reference" class="nav-item" data-view="drug-reference" id="nav-drugs">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12 2 2 4-4"/><path d="M12 8v1M12 15v1"/></svg>
+          <span>Drug Reference</span>
+        </a>
+        <a href="#dispensary" class="nav-item nav-dispensary" data-view="dispensary" id="nav-dispensary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/><path d="M12 12h.01M16 12h.01M8 12h.01"/></svg>
+          <span>Dispensary</span>
+          <span class="nav-badge disp-badge">Rx</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="guidelines-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <div class="badge-title">Uganda Clinical Guidelines</div>
+            <div class="badge-sub">2023 Edition · MOH Uganda</div>
+          </div>
+        </div>
+        <div id="offline-status" class="offline-status"></div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="main-content" role="main">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="topbar-title" id="topbar-title">Dashboard</div>
+        <div class="topbar-actions">
+          <div id="connectivity-dot" class="connectivity-dot online" title="Online"></div>
+        </div>
+      </header>
+
+      <!-- VIEW CONTAINER -->
+      <div id="view-container" class="view-container">
+
+        <!-- ══════════ HOME VIEW ══════════ -->
+        <section id="view-home" class="view active" aria-label="Home dashboard">
+          <div class="hero-section">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Uganda Clinical Guidelines 2023
+              </div>
+              <h1 class="hero-title">Clinical Decision<br /><span class="gradient-text">Support System</span></h1>
+              <p class="hero-desc">Evidence-based disease management protocols from Uganda's Ministry of Health. Offline-capable, comprehensive, and built for frontline health workers.</p>
+              <div class="hero-actions">
+                <button class="btn-primary" onclick="app.navigate('search')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                  Search Disease
+                </button>
+                <button class="btn-secondary" onclick="app.navigate('symptom-checker')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Symptom Checker
+                </button>
+              </div>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <div class="stat-number" id="stat-total">360</div>
+                <div class="stat-label">Conditions</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">24</div>
+                <div class="stat-label">Chapters</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">1,161</div>
+                <div class="stat-label">Pages Covered</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Offline Ready</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRIORITY CARDS -->
+          <div class="priority-section">
+            <h2 class="section-title">Priority Sections</h2>
+            <div class="priority-grid">
+              <div class="priority-card women-card" onclick="app.navigate('womens-health')" role="button" tabindex="0">
+                <div class="priority-icon">
+                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(236,72,153,0.15)"/><circle cx="24" cy="16" r="7" stroke="#ec4899" stroke-width="2.5"/><path d="M24 23v10M20 29h8" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round"/></svg>
+                </div>
+                <div class="priority-content">
+                  <h3>Women's Health</h3>
+                  <p>Obstetrics · Gynaecology · Maternal Care · Family Planning · STIs</p>
+                  <div class="priority-tags">
+                    <span class="tag">Antenatal Care</span>
+                    <span class="tag">Obstetric Emergencies</span>
+                    <span class="tag">Family Planning</span>
+                  </div>
+                </div>
+                <div class="priority-arrow">→</div>
+              </div>
+              <div class="priority-card children-card" onclick="app.navigate('childrens-health')" role="button" tabindex="0">
+                <div class="priority-icon">
+                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(56,189,248,0.15)"/><circle cx="24" cy="15" r="6" stroke="#38bdf8" stroke-width="2.5"/><path d="M14 35c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/></svg>
+                </div>
+                <div class="priority-content">
+                  <h3>Children's Health</h3>
+                  <p>IMCI · Paediatrics · Neonatology · Nutrition · Immunization</p>
+                  <div class="priority-tags">
+                    <span class="tag">IMCI Guidelines</span>
+                    <span class="tag">Newborn Care</span>
+                    <span class="tag">Malnutrition</span>
+                  </div>
+                </div>
+                <div class="priority-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHAPTER QUICK ACCESS -->
+          <div class="chapters-overview">
+            <h2 class="section-title">Browse by Chapter</h2>
+            <div id="chapters-grid" class="chapters-grid">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- QUICK SEARCH -->
+          <div class="quick-search-section">
+            <h2 class="section-title">Quick Disease Search</h2>
+            <div class="quick-search-bar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input id="hero-search" type="search" placeholder="Type a disease name e.g. Malaria, Pneumonia, Diabetes..." autocomplete="off" />
+            </div>
+            <div id="quick-results" class="quick-results hidden"></div>
+          </div>
+        </section>
+
+        <!-- ══════════ SEARCH VIEW ══════════ -->
+        <section id="view-search" class="view" aria-label="Disease search">
+          <div class="view-header">
+            <h2>Disease & Condition Search</h2>
+            <p class="view-sub">Search any disease or condition from the Uganda Clinical Guidelines 2023</p>
+          </div>
+          <div class="search-bar-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input id="disease-search-input" type="search" placeholder="Search diseases, conditions, syndromes..." autocomplete="off" aria-label="Search diseases" />
+            <button id="search-clear" class="search-clear hidden" aria-label="Clear search">✕</button>
+          </div>
+          <div class="search-filters">
+            <button class="filter-btn active" data-filter="all">All Conditions</button>
+            <button class="filter-btn" data-filter="women">Women's Health</button>
+            <button class="filter-btn" data-filter="children">Children's</button>
+            <button class="filter-btn" data-filter="emergency">Emergency</button>
+          </div>
+          <div id="search-results-container">
+            <div id="search-results" class="search-results"></div>
+            <div id="search-empty" class="search-empty hidden">
+              <div class="empty-icon">🔍</div>
+              <div class="empty-title">No results found</div>
+              <div class="empty-sub">Try different keywords or check the spelling</div>
+            </div>
+            <div id="search-initial" class="search-initial">
+              <div class="initial-icon">💊</div>
+              <div class="initial-title">Start typing to search</div>
+              <div class="initial-sub">Search through 360+ conditions from Uganda Clinical Guidelines 2023</div>
+              <div class="recent-section" id="recent-searches"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════ SYMPTOM CHECKER VIEW ══════════ -->
+        <section id="view-symptom-checker" class="view" aria-label="Symptom checker">
+          <div class="view-header">
+            <h2>🩺 Symptom Checker</h2>
+            <p class="view-sub">Enter signs and symptoms to get differential diagnoses with management options</p>
+          </div>
+
+          <div class="symptom-checker-layout">
+            <div class="symptom-input-panel">
+              <div class="panel-header">
+                <h3>Patient Information</h3>
+                <button class="btn-ghost" onclick="symptomChecker.reset()" id="sc-reset">Clear All</button>
+              </div>
+
+              <!-- Patient Profile -->
+              <div class="patient-profile">
+                <div class="form-group">
+                  <label>Patient Age Group</label>
+                  <div class="age-group-btns">
+                    <button class="age-btn active" data-age="adult">Adult (≥15y)</button>
+                    <button class="age-btn" data-age="child">Child (5–14y)</button>
+                    <button class="age-btn" data-age="infant">Infant (&lt;5y)</button>
+                    <button class="age-btn" data-age="neonate">Neonate (&lt;28d)</button>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Sex</label>
+                    <div class="sex-btns">
+                      <button class="sex-btn active" data-sex="any">Any</button>
+                      <button class="sex-btn" data-sex="female">Female</button>
+                      <button class="sex-btn" data-sex="male">Male</button>
+                    </div>
+                  </div>
+                  <div class="form-group pregnancy-group hidden" id="pregnancy-group">
+                    <label>Pregnancy Status</label>
+                    <div class="sex-btns">
+                      <button class="preg-btn" data-preg="no">Not Pregnant</button>
+                      <button class="preg-btn" data-preg="yes">Pregnant</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Symptom Input -->
+              <div class="symptom-input-section">
+                <h4>Signs & Symptoms</h4>
+                <p class="input-hint">Type symptoms, then press Enter or click + to add</p>
+                <div class="symptom-input-row">
+                  <input id="symptom-input" type="text" placeholder="e.g. fever, headache, vomiting..." autocomplete="off" />
+                  <button id="add-symptom-btn" class="btn-add">+ Add</button>
+                </div>
+                <!-- Common symptoms quick-add -->
+                <div class="common-symptoms">
+                  <div class="cs-label">Common symptoms:</div>
+                  <div class="cs-chips" id="common-symptom-chips">
+                    <!-- Populated by JS -->
+                  </div>
+                </div>
+                <!-- Selected symptoms -->
+                <div class="selected-symptoms" id="selected-symptoms">
+                  <div class="selected-label" id="selected-label">No symptoms selected yet</div>
+                  <div class="symptoms-chips" id="symptoms-chips"></div>
+                </div>
+              </div>
+
+              <button class="btn-primary btn-analyze" id="analyze-btn" onclick="symptomChecker.analyze()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Analyze Symptoms
+              </button>
+            </div>
+
+            <div class="symptom-results-panel" id="symptom-results-panel">
+              <div class="results-placeholder" id="sc-placeholder">
+                <div class="placeholder-icon">🔬</div>
+                <h3>Enter symptoms to see possible diagnoses</h3>
+                <p>The system will compare your patient's profile against Uganda Clinical Guidelines 2023 to suggest the most likely conditions and their management protocols.</p>
+              </div>
+              <div id="sc-results" class="sc-results hidden"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════ WOMEN'S HEALTH VIEW ══════════ -->
+        <section id="view-womens-health" class="view" aria-label="Women's health">
+          <div class="view-header women-header">
+            <div class="header-icon">🤰</div>
+            <div>
+              <h2>Women's Health</h2>
+              <p class="view-sub">Reproductive health, obstetrics, gynaecology, and maternal care guidelines</p>
+            </div>
+          </div>
+          <div class="special-section-grid" id="womens-content">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <!-- ══════════ CHILDREN'S HEALTH VIEW ══════════ -->
+        <section id="view-childrens-health" class="view" aria-label="Children's health">
+          <div class="view-header children-header">
+            <div class="header-icon">👶</div>
+            <div>
+              <h2>Children's Health</h2>
+              <p class="view-sub">Paediatrics, neonatology, IMCI, immunization, and nutritional management</p>
+            </div>
+          </div>
+          <div class="special-section-grid" id="childrens-content">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <!-- ══════════ CHAPTERS VIEW ══════════ -->
+        <section id="view-chapters" class="view" aria-label="All chapters">
+          <div class="view-header">
+            <h2>All Clinical Chapters</h2>
+            <p class="view-sub">Browse all 24 chapters of the Uganda Clinical Guidelines 2023</p>
+          </div>
+          <div id="all-chapters-list" class="all-chapters-list">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <!-- ══════════ DRUG REFERENCE VIEW ══════════ -->
+        <section id="view-drug-reference" class="view" aria-label="Drug reference">
+          <div class="view-header">
+            <h2>💊 Drug Reference</h2>
+            <p class="view-sub">Search drugs mentioned across Uganda Clinical Guidelines 2023</p>
+          </div>
+          <div class="search-bar-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input id="drug-search-input" type="search" placeholder="Search drug name..." autocomplete="off" />
+          </div>
+          <div id="drug-results" class="drug-results"></div>
+        </section>
+
+        <!-- ══════════ DISPENSARY VIEW ══════════ -->
+        <section id="view-dispensary" class="view" aria-label="Dispensary">
+          <div class="view-header dispensary-header">
+            <div class="disp-header-icon">🏥</div>
+            <div>
+              <h2>Dispensary</h2>
+              <p class="view-sub">Search any disease to get its specific drug treatment — doses, routes, frequency &amp; regimens from Uganda Clinical Guidelines 2023</p>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="disp-search-wrap">
+            <div class="search-bar-wrap disp-search-bar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input id="dispensary-search-input" type="search"
+                placeholder="Type disease name e.g. Malaria, Pneumonia, Diabetes, Pre-eclampsia..."
+                autocomplete="off" aria-label="Search disease for drug treatment" />
+              <button id="dispensary-search-clear" class="search-clear hidden" aria-label="Clear">✕</button>
+            </div>
+            <!-- Quick disease chips -->
+            <div class="disp-quick-chips" id="disp-quick-chips">
+              <span class="disp-chip" onclick="dispensary.quickSearch('Malaria')">Malaria</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Pneumonia')">Pneumonia</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Diabetes')">Diabetes</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Pre-eclampsia')">Pre-eclampsia</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Tuberculosis')">Tuberculosis</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('HIV')">HIV/ARVs</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Typhoid')">Typhoid</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Meningitis')">Meningitis</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Septicaemia')">Septicaemia</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Epilepsy')">Epilepsy</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Hypertension')">Hypertension</span>
+              <span class="disp-chip" onclick="dispensary.quickSearch('Heart Failure')">Heart Failure</span>
+            </div>
+          </div>
+
+          <!-- Search Suggestions -->
+          <div id="disp-suggestions" class="disp-suggestions hidden"></div>
+
+          <!-- Results Panel -->
+          <div id="disp-results" class="disp-results">
+            <!-- Landing state -->
+            <div class="disp-landing" id="disp-landing">
+              <div class="disp-landing-icon">💊</div>
+              <h3>Search a Disease to View Drug Treatment</h3>
+              <p>Get specific drugs, dosages, routes, frequency &amp; regimens as per Uganda Clinical Guidelines 2023</p>
+              <div class="disp-features">
+                <div class="disp-feature"><span>🔵</span> First-line drugs</div>
+                <div class="disp-feature"><span>🟡</span> Second-line / Alternatives</div>
+                <div class="disp-feature"><span>🟢</span> Prophylaxis regimens</div>
+                <div class="disp-feature"><span>🤰</span> Pregnancy-safe options</div>
+                <div class="disp-feature"><span>👶</span> Paediatric dosing</div>
+                <div class="disp-feature"><span>🔴</span> Severe / IV regimens</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════ DISEASE DETAIL VIEW ══════════ -->
+        <section id="view-disease-detail" class="view" aria-label="Disease detail" style="display:none">
+          <div class="detail-topbar">
+            <button class="back-btn" id="back-btn" onclick="app.goBack()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+              Back
+            </button>
+            <div class="detail-chapter-tag" id="detail-chapter-tag"></div>
+          </div>
+          <div id="disease-detail-content">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <!-- ══════════ CHAPTER DISEASES VIEW ══════════ -->
+        <section id="view-chapter-diseases" class="view" aria-label="Chapter diseases" style="display:none">
+          <div class="detail-topbar">
+            <button class="back-btn" onclick="app.goBack()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+              Back
+            </button>
+          </div>
+          <div class="view-header" id="chapter-view-header"></div>
+          <div id="chapter-diseases-list" class="search-results"></div>
+        </section>
+
+      </div><!-- /view-container -->
+    </main>
+  </div><!-- /app-shell -->
+
+  <!-- SIDEBAR OVERLAY -->
+  <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
+
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+          <circle cx="30" cy="30" r="30" fill="url(#loadGrad)"/>
+          <path d="M30 15 L30 45 M15 30 L45 30" stroke="white" stroke-width="5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="loadGrad" x1="0" y1="0" x2="60" y2="60">
+              <stop offset="0%" stop-color="#0d9488"/>
+              <stop offset="100%" stop-color="#0891b2"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="loading-brand">VitaNova</div>
+      <div class="loading-sub">Uganda Clinical Guidelines 2023</div>
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <div class="loading-status" id="loading-status">Initialising…</div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast hidden" role="alert" aria-live="assertive"></div>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/symptom-checker.js"></script>
+  <script src="js/dispensary.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

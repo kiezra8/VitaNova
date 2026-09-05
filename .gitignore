@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Build scripts (stay in parent folder, not deployed)
+*.py
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Keep all data files — these are required for the app
+# data/*.json — DO NOT ignore
