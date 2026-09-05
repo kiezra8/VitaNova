@@ -1431,10 +1431,196 @@ ul { list-style: none; }
 
 /* Print / export */
 @media print {
-  .sidebar, .topbar, .disp-quick-chips, .disp-search-wrap, .drug-copy-btn, .disp-prescription-btn { display: none !important; }
+  .sidebar, .topbar, .disp-quick-chips, .disp-search-wrap, .drug-copy-btn, .disp-prescription-btn, .detail-action-bar, .view-mode-toggle { display: none !important; }
   .main-content { margin-left: 0; }
-  .disp-disease-card { border: 1px solid #ccc; break-inside: avoid; }
+  .disp-disease-card, .clinical-card { border: 1px solid #ccc; break-inside: avoid; }
   body { background: white; color: black; }
   .drug-name-text, .drug-dose-badge { color: black; }
+  .tab-panel { display: block !important; margin-bottom: 20px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   ENHANCED CLINICAL DETAIL FORMATTING (UCG 2023)
+   ══════════════════════════════════════════════════════════════ */
+.detail-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.detail-actions-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.detail-actions-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.action-chip:hover {
+  background: rgba(20,184,166,0.12);
+  color: var(--teal-400);
+  border-color: rgba(20,184,166,0.3);
+}
+
+.action-chip.active {
+  background: rgba(20,184,166,0.2);
+  color: var(--teal-300);
+  border-color: var(--teal-500);
+}
+
+.icd-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: #a5b4fc;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* LOC (Level of Care) Badges */
+.loc-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 4px;
+  vertical-align: middle;
+}
+.loc-badge.loc-hc2, .loc-badge.loc-hc2v { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+.loc-badge.loc-hc3, .loc-badge.loc-hc3v { background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.3); }
+.loc-badge.loc-hc4, .loc-badge.loc-hc4v { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+.loc-badge.loc-hospital, .loc-badge.loc-h { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+.loc-badge.loc-rrh { background: rgba(168,85,247,0.15); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
+
+/* Diagnostic Tags */
+.diagnostic-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.diag-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-md);
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(6,182,212,0.1);
+  border: 1px solid rgba(6,182,212,0.25);
+  color: #22d3ee;
+}
+
+/* Bullet list and typography */
+.clinical-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 var(--space-4) 0;
+}
+
+.clinical-bullet-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: var(--space-2);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.clinical-bullet-list li::before {
+  content: '•';
+  position: absolute;
+  left: 4px;
+  top: 0;
+  color: var(--teal-400);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.clinical-mini-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--teal-300);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid rgba(20,184,166,0.15);
+}
+
+.clinical-subheading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: var(--space-4) 0 var(--space-2) 0;
+}
+
+.clinical-para {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--space-3);
+}
+
+/* Continuous single page mode */
+.continuous-mode .tab-panel {
+  display: block !important;
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-6);
+}
+
+.continuous-mode .tab-panel:last-child {
+  border-bottom: none;
+}
+
+.continuous-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--border);
+}
+
 

@@ -9,7 +9,7 @@ import json, re, os
 doc = pymupdf.open('Uganda Clinical Guidelines 2023 (2).pdf')
 all_pages_text = [page.get_text() for page in doc]
 
-with open('vitanova-app/data/diseases.json', 'r', encoding='utf-8') as f:
+with open('data/diseases.json', 'r', encoding='utf-8') as f:
     diseases = json.load(f)
 
 print('Building dispensary for {} diseases...'.format(len(diseases)))
@@ -314,9 +314,9 @@ for k in sample_keys:
         ))
 
 # Save
-with open('vitanova-app/data/dispensary.json', 'w', encoding='utf-8') as f:
+with open('data/dispensary.json', 'w', encoding='utf-8') as f:
     json.dump(dispensary, f, ensure_ascii=False, separators=(',', ':'))
 
-sz = os.path.getsize('vitanova-app/data/dispensary.json')
+sz = os.path.getsize('data/dispensary.json')
 print('\ndispensary.json: {:,} bytes'.format(sz))
 print('Done!')

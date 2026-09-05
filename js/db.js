@@ -3,7 +3,7 @@
  * IndexedDB wrapper for offline data storage
  */
 const DB_NAME = 'vitanova-db';
-const DB_VERSION = 2;  // bumped for new store
+const DB_VERSION = 3;  // Master Uganda Clinical Guidelines 2023
 const STORE_DISEASES = 'diseases';
 const STORE_SYMPTOM_MAP = 'symptom_map';
 const STORE_CHAPTERS = 'chapters';
@@ -27,6 +27,17 @@ class VitaNovaDB {
           store.createIndex('chapter_num', 'chapter_num', { unique: false });
           store.createIndex('priority', 'priority', { unique: false });
           store.createIndex('name', 'name', { unique: false });
+        } else if (e.oldVersion < 3) {
+          // Clear old partial database to load complete 532 guidelines
+          try {
+            const tx = req.transaction;
+            tx.objectStore(STORE_DISEASES).clear();
+            if (db.objectStoreNames.contains(STORE_DISPENSARY)) tx.objectStore(STORE_DISPENSARY).clear();
+            if (db.objectStoreNames.contains(STORE_SYMPTOM_MAP)) tx.objectStore(STORE_SYMPTOM_MAP).clear();
+            if (db.objectStoreNames.contains(STORE_META)) tx.objectStore(STORE_META).clear();
+          } catch(err) {
+            console.warn('Store clear error during migration:', err);
+          }
         }
         if (!db.objectStoreNames.contains(STORE_SYMPTOM_MAP)) {
           db.createObjectStore(STORE_SYMPTOM_MAP, { keyPath: 'keyword' });

@@ -327,6 +327,56 @@ const app = {
     this.navigate('disease-detail', disease);
   },
 
+  formatClinicalContent(raw) {
+    if (!raw) return '<p class="text-muted">No specific details recorded in guidelines.</p>';
+    let text = this.escapeHtml(raw);
+
+    // Format LOC tags (HC2, HC3, HC4, Hospital, RRH)
+    text = text.replace(/\b(HC2|HC3|HC4|Hospital|RRH|HC2V|HC3V|HC4V)\b/g, '<span class="loc-badge loc-$1">$1</span>');
+
+    const lines = text.split('\n');
+    let inList = false;
+    const formatted = [];
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed) {
+        if (inList) { formatted.push('</ul>'); inList = false; }
+        continue;
+      }
+
+      // Bullets
+      if (trimmed.startsWith('•') || trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+        if (!inList) {
+          formatted.push('<ul class="clinical-bullet-list">');
+          inList = true;
+        }
+        const cleanItem = trimmed.replace(/^[\s•\-\*]+/, '').trim();
+        formatted.push(`<li>${cleanItem}</li>`);
+      } else {
+        if (inList) {
+          formatted.push('</ul>');
+          inList = false;
+        }
+        if (trimmed.startsWith('###')) {
+          formatted.push(`<div class="clinical-mini-header">${trimmed.replace(/^###\s*/, '')}</div>`);
+        } else if (trimmed.startsWith('##')) {
+          formatted.push(`<h4 class="clinical-subheading">${trimmed.replace(/^##\s*/, '')}</h4>`);
+        } else if (/^(?:Causes?|What to do|What not to do|General measures|Supportive care|Empirical regimen|If severe|If shock|Venom in eyes|First-line|Second-line|Alternative|Caution|Warning|Note|Notes)[:\s]/i.test(trimmed)) {
+          if (/^(?:Caution|Warning|Alert)/i.test(trimmed)) {
+            formatted.push(`<div class="alert-box alert-warning"><span class="alert-icon">⚠️</span><div class="alert-content-text">${trimmed}</div></div>`);
+          } else {
+            formatted.push(`<div class="clinical-mini-header">${trimmed}</div>`);
+          }
+        } else {
+          formatted.push(`<p class="clinical-para">${trimmed}</p>`);
+        }
+      }
+    }
+    if (inList) formatted.push('</ul>');
+    return formatted.join('\n');
+  },
+
   renderDiseaseDetail(disease) {
     const container = document.getElementById('disease-detail-content');
     if (!container) return;
@@ -347,229 +397,393 @@ const app = {
     if (disease.priority === 'children') {
       priorityBadges.push(`<span class="priority-badge-large badge-children">👶 Children's Health Priority</span>`);
     }
+    if (disease.priority === 'emergency') {
+      priorityBadges.push(`<span class="priority-badge-large badge-emergency" style="background:rgba(239,68,68,0.15); color:#f87171; border:1px solid rgba(239,68,68,0.3)">🚨 Emergency / Trauma</span>`);
+    }
+    if (disease.icd_code) {
+      priorityBadges.push(`<span class="icd-badge">${this.escapeHtml(disease.icd_code)}</span>`);
+    }
 
-    const hasSymptoms = disease.symptoms && disease.symptoms.length > 0;
-    const hasSigns = disease.signs && disease.signs.length > 0;
+    const hasSymptoms = (disease.symptoms && disease.symptoms.length > 0) || (disease.signs && disease.signs.length > 0) || (disease.clinical_features_text && disease.clinical_features_text.length > 20);
     const hasMeds = disease.medications && disease.medications.length > 0;
-    const hasTreatment = disease.treatment && disease.treatment.length > 10;
-    const hasInvestigations = disease.investigations && disease.investigations.length > 10;
-    const hasReferral = disease.referral && disease.referral.length > 5;
-    const hasPrevention = disease.prevention && disease.prevention.length > 5;
+    const hasLabTests = disease.lab_tests && disease.lab_tests.length > 0;
     const hasPregnancy = disease.pregnancy_notes && disease.pregnancy_notes.length > 10;
     const hasChildren = disease.children_notes && disease.children_notes.length > 10;
     const hasHIV = disease.hiv_notes && disease.hiv_notes.length > 10;
+    const hasSpecial = hasPregnancy || hasChildren || hasHIV;
 
     container.innerHTML = `
       <!-- Hero -->
-      <div class="disease-detail-hero">
+      <div class="disease-detail-hero" style="border-left: 5px solid ${disease.chapter_color || '#14b8a6'}">
         <div class="detail-section-num">Section ${this.escapeHtml(disease.section)} · Uganda Clinical Guidelines 2023</div>
         <h1 class="detail-name">${this.escapeHtml(disease.name)}</h1>
         <div class="detail-chapter">${disease.chapter_icon} ${this.escapeHtml(disease.chapter)}</div>
         ${priorityBadges.length ? `<div class="detail-priority-badges">${priorityBadges.join('')}</div>` : ''}
       </div>
 
-      <!-- Tabs -->
-      <div class="detail-tabs">
-        <button class="tab-btn active" onclick="app.switchTab('overview', this)">Overview</button>
-        <button class="tab-btn" onclick="app.switchTab('diagnosis', this)">Diagnosis</button>
-        <button class="tab-btn" onclick="app.switchTab('treatment', this)">Treatment</button>
-        ${hasMeds ? `<button class="tab-btn" onclick="app.switchTab('medications', this)">Medications</button>` : ''}
-        ${(hasReferral || hasPrevention) ? `<button class="tab-btn" onclick="app.switchTab('referral', this)">Referral & Prevention</button>` : ''}
-        ${(hasPregnancy || hasChildren || hasHIV) ? `<button class="tab-btn" onclick="app.switchTab('special', this)">Special Populations</button>` : ''}
-        <button class="tab-btn" onclick="app.switchTab('full', this)">Full Guidelines</button>
+      <!-- Action bar -->
+      <div class="detail-action-bar">
+        <div class="detail-actions-left">
+          <button class="action-chip" onclick="app.copyProtocol('${disease.id}')" title="Copy management protocol to clipboard">
+            📋 Copy Protocol
+          </button>
+          <button class="action-chip" onclick="window.print()" title="Print this clinical guide">
+            🖨️ Print Guide
+          </button>
+          <button class="action-chip" onclick="app.openInDispensary('${disease.id}')" title="View drug regimens in dispensary">
+            💊 Dispensary Drugs
+          </button>
+        </div>
+        <div class="detail-actions-right">
+          <button class="action-chip view-mode-toggle" id="btn-toggle-view" onclick="app.toggleDetailViewMode()">
+            📜 Continuous View
+          </button>
+        </div>
       </div>
 
-      <!-- Tab: Overview -->
-      <div id="tab-overview" class="tab-panel active">
-        ${disease.definition ? `
+      <!-- Tabs Navigation -->
+      <div class="detail-tabs" id="disease-detail-tabs">
+        <button class="tab-btn active" onclick="app.switchTab('overview', this)">📖 Overview</button>
+        <button class="tab-btn" onclick="app.switchTab('symptoms', this)">🤒 Signs & Symptoms</button>
+        <button class="tab-btn" onclick="app.switchTab('investigations', this)">🔬 Lab Work</button>
+        <button class="tab-btn" onclick="app.switchTab('treatment', this)">💊 Treatment</button>
+        <button class="tab-btn" onclick="app.switchTab('prevention', this)">🛡️ Prevention & Referral</button>
+        ${hasSpecial ? `<button class="tab-btn" onclick="app.switchTab('special', this)">👥 Special Populations</button>` : ''}
+        <button class="tab-btn" onclick="app.switchTab('full', this)">📄 Full Guidelines</button>
+      </div>
+
+      <div id="disease-tab-panels-wrapper">
+        <!-- Tab 1: Overview -->
+        <div id="tab-overview" class="tab-panel active">
           <div class="clinical-card">
             <div class="clinical-card-header">
               <div class="clinical-card-icon">📖</div>
-              <div class="clinical-card-title">Definition & Overview</div>
+              <div class="clinical-card-title">Condition Overview & Definition</div>
             </div>
-            <p class="clinical-text">${this.escapeHtml(disease.definition)}</p>
+            <div class="clinical-card-body">
+              ${this.formatClinicalContent(disease.overview || disease.definition || disease.full_content?.substring(0, 800))}
+            </div>
           </div>
-        ` : ''}
 
-        ${hasSymptoms ? `
+          ${disease.causes && disease.causes.length > 0 ? `
+            <div class="clinical-card">
+              <div class="clinical-card-header">
+                <div class="clinical-card-icon">🔍</div>
+                <div class="clinical-card-title">Aetiology & Causes</div>
+              </div>
+              <ul class="clinical-bullet-list">
+                ${disease.causes.map(c => `<li>${this.escapeHtml(c)}</li>`).join('')}
+              </ul>
+            </div>
+          ` : (disease.causes_text ? `
+            <div class="clinical-card">
+              <div class="clinical-card-header">
+                <div class="clinical-card-icon">🔍</div>
+                <div class="clinical-card-title">Aetiology & Causes</div>
+              </div>
+              <div class="clinical-card-body">
+                ${this.formatClinicalContent(disease.causes_text)}
+              </div>
+            </div>
+          ` : '')}
+        </div>
+
+        <!-- Tab 2: Signs & Symptoms -->
+        <div id="tab-symptoms" class="tab-panel">
           <div class="clinical-card">
             <div class="clinical-card-header">
               <div class="clinical-card-icon">🤒</div>
-              <div class="clinical-card-title">Signs & Symptoms</div>
+              <div class="clinical-card-title">Clinical Presentation & Symptoms</div>
             </div>
-            <ul class="symptom-list">
-              ${disease.symptoms.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
-              ${hasSigns ? disease.signs.map(s => `<li>${this.escapeHtml(s)}</li>`).join('') : ''}
-            </ul>
+            ${disease.symptoms && disease.symptoms.length > 0 ? `
+              <ul class="clinical-bullet-list">
+                ${disease.symptoms.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
+              </ul>
+            ` : ''}
+            ${disease.clinical_features_text ? `
+              <div class="clinical-card-body" style="${disease.symptoms?.length ? 'margin-top:var(--space-4); border-top:1px solid var(--border); padding-top:var(--space-3)' : ''}">
+                ${this.formatClinicalContent(disease.clinical_features_text)}
+              </div>
+            ` : (!disease.symptoms?.length ? `
+              <p class="text-muted">Refer to physical examination and diagnostic criteria in the guidelines below.</p>
+            ` : '')}
           </div>
-        ` : ''}
 
-        ${!disease.definition && !hasSymptoms ? `
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">📋</div>
-              <div class="clinical-card-title">Clinical Information</div>
+          ${disease.signs && disease.signs.length > 0 ? `
+            <div class="clinical-card">
+              <div class="clinical-card-header">
+                <div class="clinical-card-icon">🩺</div>
+                <div class="clinical-card-title">Physical Examination & Signs</div>
+              </div>
+              <ul class="clinical-bullet-list">
+                ${disease.signs.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
+              </ul>
             </div>
-            <p class="clinical-text">${this.escapeHtml((disease.full_content || '').substring(0, 1500))}...</p>
-          </div>
-        ` : ''}
-      </div>
+          ` : ''}
+        </div>
 
-      <!-- Tab: Diagnosis -->
-      <div id="tab-diagnosis" class="tab-panel">
-        ${hasInvestigations ? `
+        <!-- Tab 3: Lab Work & Investigations -->
+        <div id="tab-investigations" class="tab-panel">
+          ${hasLabTests ? `
+            <div class="clinical-card">
+              <div class="clinical-card-header">
+                <div class="clinical-card-icon">🧪</div>
+                <div class="clinical-card-title">Recommended Diagnostic Tests</div>
+              </div>
+              <div class="diagnostic-tags-container">
+                ${disease.lab_tests.map(t => `<span class="diag-tag-chip">🔬 ${this.escapeHtml(t)}</span>`).join('')}
+              </div>
+            </div>
+          ` : ''}
+
           <div class="clinical-card">
             <div class="clinical-card-header">
               <div class="clinical-card-icon">🔬</div>
-              <div class="clinical-card-title">Investigations & Diagnosis</div>
+              <div class="clinical-card-title">Investigations Protocol & Criteria</div>
             </div>
-            <p class="clinical-text">${this.escapeHtml(disease.investigations)}</p>
-          </div>
-        ` : `
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">🔬</div>
-              <div class="clinical-card-title">Diagnostic Approach</div>
+            <div class="clinical-card-body">
+              ${this.formatClinicalContent(disease.investigations)}
             </div>
-            <p class="clinical-text">${this.escapeHtml(this.extractSection(disease.full_content, ['diagnos', 'investigat', 'workup', 'laboratory']))}</p>
           </div>
-        `}
-      </div>
+        </div>
 
-      <!-- Tab: Treatment -->
-      <div id="tab-treatment" class="tab-panel">
-        ${hasTreatment ? `
+        <!-- Tab 4: Treatment & Management -->
+        <div id="tab-treatment" class="tab-panel">
           <div class="clinical-card">
             <div class="clinical-card-header">
               <div class="clinical-card-icon">💊</div>
-              <div class="clinical-card-title">Treatment & Management</div>
+              <div class="clinical-card-title">Management & Treatment Protocol</div>
             </div>
-            <p class="clinical-text">${this.escapeHtml(disease.treatment)}</p>
-          </div>
-        ` : `
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">💊</div>
-              <div class="clinical-card-title">Treatment & Management</div>
+            <div class="clinical-card-body">
+              ${this.formatClinicalContent(disease.treatment)}
             </div>
-            <p class="clinical-text">${this.escapeHtml(this.extractSection(disease.full_content, ['treatment', 'management', 'therapeu']))}</p>
           </div>
-        `}
-      </div>
 
-      <!-- Tab: Medications -->
-      ${hasMeds ? `
-        <div id="tab-medications" class="tab-panel">
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">💉</div>
-              <div class="clinical-card-title">Drug Treatment</div>
-            </div>
-            <table class="medicine-table">
-              <thead>
-                <tr>
-                  <th>Drug</th>
-                  <th>Dose / Regimen</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${disease.medications.map(m => `
+          ${hasMeds ? `
+            <div class="clinical-card">
+              <div class="clinical-card-header">
+                <div class="clinical-card-icon">💉</div>
+                <div class="clinical-card-title">Key Medicines & Regimens</div>
+              </div>
+              <table class="medicine-table">
+                <thead>
                   <tr>
-                    <td>${this.escapeHtml(m.drug)}</td>
-                    <td>${this.escapeHtml(m.dose || '—')}</td>
+                    <th>Medicine</th>
+                    <th>Dosage & Frequency</th>
                   </tr>
-                `).join('')}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  ${disease.medications.map(m => `
+                    <tr>
+                      <td>${this.escapeHtml(m.drug)}</td>
+                      <td>${this.escapeHtml(m.dose || 'See protocol above')}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+              <div style="margin-top:var(--space-4); text-align:right;">
+                <button class="action-chip" onclick="app.openInDispensary('${disease.id}')">
+                  💊 Open in Dispensary for Line Regimens →
+                </button>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Tab 5: Prevention & Referral -->
+        <div id="tab-prevention" class="tab-panel">
+          <div class="clinical-card">
+            <div class="clinical-card-header">
+              <div class="clinical-card-icon">🚑</div>
+              <div class="clinical-card-title">Referral Criteria & Pre-Referral Stabilization</div>
+            </div>
+            <div class="alert-box alert-warning">
+              <span class="alert-icon">⚠️</span>
+              <div class="alert-content-text">
+                ${this.formatClinicalContent(disease.referral)}
+              </div>
+            </div>
+          </div>
+
+          <div class="clinical-card">
+            <div class="clinical-card-header">
+              <div class="clinical-card-icon">🛡️</div>
+              <div class="clinical-card-title">Prevention, Prophylaxis & Health Education</div>
+            </div>
+            <div class="clinical-card-body">
+              ${this.formatClinicalContent(disease.prevention)}
+            </div>
           </div>
         </div>
-      ` : ''}
 
-      <!-- Tab: Referral & Prevention -->
-      ${(hasReferral || hasPrevention) ? `
-        <div id="tab-referral" class="tab-panel">
-          ${hasReferral ? `
-            <div class="clinical-card">
-              <div class="clinical-card-header">
-                <div class="clinical-card-icon">🚑</div>
-                <div class="clinical-card-title">Referral Criteria</div>
+        <!-- Tab 6: Special Populations -->
+        ${hasSpecial ? `
+          <div id="tab-special" class="tab-panel">
+            ${hasPregnancy ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">🤰</div>
+                  <div class="clinical-card-title">Management in Pregnancy & Lactation</div>
+                </div>
+                <div class="alert-box alert-info">
+                  <span class="alert-icon">ℹ️</span>
+                  <div class="alert-content-text">
+                    ${this.formatClinicalContent(disease.pregnancy_notes)}
+                  </div>
+                </div>
               </div>
-              <div class="alert-box alert-warning">
-                <span class="alert-icon">⚠️</span>
-                <div class="alert-content-text">${this.escapeHtml(disease.referral)}</div>
-              </div>
-            </div>
-          ` : ''}
-          ${hasPrevention ? `
-            <div class="clinical-card">
-              <div class="clinical-card-header">
-                <div class="clinical-card-icon">🛡️</div>
-                <div class="clinical-card-title">Prevention & Prophylaxis</div>
-              </div>
-              <p class="clinical-text">${this.escapeHtml(disease.prevention)}</p>
-            </div>
-          ` : ''}
-        </div>
-      ` : ''}
+            ` : ''}
 
-      <!-- Tab: Special Populations -->
-      ${(hasPregnancy || hasChildren || hasHIV) ? `
-        <div id="tab-special" class="tab-panel">
-          ${hasPregnancy ? `
-            <div class="clinical-card">
-              <div class="clinical-card-header">
-                <div class="clinical-card-icon">🤰</div>
-                <div class="clinical-card-title">Management in Pregnancy</div>
+            ${hasChildren ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">👶</div>
+                  <div class="clinical-card-title">Paediatric & Child Dosing Considerations</div>
+                </div>
+                <div class="clinical-card-body">
+                  ${this.formatClinicalContent(disease.children_notes)}
+                </div>
               </div>
-              <div class="alert-box alert-info">
-                <span class="alert-icon">ℹ️</span>
-                <div class="alert-content-text">${this.escapeHtml(disease.pregnancy_notes)}</div>
-              </div>
-            </div>
-          ` : ''}
-          ${hasChildren ? `
-            <div class="clinical-card">
-              <div class="clinical-card-header">
-                <div class="clinical-card-icon">👶</div>
-                <div class="clinical-card-title">Management in Children</div>
-              </div>
-              <p class="clinical-text">${this.escapeHtml(disease.children_notes)}</p>
-            </div>
-          ` : ''}
-          ${hasHIV ? `
-            <div class="clinical-card">
-              <div class="clinical-card-header">
-                <div class="clinical-card-icon">🔴</div>
-                <div class="clinical-card-title">HIV/Immunocompromised Patients</div>
-              </div>
-              <p class="clinical-text">${this.escapeHtml(disease.hiv_notes)}</p>
-            </div>
-          ` : ''}
-        </div>
-      ` : ''}
+            ` : ''}
 
-      <!-- Tab: Full Guidelines -->
-      <div id="tab-full" class="tab-panel">
-        <div class="clinical-card">
-          <div class="clinical-card-header">
-            <div class="clinical-card-icon">📄</div>
-            <div class="clinical-card-title">Full Clinical Guidelines — Section ${this.escapeHtml(disease.section)}</div>
+            ${hasHIV ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">🔴</div>
+                  <div class="clinical-card-title">HIV & Immunocompromised Patients</div>
+                </div>
+                <div class="clinical-card-body">
+                  ${this.formatClinicalContent(disease.hiv_notes)}
+                </div>
+              </div>
+            ` : ''}
           </div>
-          <pre class="full-content-text">${this.escapeHtml(disease.full_content || 'Full content not available for this section.')}</pre>
+        ` : ''}
+
+        <!-- Tab 7: Full Guidelines -->
+        <div id="tab-full" class="tab-panel">
+          <div class="clinical-card">
+            <div class="clinical-card-header" style="justify-content: space-between;">
+              <div style="display:flex; align-items:center; gap:var(--space-3)">
+                <div class="clinical-card-icon">📄</div>
+                <div class="clinical-card-title">Official Guidelines — Section ${this.escapeHtml(disease.section)}</div>
+              </div>
+              <button class="action-chip" onclick="app.copyText(document.getElementById('full-guide-pre').innerText)">
+                📋 Copy Text
+              </button>
+            </div>
+            <pre id="full-guide-pre" class="full-content-text" style="white-space: pre-wrap; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.7;">${this.escapeHtml(disease.full_content || 'Full content not available for this section.')}</pre>
+          </div>
         </div>
       </div>
     `;
   },
 
   switchTab(tabName, btn) {
-    // Deactivate all tab buttons and panels
+    // If continuous mode is on, turn it off and switch to tab
+    const wrapper = document.getElementById('disease-tab-panels-wrapper');
+    if (wrapper && wrapper.classList.contains('continuous-mode')) {
+      this.toggleDetailViewMode();
+    }
+
     btn.closest('.detail-tabs').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('#view-disease-detail .tab-panel').forEach(p => p.classList.remove('active'));
 
-    // Activate selected
     btn.classList.add('active');
     const panel = document.getElementById(`tab-${tabName}`);
     if (panel) panel.classList.add('active');
+  },
+
+  toggleDetailViewMode() {
+    const wrapper = document.getElementById('disease-tab-panels-wrapper');
+    const toggleBtn = document.getElementById('btn-toggle-view');
+    const tabsNav = document.getElementById('disease-detail-tabs');
+    if (!wrapper) return;
+
+    if (wrapper.classList.contains('continuous-mode')) {
+      wrapper.classList.remove('continuous-mode');
+      if (tabsNav) tabsNav.style.display = 'flex';
+      if (toggleBtn) {
+        toggleBtn.textContent = '📜 Continuous View';
+        toggleBtn.classList.remove('active');
+      }
+      // Activate first tab
+      const activeBtn = tabsNav.querySelector('.tab-btn.active') || tabsNav.querySelector('.tab-btn');
+      if (activeBtn) activeBtn.click();
+    } else {
+      wrapper.classList.add('continuous-mode');
+      if (tabsNav) tabsNav.style.display = 'none';
+      if (toggleBtn) {
+        toggleBtn.textContent = '📑 Tabbed View';
+        toggleBtn.classList.add('active');
+      }
+    }
+  },
+
+  openInDispensary(diseaseId) {
+    this.navigate('dispensary');
+    setTimeout(() => {
+      if (window.dispensary) {
+        dispensary.selectDisease(diseaseId);
+      }
+    }, 100);
+  },
+
+  copyProtocol(diseaseId) {
+    const d = AppState.diseases.find(x => x.id === diseaseId);
+    if (!d) return;
+
+    const text = `
+VITANOVA — UGANDA CLINICAL GUIDELINES 2023
+===========================================
+Section ${d.section}: ${d.name} (${d.chapter})
+${d.icd_code ? d.icd_code + '\n' : ''}
+--- OVERVIEW ---
+${d.overview || d.definition}
+
+--- SIGNS & SYMPTOMS ---
+${(d.symptoms || []).map(s => '• ' + s).join('\n')}
+${(d.signs || []).map(s => '• ' + s).join('\n')}
+
+--- INVESTIGATIONS & LAB WORK ---
+${d.investigations}
+
+--- TREATMENT & MANAGEMENT ---
+${d.treatment}
+
+--- REFERRAL CRITERIA ---
+${d.referral}
+
+--- PREVENTION ---
+${d.prevention}
+`.trim();
+
+    this.copyText(text);
+  },
+
+  copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      this.showToast('Copied to clipboard ✅');
+    }).catch(() => {
+      this.showToast('Failed to copy');
+    });
+  },
+
+  showToast(message) {
+    let toast = document.getElementById('vn-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'vn-toast';
+      toast.style.cssText = 'position:fixed; bottom:24px; right:24px; background:#0f172a; color:#14b8a6; border:1px solid #14b8a6; padding:12px 20px; border-radius:8px; font-weight:600; font-size:0.9rem; z-index:99999; box-shadow:0 8px 24px rgba(0,0,0,0.5); transition:opacity 0.3s ease;';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.style.opacity = '1';
+    toast.style.display = 'block';
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => { toast.style.display = 'none'; }, 300);
+    }, 2500);
   },
 
   extractSection(fullContent, keywords) {
