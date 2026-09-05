@@ -490,30 +490,45 @@ const app = {
           ` : ''}
         </div>
         <div class="detail-actions-right">
-          <button class="action-chip view-mode-toggle" id="btn-toggle-view" onclick="app.toggleDetailViewMode()">
-            📜 Continuous View
+          <button class="action-chip view-mode-toggle" id="btn-toggle-view" onclick="app.toggleDetailViewMode()" title="Toggle between All-in-One and Tabbed view">
+            📑 Tabbed View
           </button>
         </div>
       </div>
 
-      <!-- Tabs Navigation -->
-      <div class="detail-tabs" id="disease-detail-tabs">
-        <button class="tab-btn active" onclick="app.switchTab('overview', this)">📖 Overview</button>
-        ${hasSymptoms ? `<button class="tab-btn" onclick="app.switchTab('symptoms', this)">🤒 Signs & Symptoms</button>` : ''}
-        ${hasInvestigations ? `<button class="tab-btn" onclick="app.switchTab('investigations', this)">🔬 Lab Work</button>` : ''}
-        ${hasTreatment ? `<button class="tab-btn" onclick="app.switchTab('treatment', this)">💊 Treatment</button>` : ''}
-        ${hasPrevOrRef ? `<button class="tab-btn" onclick="app.switchTab('prevention', this)">🛡️ Prevention & Referral</button>` : ''}
-        ${hasSpecial ? `<button class="tab-btn" onclick="app.switchTab('special', this)">👥 Special Populations</button>` : ''}
-        <button class="tab-btn" onclick="app.switchTab('full', this)">📄 Full Guidelines</button>
+      <!-- Sticky Quick Navigation Bar -->
+      <div class="detail-quick-nav" id="detail-quick-nav">
+        <span style="font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; padding-left:4px">JUMP TO:</span>
+        <button class="quick-nav-chip active" onclick="app.scrollToSection('sec-overview', this)">📖 Overview</button>
+        ${hasSymptoms ? `<button class="quick-nav-chip" onclick="app.scrollToSection('sec-symptoms', this)">🤒 Signs & Symptoms</button>` : ''}
+        ${hasInvestigations ? `<button class="quick-nav-chip" onclick="app.scrollToSection('sec-investigations', this)">🔬 Lab Work</button>` : ''}
+        ${hasTreatment ? `<button class="quick-nav-chip" onclick="app.scrollToSection('sec-treatment', this)">💊 Treatment</button>` : ''}
+        ${hasPrevOrRef ? `<button class="quick-nav-chip" onclick="app.scrollToSection('sec-prevention', this)">🛡️ Prevention & Referral</button>` : ''}
+        ${hasSpecial ? `<button class="quick-nav-chip" onclick="app.scrollToSection('sec-special', this)">👥 Special Populations</button>` : ''}
       </div>
 
-      <div id="disease-tab-panels-wrapper">
-        <!-- Tab 1: Overview -->
-        <div id="tab-overview" class="tab-panel active">
+      <!-- Tabs Navigation (used in Tabbed Mode) -->
+      <div class="detail-tabs" id="disease-detail-tabs" style="display:none">
+        <button class="tab-btn active" data-tab="overview" onclick="app.switchTab('overview', this)">📖 Overview</button>
+        ${hasSymptoms ? `<button class="tab-btn" data-tab="symptoms" onclick="app.switchTab('symptoms', this)">🤒 Signs & Symptoms</button>` : ''}
+        ${hasInvestigations ? `<button class="tab-btn" data-tab="investigations" onclick="app.switchTab('investigations', this)">🔬 Lab Work</button>` : ''}
+        ${hasTreatment ? `<button class="tab-btn" data-tab="treatment" onclick="app.switchTab('treatment', this)">💊 Treatment</button>` : ''}
+        ${hasPrevOrRef ? `<button class="tab-btn" data-tab="prevention" onclick="app.switchTab('prevention', this)">🛡️ Prevention & Referral</button>` : ''}
+        ${hasSpecial ? `<button class="tab-btn" data-tab="special" onclick="app.switchTab('special', this)">👥 Special Populations</button>` : ''}
+      </div>
+
+      <!-- Main Protocol Wrapper (Continuous Unified Mode Active by Default) -->
+      <div id="disease-tab-panels-wrapper" class="continuous-mode">
+        
+        <!-- Section 1: Overview & Causes -->
+        <div id="sec-overview" class="tab-panel active">
+          <div class="continuous-section-title">
+            <span>📖</span> 1. Condition Overview & Causes
+          </div>
           <div class="clinical-card">
             <div class="clinical-card-header">
               <div class="clinical-card-icon">📖</div>
-              <div class="clinical-card-title">Condition Overview & Definition</div>
+              <div class="clinical-card-title">Condition Definition & Overview</div>
             </div>
             <div class="clinical-card-body">
               ${this.formatClinicalContent(disease.overview || disease.definition || disease.full_content)}
@@ -564,13 +579,17 @@ const app = {
           ` : ''}
         </div>
 
-        <!-- Tab 2: Signs & Symptoms -->
+        <!-- Section 2: Signs & Symptoms -->
         ${hasSymptoms ? `
-          <div id="tab-symptoms" class="tab-panel">
+          <div id="sec-symptoms" class="tab-panel active">
+            <div class="continuous-section-title">
+              <span>🤒</span> 2. Clinical Presentation: Signs & Symptoms
+            </div>
+            
             <div class="clinical-card">
               <div class="clinical-card-header">
                 <div class="clinical-card-icon">🤒</div>
-                <div class="clinical-card-title">Clinical Presentation & Symptoms</div>
+                <div class="clinical-card-title">Presenting Complaints & Patient Symptoms</div>
               </div>
               ${disease.symptoms && disease.symptoms.length > 0 ? `
                 <ul class="clinical-bullet-list">
@@ -588,7 +607,7 @@ const app = {
               <div class="clinical-card">
                 <div class="clinical-card-header">
                   <div class="clinical-card-icon">🩺</div>
-                  <div class="clinical-card-title">Physical Examination & Signs</div>
+                  <div class="clinical-card-title">Physical Examination & Clinical Signs</div>
                 </div>
                 <ul class="clinical-bullet-list">
                   ${disease.signs.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
@@ -598,14 +617,18 @@ const app = {
           </div>
         ` : ''}
 
-        <!-- Tab 3: Lab Work & Investigations -->
+        <!-- Section 3: Lab Work & Investigations -->
         ${hasInvestigations ? `
-          <div id="tab-investigations" class="tab-panel">
+          <div id="sec-investigations" class="tab-panel active">
+            <div class="continuous-section-title">
+              <span>🔬</span> 3. Lab Work & Diagnostic Investigations
+            </div>
+            
             ${hasLabTests ? `
               <div class="clinical-card">
                 <div class="clinical-card-header">
                   <div class="clinical-card-icon">🧪</div>
-                  <div class="clinical-card-title">Diagnostic Tests Mentioned</div>
+                  <div class="clinical-card-title">Required & Diagnostic Tests</div>
                 </div>
                 <div class="diagnostic-tags-container">
                   ${disease.lab_tests.map(t => `<span class="diag-tag-chip">🔬 ${this.escapeHtml(t)}</span>`).join('')}
@@ -617,7 +640,7 @@ const app = {
               <div class="clinical-card">
                 <div class="clinical-card-header">
                   <div class="clinical-card-icon">🔬</div>
-                  <div class="clinical-card-title">Investigations Protocol & Criteria</div>
+                  <div class="clinical-card-title">Diagnostic Protocol & Criteria</div>
                 </div>
                 <div class="clinical-card-body">
                   ${this.formatClinicalContent(disease.investigations)}
@@ -627,14 +650,18 @@ const app = {
           </div>
         ` : ''}
 
-        <!-- Tab 4: Treatment & Management -->
+        <!-- Section 4: Treatment & Management -->
         ${hasTreatment ? `
-          <div id="tab-treatment" class="tab-panel">
+          <div id="sec-treatment" class="tab-panel active">
+            <div class="continuous-section-title">
+              <span>💊</span> 4. Treatment & Management Protocol
+            </div>
+
             ${disease.treatment ? `
               <div class="clinical-card">
                 <div class="clinical-card-header">
                   <div class="clinical-card-icon">💊</div>
-                  <div class="clinical-card-title">Management & Treatment Protocol</div>
+                  <div class="clinical-card-title">Management Protocol & Procedures</div>
                 </div>
                 <div class="clinical-card-body">
                   ${this.formatClinicalContent(disease.treatment)}
@@ -652,13 +679,13 @@ const app = {
                   <thead>
                     <tr>
                       <th>Medicine</th>
-                      <th>Dosage & Frequency</th>
+                      <th>Dosage, Route & Frequency</th>
                     </tr>
                   </thead>
                   <tbody>
                     ${disease.medications.map(m => `
                       <tr>
-                        <td>${this.escapeHtml(m.drug)}</td>
+                        <td style="font-weight:600; color:var(--text-primary)">${this.escapeHtml(m.drug)}</td>
                         <td>${this.escapeHtml(m.dose || 'See protocol above')}</td>
                       </tr>
                     `).join('')}
@@ -666,7 +693,7 @@ const app = {
                 </table>
                 <div style="margin-top:var(--space-4); text-align:right;">
                   <button class="action-chip" onclick="app.openInDispensary('${disease.id}')">
-                    💊 Open in Dispensary for Line Regimens →
+                    💊 View Full Regimens in Dispensary →
                   </button>
                 </div>
               </div>
@@ -674,9 +701,13 @@ const app = {
           </div>
         ` : ''}
 
-        <!-- Tab 5: Prevention & Referral -->
+        <!-- Section 5: Prevention & Referral -->
         ${hasPrevOrRef ? `
-          <div id="tab-prevention" class="tab-panel">
+          <div id="sec-prevention" class="tab-panel active">
+            <div class="continuous-section-title">
+              <span>🛡️</span> 5. Prevention & Referral Criteria
+            </div>
+
             ${hasReferral ? `
               <div class="clinical-card">
                 <div class="clinical-card-header">
@@ -706,9 +737,13 @@ const app = {
           </div>
         ` : ''}
 
-        <!-- Tab 6: Special Populations -->
+        <!-- Section 6: Special Populations -->
         ${hasSpecial ? `
-          <div id="tab-special" class="tab-panel">
+          <div id="sec-special" class="tab-panel active">
+            <div class="continuous-section-title">
+              <span>👥</span> 6. Special Population Protocols
+            </div>
+
             ${hasPregnancy ? `
               <div class="clinical-card">
                 <div class="clinical-card-header">
@@ -750,23 +785,42 @@ const app = {
           </div>
         ` : ''}
 
-        <!-- Tab 7: Full Guidelines -->
-        <div id="tab-full" class="tab-panel">
-          <div class="clinical-card">
-            <div class="clinical-card-header" style="justify-content: space-between;">
-              <div style="display:flex; align-items:center; gap:var(--space-3)">
-                <div class="clinical-card-icon">📄</div>
-                <div class="clinical-card-title">Official Guidelines — Section ${this.escapeHtml(disease.section)}</div>
-              </div>
-              <button class="action-chip" onclick="app.copyText(document.getElementById('full-guide-pre').innerText)">
-                📋 Copy Text
-              </button>
-            </div>
-            <pre id="full-guide-pre" class="full-content-text" style="white-space: pre-wrap; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.7;">${this.escapeHtml(disease.full_content || '')}</pre>
-          </div>
-        </div>
+        <!-- Collapsible Official Guidelines Transcript -->
+        <details class="full-guidelines-accordion">
+          <summary>
+            <span>📄 Official UCG 2023 Manual Text (Section ${this.escapeHtml(disease.section)})</span>
+            <span style="font-size:0.75rem; color:var(--text-muted)">Click to view full transcript ▼</span>
+          </summary>
+          <pre id="full-guide-pre">${this.escapeHtml(disease.full_content || '')}</pre>
+        </details>
+
       </div>
     `;
+  },
+
+  scrollToSection(id, btn) {
+    if (btn) {
+      btn.closest('.detail-quick-nav').querySelectorAll('.quick-nav-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    const wrapper = document.getElementById('disease-tab-panels-wrapper');
+    // If currently in tabbed mode, switch tab
+    if (wrapper && !wrapper.classList.contains('continuous-mode')) {
+      const tabName = id.replace('sec-', '');
+      const tabBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+      if (tabBtn) tabBtn.click();
+      return;
+    }
+    const target = document.getElementById(id);
+    if (target) {
+      const headerOffset = 110;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   },
 
   switchTab(tabName, btn) {
@@ -780,7 +834,7 @@ const app = {
     document.querySelectorAll('#view-disease-detail .tab-panel').forEach(p => p.classList.remove('active'));
 
     btn.classList.add('active');
-    const panel = document.getElementById(`tab-${tabName}`);
+    const panel = document.getElementById(`sec-${tabName}`);
     if (panel) panel.classList.add('active');
   },
 
@@ -788,25 +842,31 @@ const app = {
     const wrapper = document.getElementById('disease-tab-panels-wrapper');
     const toggleBtn = document.getElementById('btn-toggle-view');
     const tabsNav = document.getElementById('disease-detail-tabs');
+    const quickNav = document.getElementById('detail-quick-nav');
     if (!wrapper) return;
 
     if (wrapper.classList.contains('continuous-mode')) {
+      // Switch to Tabbed View
       wrapper.classList.remove('continuous-mode');
       if (tabsNav) tabsNav.style.display = 'flex';
+      if (quickNav) quickNav.style.display = 'none';
       if (toggleBtn) {
-        toggleBtn.textContent = '📜 Continuous View';
+        toggleBtn.textContent = '📜 Unified View';
         toggleBtn.classList.remove('active');
       }
       // Activate first tab
-      const activeBtn = tabsNav.querySelector('.tab-btn.active') || tabsNav.querySelector('.tab-btn');
-      if (activeBtn) activeBtn.click();
+      const firstTab = tabsNav.querySelector('.tab-btn.active') || tabsNav.querySelector('.tab-btn');
+      if (firstTab) firstTab.click();
     } else {
+      // Switch to Unified Continuous View
       wrapper.classList.add('continuous-mode');
       if (tabsNav) tabsNav.style.display = 'none';
+      if (quickNav) quickNav.style.display = 'flex';
       if (toggleBtn) {
         toggleBtn.textContent = '📑 Tabbed View';
         toggleBtn.classList.add('active');
       }
+      document.querySelectorAll('#view-disease-detail .tab-panel').forEach(p => p.classList.add('active'));
     }
   },
 
@@ -828,7 +888,7 @@ VITANOVA — UGANDA CLINICAL GUIDELINES 2023
 ===========================================
 Section ${d.section}: ${d.name} (${d.chapter})
 ${d.icd_code ? d.icd_code + '\n' : ''}
---- OVERVIEW ---
+--- OVERVIEW & DEFINITION ---
 ${d.overview || d.definition}
 
 --- SIGNS & SYMPTOMS ---
@@ -874,18 +934,6 @@ ${d.prevention}
       toast.style.opacity = '0';
       setTimeout(() => { toast.style.display = 'none'; }, 300);
     }, 2500);
-  },
-
-  extractSection(fullContent, keywords) {
-    if (!fullContent) return 'See full guidelines tab for details.';
-    const text = fullContent;
-    for (const kw of keywords) {
-      const idx = text.toLowerCase().indexOf(kw);
-      if (idx !== -1) {
-        return text.substring(idx, idx + 2000);
-      }
-    }
-    return text.substring(0, 2000);
   },
 
   // ── Women's Health ─────────────────────────────────────────────

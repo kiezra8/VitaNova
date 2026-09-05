@@ -1623,4 +1623,102 @@ ul { list-style: none; }
   border-bottom: 2px solid var(--border);
 }
 
+/* Quick Navigation Anchor Bar */
+.detail-quick-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding: var(--space-2) 0;
+  margin-bottom: var(--space-4);
+  position: sticky;
+  top: 60px;
+  z-index: 20;
+  background: var(--bg-main);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-quick-nav::-webkit-scrollbar {
+  height: 4px;
+}
+.detail-quick-nav::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.quick-nav-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.quick-nav-chip:hover {
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--teal-300);
+  border-color: rgba(20, 184, 166, 0.4);
+  transform: translateY(-1px);
+}
+
+.quick-nav-chip.active {
+  background: var(--teal-500);
+  color: #ffffff;
+  border-color: var(--teal-500);
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+}
+
+/* Collapsible Manual Transcript */
+.full-guidelines-accordion {
+  margin-top: var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+.full-guidelines-accordion summary {
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+  background: rgba(255, 255, 255, 0.02);
+  transition: background 0.15s ease, color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.full-guidelines-accordion summary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.full-guidelines-accordion pre {
+  margin: 0;
+  padding: var(--space-4);
+  border-top: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  background: var(--bg-main);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+
 

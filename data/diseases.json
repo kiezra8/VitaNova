@@ -179,16 +179,16 @@
   {
     "id": "dis_1_1_3",
     "section": "1.1.3",
-    "name": "Dehydration",
+    "name": "Dehydration (Rehydration Protocols Plan A, B, C)",
     "chapter_num": "1",
     "chapter": "Emergencies and Trauma",
     "chapter_icon": "🚨",
     "chapter_color": "#ef4444",
     "priority": "emergency",
     "is_category": false,
-    "icd_code": "ICD10CODE: E86.0",
+    "icd_code": "E86.0",
     "definition": "A condition brought about by the loss of significant quantities of fluids \nand salts from the body.",
-    "overview": "A condition brought about by the loss of significant quantities of fluids \nand salts from the body.\nCauses\n \n• \nVomiting and/or diarrhoea\n \n• \nDecreased fluid intake\n \n• \nExcessive loss of fluids, e.g. due to polyuria in diabetes, \nexcessive sweating as in high fever, burns",
+    "overview": "Dehydration is the depletion of total body water and essential electrolytes (sodium, potassium, chloride, bicarbonate), commonly resulting from acute gastroenteritis, vomiting, severe burns, excessive sweating, or inadequate fluid intake. It is clinically classified into No Dehydration, Some Dehydration, and Severe Dehydration.",
     "causes": [
       "Causes",
       "Vomiting and/or diarrhoea",
@@ -198,22 +198,51 @@
     ],
     "causes_text": "Causes\n \n• \nVomiting and/or diarrhoea\n \n• \nDecreased fluid intake\n \n• \nExcessive loss of fluids, e.g. due to polyuria in diabetes, \nexcessive sweating as in high fever, burns",
     "symptoms": [
-      "Apathy, sunken eyes/fontanel, loss of skin turgor (especially",
-      "in children)",
-      "Hypotension, tachycardia, deep (acidotic) breathing, dry mu­",
-      "cosae, poor or no urine output."
+      "Thirst (drinking eagerly in some dehydration, unable to drink in severe)",
+      "Dry mouth, cracked lips, and dry tongue",
+      "Decreased urine output (oliguria or concentrated dark urine)",
+      "Lethargy, weakness, lightheadedness, or altered mental status",
+      "Irritability and restlessness (especially in infants)"
     ],
-    "signs": [],
+    "signs": [
+      "Sunken eyes and absent tears when crying",
+      "Loss of skin turgor: skin pinch on abdomen goes back very slowly (> 2 seconds)",
+      "Cold, clammy extremities, weak or impalpable radial pulse, capillary refill > 2 seconds",
+      "Depressed anterior fontanelle in infants",
+      "Hypotension and tachycardia (signs of hypovolaemic shock in severe dehydration)"
+    ],
     "clinical_features_text": "Clinical features\n \n• \nApathy, sunken eyes/fontanel, loss of skin turgor (especially \nin children)\n \n• \nHypotension, tachycardia, deep (acidotic) breathing, dry mu­\ncosae, poor or no urine output.",
-    "investigations": "",
-    "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
-    "children_notes": "",
-    "hiv_notes": "",
+    "investigations": "CLINICAL ASSESSMENT & DIAGNOSIS:\n[HC2] Clinical Dehydration Assessment Scale:\n- Assess 4 key signs: General condition (well vs restless vs lethargic/unconscious), Eyes (normal vs sunken), Thirst (drinks normally vs thirsty/drinks eagerly vs unable to drink), Skin pinch (returns immediately vs slowly vs very slowly > 2 sec).\n\n[HC3/HC4] Laboratory Tests:\n- Serum Electrolytes (Na+, K+, Cl-, HCO3-): detect hypernatraemia, hyponatraemia, and hypokalaemia.\n- Blood Urea and Serum Creatinine: differentiate pre-renal azotaemia from acute tubular necrosis.\n- Blood Glucose: check for hypoglycaemia.\n- Urinalysis: assess specific gravity and ketonuria.",
+    "lab_tests": [
+      "Serum Electrolytes (Na+, K+, Cl-)",
+      "Serum Creatinine & Urea",
+      "Blood Glucose (Random/Fasting)",
+      "Urinalysis / Urine Dipstick"
+    ],
+    "treatment": "UGANDA CLINICAL GUIDELINES REHYDRATION PROTOCOLS:\n\nPLAN A: HOME MANAGEMENT OF DIARRHOEA / NO DEHYDRATION\n[HC2] Give extra fluids to replace losses:\n- After each loose stool: give 50-100 ml ORS (child < 2 yrs); 100-200 ml ORS (child 2-10 yrs); as much as wanted (older children & adults).\n- Continue exclusive breastfeeding or normal feeding.\n- Zinc sulphate supplements for 10-14 days: 10 mg daily (< 6 months); 20 mg daily (>= 6 months).\n\nPLAN B: ORAL REHYDRATION FOR SOME DEHYDRATION\n[HC2] Give Oral Rehydration Salt (ORS) solution over 4 hours in clinic:\n- Approximate amount of ORS (ml) = Weight (kg) x 75 ml:\n  • < 4 months (< 6 kg): 200 – 400 ml\n  • 4 – 11 months (6 – 9.9 kg): 400 – 700 ml\n  • 12 – 23 months (10 – 11.9 kg): 700 – 900 ml\n  • 2 – 5 years (12 – 19 kg): 900 – 1400 ml\n  • Adults: 2000 – 4000 ml over 4 hours.\n- If patient vomits, wait 10 minutes then continue more slowly. Reassess after 4 hours.\n\nPLAN C: INTRAVENOUS RESUSCITATION FOR SEVERE DEHYDRATION (Medical Emergency)\n[HC3/HC4] Give Ringer's Lactate (or Normal Saline 0.9% if RL unavailable) 100 ml/kg total:\n- Infants (< 1 year):\n  • Step 1: Give 30 ml/kg IV over 1 hour (repeat if pulse weak)\n  • Step 2: Give 70 ml/kg IV over 5 hours (Total: 6 hours)\n- Older Children & Adults (>= 1 year):\n  • Step 1: Give 30 ml/kg IV over 30 minutes\n  • Step 2: Give 70 ml/kg IV over 2.5 hours (Total: 3 hours)\n- As soon as the patient can drink, give ORS solution (approx. 5 ml/kg/hour) while IV therapy continues.\n- Reassess hydration status every 15-30 minutes until radial pulse is strong.",
+    "medications": [
+      {
+        "drug": "Oral Rehydration Salts (ORS) low-osmolarity",
+        "dose": "Plan A & B weight-based fluid replacement"
+      },
+      {
+        "drug": "Ringer Lactate IV Infusion",
+        "dose": "100 ml/kg IV regimen (Plan C for severe dehydration)"
+      },
+      {
+        "drug": "Sodium Chloride 0.9% (Normal Saline)",
+        "dose": "100 ml/kg IV (alternative if Ringer Lactate unavailable)"
+      },
+      {
+        "drug": "Zinc Sulphate tablets",
+        "dose": "10 mg (<6mo) or 20 mg (>=6mo) daily for 10-14 days"
+      }
+    ],
+    "prevention": "- Safe drinking water: boil or chlorinate water.\n- Proper food hygiene and hand washing with soap before eating and after using the toilet.\n- Rotavirus vaccination at 6 and 10 weeks of age.\n- Prompt early initiation of ORS solution at home as soon as diarrhoea starts.",
+    "referral": "Refer immediately to HC4 or Hospital if IV line cannot be sited in severe dehydration (use nasogastric tube with ORS 20 ml/kg/hour during transport), if patient develops anuria, severe abdominal distension, or persistent convulsions.",
+    "pregnancy_notes": "Severe dehydration in pregnant women can trigger preterm labor or hypoperfusion of the placenta. Rehydrate promptly and monitor maternal vitals and fetal heart rate.",
+    "children_notes": "Do not withhold food or breast milk during rehydration. In severe malnutrition, do NOT use standard Plan C or standard ORS (risk of heart failure); use ReSoMal (Rehydration Solution for Malnutrition) orally or via NG tube.",
+    "hiv_notes": "HIV-infected children with diarrhoea often have persistent or recurrent episodes. Add Co-trimoxazole prophylaxis and continue ART.",
     "full_content": "1.1.3 Dehydration                                           ICD10CODE: E86.0\nA condition brought about by the loss of significant quantities of fluids \nand salts from the body.\nCauses\n \n• \nVomiting and/or diarrhoea\n \n• \nDecreased fluid intake\n \n• \nExcessive loss of fluids, e.g. due to polyuria in diabetes, \nexcessive sweating as in high fever, burns\nClinical features\n \n• \nApathy, sunken eyes/fontanel, loss of skin turgor (especially \nin children)\n \n• \nHypotension, tachycardia, deep (acidotic) breathing, dry mu­\ncosae, poor or no urine output."
   },
   {
@@ -4028,9 +4057,40 @@
     "overview": "Intestinal worms enter the human body through ingestion of the worm eggs \nin food or water via dirty hands or through injured skin when walking barefoot. \nExamples include:\nTYPE OF INFESTA­\nTION\nFEATURES\nAscariasis: Ascaris lum­\nbricoides (round worm). \nInfests small intestines\n \n•  Oro-faecal transmission\n \n•  Usually few or no symptoms\n \n•  Persistent dry irritating cough\n \n•  Patient may pass out live worms \nthrough the anus, nose, or mouth\n \n•  Pneumonitis- Loeffler’s syndrome\n \n•  Heavy infestations may cause \nnutritional deficiencies\n \n•  Worms may also cause obstruction \nto bowel, bile duct, pancreatic duct, \nor appendix\nEnterobiasis: (thread­\nworm) Enterobias ver­\nmicularis\n \n•  Transmitted by faecal-oral route\n \n•  Mainly affects children\n \n•  Intense itching at the anal orifice\n\n\nTYPE OF INFESTA­\nTION\nFEATURES\nHook worm Caused by \nNecator americanus and \nAncylostoma duodenale\n \n•  Chronic parasitic infestation of the \nintestines\n \n•  Transmitted by penetration of the \nskin by larvae from the soil\n \n•  Dermatitis (ground itch)\n \n•  Cough and inflammation of the \ntrachea (tracheitis) common during \nlarvae migration phase\n \n•  Iron-deficiency anaemia\n \n•  Reduced blood proteins in heavy \ninfestations\n \n•  Reduced blood proteins in heavy \ninfestations\nStrongyloidiasis \nStrongyloides stercoralis\n \n•  Skin symptoms: Itchy eruption at \nthe site of larval penetration\n \n•  Intestinal symptoms e.g. abdominal \npain, diarrhoea, and weight loss\n \n•  Lung symptoms due to larvae in \nthe lungs, e.g. cough and wheezing\n \n•  Specific organ involvement, e.g. \nmeningoencephalitis\n \n•  Hyperinfection syndrome: \nOccurs when immunity against \nauto-infection fails, e.g. in \nimmunosuppressed cases\nWhip worm\nInfests human caecum \nand upper colon\n \n•  May be symptomless\n \n•  Heavy infestation may cause \nbloody, mucoid stools, and \ndiarrhoea\n \n•  Complications include anaemia \nand prolapse of the rectum",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "Ascariasis: Ascaris lum­",
+      "bricoides (round worm).",
+      "Infests small intestines",
+      "Oro-faecal transmission",
+      "Usually few or no symptoms",
+      "Persistent dry irritating cough",
+      "Patient may pass out live worms",
+      "through the anus, nose, or mouth",
+      "Pneumonitis- Loeffler’s syndrome",
+      "Heavy infestations may cause",
+      "nutritional deficiencies",
+      "Worms may also cause obstruction",
+      "to bowel, bile duct, pancreatic duct,",
+      "or appendix",
+      "Enterobiasis: (thread­",
+      "worm) Enterobias ver­",
+      "micularis",
+      "Transmitted by faecal-oral route",
+      "Mainly affects children",
+      "Intense itching at the anal orifice",
+      "TYPE OF INFESTA­",
+      "TION",
+      "FEATURES",
+      "Hook worm Caused by",
+      "Necator americanus and",
+      "Ancylostoma duodenale",
+      "Chronic parasitic infestation of the",
+      "intestines",
+      "Transmitted by penetration of the",
+      "skin by larvae from the soil"
+    ],
     "signs": [],
-    "clinical_features_text": "",
+    "clinical_features_text": "Ascariasis: Ascaris lum­\nbricoides (round worm). \nInfests small intestines\n \n•  Oro-faecal transmission\n \n•  Usually few or no symptoms\n \n•  Persistent dry irritating cough\n \n•  Patient may pass out live worms \nthrough the anus, nose, or mouth\n \n•  Pneumonitis- Loeffler’s syndrome\n \n•  Heavy infestations may cause \nnutritional deficiencies\n \n•  Worms may also cause obstruction \nto bowel, bile duct, pancreatic duct, \nor appendix\nEnterobiasis: (thread­\nworm) Enterobias ver­\nmicularis\n \n•  Transmitted by faecal-oral route\n \n•  Mainly affects children\n \n•  Intense itching at the anal orifice\n\n\nTYPE OF INFESTA­\nTION\nFEATURES\nHook worm Caused by \nNecator americanus and \nAncylostoma duodenale\n \n•  Chronic parasitic infestation of the \nintestines\n \n•  Transmitted by penetration of the \nskin by larvae from the soil\n \n•  Dermatitis (ground itch)\n \n•  Cough and inflammation of the \ntrachea (tracheitis) common during \nlarvae migration phase\n \n•  Iron-deficiency anaemia\n \n•  Reduced blood proteins in heavy \ninfestations\n \n•  Reduced blood proteins in heavy \ninfestations\nStrongyloidiasis \nStrongyloides stercoralis\n \n•  Skin symptoms: Itchy eruption at \nthe site of larval penetration\n \n•  Intestinal symptoms e.g. abdominal \npain, diarrhoea, and weight loss\n \n•  Lung symptoms due to larvae in \nthe lungs, e.g. cough and wheezing\n \n•  Specific organ involvement, e.g. \nmeningoencephalitis\n \n•  Hyperinfection syndrome: \nOccurs when immunity against \nauto-infection fails, e.g. in \nimmunosuppressed cases\nWhip worm\nInfests human caecum \nand upper colon\n \n•  May be symptomless\n \n•  Heavy infestation may cause \nbloody, mucoid stools, and \ndiarrhoea\n \n•  Complications include anaemia \nand prolapse of the rectum",
     "investigations": "Differential diagnosis\n \n\nOther causes of cough, diarrhea\n \n\nOther causes of intestinal obstruction and nutritional deficiency\n \n\nLoeffler’s Syndrome\n \n\nOther causes of iron-deficiency anaemia\n\nInvestigations\n \n\nStool examination for ova, live worms or segments\n \n\nFull blood count",
     "lab_tests": [
       "Full Blood Count (FBC)"
@@ -4463,16 +4523,16 @@
   {
     "id": "dis_2_5_2",
     "section": "2.5.2",
-    "name": "Malaria",
+    "name": "Malaria (General Overview & National Policy)",
     "chapter_num": "2",
     "chapter": "Infectious & Communicable Diseases",
     "chapter_icon": "🦠",
     "chapter_color": "#f97316",
     "priority": "",
     "is_category": false,
-    "icd_code": "ICD10 CODE: B50",
+    "icd_code": "B50",
     "definition": "Malaria is an acute febrile illness caused by infection with Plasmodium \nparasites and is transmitted from person to person by an infected female \nanopheles mosquito.",
-    "overview": "Malaria is an acute febrile illness caused by infection with Plasmodium \nparasites and is transmitted from person to person by an infected female \nanopheles mosquito.\n\n\nCause\n \n•  There are five Plasmodium species of malaria parasites which \ninfect humans namely: P. falciparum, P. vivax, P. ovale, P. malariae \nand P. knowlesi.\n \n•  P. falciparum is the most virulent and also the most common \nmalaria parasite in Uganda.",
+    "overview": "Malaria is an acute febrile illness caused by protozoan parasites of the genus Plasmodium, transmitted through the bites of infected female Anopheles mosquitoes. Five species infect humans: P. falciparum (causes almost all severe disease and mortality in Uganda), P. vivax, P. ovale, P. malariae, and P. knowlesi.",
     "causes": [
       "Cause",
       "There are five Plasmodium species of malaria parasites which",
@@ -4483,33 +4543,57 @@
     ],
     "causes_text": "Cause\n \n•  There are five Plasmodium species of malaria parasites which \ninfect humans namely: P. falciparum, P. vivax, P. ovale, P. malariae \nand P. knowlesi.\n \n•  P. falciparum is the most virulent and also the most common \nmalaria parasite in Uganda.",
     "symptoms": [
-      "It may be asymptomatic, mild illness (uncomplicated malaria) or",
-      "severe illness (severe malaria)",
-      "Intermittent fever is the most characteristic symptom of malaria.",
-      "Three classical stages can be distinguished in a typical attack of",
-      "malaria:",
-      "The cold stage: the patient feels cold and shivers",
-      "The hot stage: the patient feels hot",
-      "The sweating stage: associated with sweating and relief of",
-      "A complete physical examination has to be performed in any patient",
-      "presenting with fever or history of fever.",
-      "When people are frequently exposed to malaria, they develop",
-      "partial immunity. In such people, the classical stages of a malaria",
-      "attack above may not be observed.",
-      "Also, in people who have had partial treatment with antimalarial",
-      "medicines, these classical stages may not be pronounced."
+      "Intermittent paroxysms of fever (every 24, 48, or 72 hours depending on species)",
+      "Classical Cold stage: sudden intense shivering, teeth chattering, goosebumps (lasts 15-60 min)",
+      "Classical Hot stage: burning dry heat, intense headache, throbbing pulses (lasts 2-6 hours)",
+      "Classical Sweating stage: profuse diaphoresis, sudden drop in temperature, exhaustion (lasts 2-4 hours)",
+      "Nausea, vomiting, loss of appetite, generalised myalgia, arthralgia, fatigue"
     ],
-    "signs": [],
+    "signs": [
+      "Axillary temperature >= 37.5°C",
+      "Pallor of conjunctivae, palms, and mucous membranes",
+      "Mild to moderate splenomegaly",
+      "Mild hepatomegaly",
+      "Dehydration (dry tongue, sunken eyes)"
+    ],
     "clinical_features_text": "Clinical Features of Malaria\n \n•  It may be asymptomatic, mild illness (uncomplicated malaria) or \nsevere illness (severe malaria)\n \n•  Intermittent fever is the most characteristic symptom of malaria. \nThree classical stages can be distinguished in a typical attack of \nmalaria:\n \n•  The cold stage: the patient feels cold and shivers\n \n•  The hot stage: the patient feels hot\n \n•  The sweating stage: associated with sweating and relief of\n\nsymptoms.\n \n•  A complete physical examination has to be performed in any patient \npresenting with fever or history of fever.\n \n•  When people are frequently exposed to malaria, they develop \npartial immunity. In such people, the classical stages of a malaria \nattack above may not be observed.\n \n•  Also, in people who have had partial treatment with antimalarial \nmedicines, these classical stages may not be pronounced.",
-    "investigations": "",
-    "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
-    "children_notes": "",
-    "hiv_notes": "",
+    "investigations": "MANDATORY LABORATORY CRITERIA:\n[HC2] Malaria Rapid Diagnostic Test (mRDT):\n- Immediate lateral-flow immunochromatographic test detecting P. falciparum HRP-2 or pan-Plasmodium LDH.\n- Every patient with fever or suspected malaria must be tested before treatment.\n\n[HC3] Blood Smear (Thick and Thin) for Microscopy:\n- Gold standard for confirming parasitaemia and assessing parasite load / density.\n- Essential when monitoring response to treatment, suspected drug resistance, or when mRDT is negative despite high clinical index of suspicion.\n\n[HC4] Additional Investigations:\n- Blood Glucose: to exclude or detect life-threatening hypoglycaemia (< 2.2 mmol/L / < 40 mg/dL).\n- Full Blood Count (FBC) / Haematocrit: severe anaemia defined as Hb < 5 g/dL (< 7 g/dL in pregnancy).\n- Lumbar Puncture: mandatory if altered mental status or meningism present to exclude bacterial meningitis.",
+    "lab_tests": [
+      "Malaria Rapid Diagnostic Test (mRDT)",
+      "Blood Slide (BS) for Malaria",
+      "Complete Blood Count (CBC)",
+      "Blood Glucose (Random/Fasting)",
+      "Serum Creatinine & Urea",
+      "Lumbar Puncture & CSF Analysis"
+    ],
+    "treatment": "UGANDA NATIONAL MALARIA TREATMENT POLICY OVERVIEW:\n\n1. UNCOMPLICATED MALARIA:\n[HC2] First-line: Artemether / Lumefantrine (AL) 20/120 mg oral weight-based 6 doses over 3 days (at 0h, 8h, 24h, 36h, 48h, 60h).\n[HC2] First-line Alternative: Artesunate / Amodiaquine (ASAQ) daily for 3 days.\n[HC3] Second-line: Dihydroartemisinin / Piperaquine (DHAP) once daily for 3 days or Quinine tablets 10 mg/kg 8-hourly for 7 days.\n\n2. SEVERE / COMPLICATED MALARIA (Medical Emergency):\n[HC3/HC4] First-line: IV Artesunate 2.4 mg/kg IV on admission (0 hours), at 12 hours, at 24 hours, then once daily until patient can tolerate oral medication (minimum 3 parenteral doses).\n[HC3/HC4] First-line Alternative: IV Quinine infusion loading dose 20 mg salt/kg in 5% or 10% Dextrose over 4 hours, then 10 mg/kg over 4 hours every 8 hours.\n[HC3/HC4] Second Alternative: IM Artemether 3.2 mg/kg loading dose on Day 1, then 1.6 mg/kg daily.\n[HC2] Pre-referral care at lower health centres: Rectal Artesunate (10 mg/kg single dose, or 100 mg for age <3 yrs, 200 mg for 3-6 yrs) then immediate transfer.\n\n3. SUPPORTIVE MANAGEMENT:\n- Correct hypoglycaemia immediately with 10% Dextrose (5 ml/kg bolus).\n- Control convulsions with IV Diazepam 0.2 mg/kg or rectal diazepam.\n- Antipyretic: Paracetamol 10-15 mg/kg 6-hourly.\n- Avoid overhydration (risk of fatal pulmonary oedema).",
+    "medications": [
+      {
+        "drug": "Artemether / Lumefantrine",
+        "dose": "6 doses over 3 days with milk/fatty food"
+      },
+      {
+        "drug": "IV Artesunate",
+        "dose": "2.4 mg/kg IV at 0h, 12h, 24h then once daily (severe)"
+      },
+      {
+        "drug": "Rectal Artesunate",
+        "dose": "100-200 mg single suppository for pre-referral in under-6s"
+      },
+      {
+        "drug": "IV Quinine Infusion",
+        "dose": "20 mg/kg loading in 5% Dextrose then 10 mg/kg 8-hourly"
+      },
+      {
+        "drug": "Paracetamol",
+        "dose": "10-15 mg/kg every 6-8 hours"
+      }
+    ],
+    "prevention": "- Long-Lasting Insecticidal Nets (LLINs) for universal coverage.\n- Indoor residual spraying (IRS).\n- Intermittent Preventive Treatment in Pregnancy (IPTp-SP) with Sulfadoxine-Pyrimethamine.\n- Chemoprophylaxis with Mefloquine or Doxycycline for non-immune travelers and sickle-cell disease.",
+    "referral": "Refer immediately to HC4 or Hospital if signs of severe malaria appear: coma, convulsions, respiratory distress, severe vomiting, severe anaemia, or oliguria. Give pre-referral rectal or IM artesunate before transport.",
+    "pregnancy_notes": "Malaria in pregnancy causes severe maternal anaemia, intrauterine growth restriction, abortion, stillbirth, and maternal mortality. Treat aggressively. IPTp with SP given monthly starting from 13 weeks of gestation.",
+    "children_notes": "Children under 5 account for majority of malaria deaths in Uganda. Beware of rapid progression from mild fever to cerebral malaria within hours.",
+    "hiv_notes": "Patients with HIV on ART have increased risk of treatment failure and drug interactions. Artemether/Lumefantrine is safe with first-line TDF+3TC+DTG.",
     "full_content": "2.5.2 Malaria\t\nICD10 CODE: B50\nMalaria is an acute febrile illness caused by infection with Plasmodium \nparasites and is transmitted from person to person by an infected female \nanopheles mosquito.\n\n\nCause\n \n•  There are five Plasmodium species of malaria parasites which \ninfect humans namely: P. falciparum, P. vivax, P. ovale, P. malariae \nand P. knowlesi.\n \n•  P. falciparum is the most virulent and also the most common \nmalaria parasite in Uganda.\nClinical Features of Malaria\n \n•  It may be asymptomatic, mild illness (uncomplicated malaria) or \nsevere illness (severe malaria)\n \n•  Intermittent fever is the most characteristic symptom of malaria. \nThree classical stages can be distinguished in a typical attack of \nmalaria:\n \n•  The cold stage: the patient feels cold and shivers\n \n•  The hot stage: the patient feels hot\n \n•  The sweating stage: associated with sweating and relief of \nsymptoms.\n \n•  A complete physical examination has to be performed in any patient \npresenting with fever or history of fever.\n \n•  When people are frequently exposed to malaria, they develop \npartial immunity. In such people, the classical stages of a malaria \nattack above may not be observed.\n \n•  Also, in people who have had partial treatment with antimalarial \nmedicines, these classical stages may not be pronounced."
   },
   {
@@ -4522,23 +4606,63 @@
     "chapter_color": "#f97316",
     "priority": "",
     "is_category": false,
-    "icd_code": "",
+    "icd_code": "B50.9",
     "definition": "Common symptoms/signs of uncomplicated malaria\n \n• \nFever: above 37.5°C (taken from the axilla ) or history of \nfever.\n \n• \nLoss of appetite, mild vomiting, diarrhoea\n \n• \nWeakness, headache, joint and muscle pain\n \n• \nMild anaemia (mild pallor of palms and mucous mem­\nbranes); occurs commonly in children.\n \n• \nMild dehydration\n\n\n \n• \nEnlarged spleen (in acute malaria it may be minimally en­\nlarged, soft and mildly tender)",
-    "overview": "Common symptoms/signs of uncomplicated malaria\n \n• \nFever: above 37.5°C (taken from the axilla ) or history of \nfever.\n \n• \nLoss of appetite, mild vomiting, diarrhoea\n \n• \nWeakness, headache, joint and muscle pain\n \n• \nMild anaemia (mild pallor of palms and mucous mem­\nbranes); occurs commonly in children.\n \n• \nMild dehydration\n\n\n \n• \nEnlarged spleen (in acute malaria it may be minimally en­\nlarged, soft and mildly tender)",
+    "overview": "Uncomplicated malaria is defined as symptomatic malaria without signs of severity or evidence of vital organ dysfunction. It is caused primarily by Plasmodium falciparum in Uganda (as well as P. vivax, P. ovale, P. malariae). All suspected malaria cases MUST have parasitological confirmation by mRDT or blood slide microscopy before initiating treatment.",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
-    "signs": [],
+    "symptoms": [
+      "Fever: axillary temperature > 37.5°C or history of fever in the past 24-48 hours",
+      "Chills and rigors (cold stage followed by hot stage and sweating)",
+      "Headache, generalised body weakness and fatigue",
+      "Loss of appetite (anorexia), mild nausea, vomiting",
+      "Joint pains (arthralgia) and muscle aches (myalgia)",
+      "Abdominal discomfort, mild diarrhoea (especially in children)"
+    ],
+    "signs": [
+      "Elevated body temperature (> 37.5°C)",
+      "Mild pallor of palms and mucous membranes (mild anaemia, common in children)",
+      "Mild dehydration (thirst, dry tongue)",
+      "Enlarged spleen / splenomegaly (soft, minimally enlarged, mildly tender in acute attack)",
+      "Absence of any danger signs or manifestations of severe malaria"
+    ],
     "clinical_features_text": "",
-    "investigations": "",
-    "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
-    "children_notes": "",
-    "hiv_notes": "",
+    "investigations": "MANDATORY TESTING BEFORE TREATMENT:\n[HC2] Malaria Rapid Diagnostic Test (mRDT):\n- Reliable, fast antigen-detection test.\n- Mandatory for all patients presenting with fever or history of fever before antimalarial administration.\n- Note: mRDT detects HRP-2 / pLDH antigen and may remain positive for 2-3 weeks after successful treatment.\n\n[HC3] Thick and Thin Blood Smear (BS) for Microscopy:\n- Thick film: highly sensitive for parasite detection and parasite density quantification.\n- Thin film: used for Plasmodium species identification (P. falciparum, P. malariae, P. ovale, P. vivax).\n- Specifically recommended over RDT in:\n  1. Patients who completed antimalarial treatment but symptoms persist.\n  2. Patients who completed treatment but present again within 3 weeks.\n  3. Patients with severe disease or suspected treatment failure.\n  4. RDT-negative patients where malaria is strongly suspected without other evident cause.\n\nOther tests if clinically indicated:\n- Random Blood Sugar (RBS): check for hypoglycaemia (especially in children and pregnant women).\n- Complete Blood Count (CBC) / Haemoglobin: assess degree of anaemia.\n- Urinalysis: rule out urinary tract infection.",
+    "lab_tests": [
+      "Malaria Rapid Diagnostic Test (mRDT)",
+      "Blood Slide (BS) for Malaria",
+      "Blood Glucose (Random/Fasting)",
+      "Complete Blood Count (CBC)",
+      "Urinalysis / Urine Dipstick"
+    ],
+    "treatment": "UGANDA NATIONAL MALARIA TREATMENT POLICY: UNCOMPLICATED MALARIA\n\nFIRST-LINE TREATMENT:\n[HC2] Artemether / Lumefantrine (AL) 20/120 mg tablets (6-dose regimen over 3 days):\n- Weight < 14 kg (approx. 5 months to 3 years):\n  • Day 1: 1 tablet at 0 hours, then 1 tablet at 8 hours\n  • Day 2: 1 tablet twice daily (morning and evening, 12 hours apart)\n  • Day 3: 1 tablet twice daily (morning and evening, 12 hours apart) - Total: 6 tablets\n- Weight 15 – 24 kg (approx. 3 to 8 years):\n  • Day 1: 2 tablets at 0 hours, then 2 tablets at 8 hours\n  • Day 2: 2 tablets twice daily (every 12 hours)\n  • Day 3: 2 tablets twice daily (every 12 hours) - Total: 12 tablets\n- Weight 25 – 34 kg (approx. 8 to 12 years):\n  • Day 1: 3 tablets at 0 hours, then 3 tablets at 8 hours\n  • Day 2: 3 tablets twice daily (every 12 hours)\n  • Day 3: 3 tablets twice daily (every 12 hours) - Total: 18 tablets\n- Weight >= 35 kg & Adults (> 12 years):\n  • Day 1: 4 tablets at 0 hours, then 4 tablets at 8 hours\n  • Day 2: 4 tablets twice daily (every 12 hours)\n  • Day 3: 4 tablets twice daily (every 12 hours) - Total: 24 tablets\n* Administration Note: Take each dose with a meal or milk to enhance the absorption of lumefantrine. If vomiting occurs within 30 minutes, repeat the full dose; if between 30-60 minutes, repeat half dose.\n\nFIRST-LINE ALTERNATIVE:\n[HC2] Artesunate / Amodiaquine (ASAQ) fixed-dose once daily for 3 days:\n- 0 – 11 months: Artesunate 25 mg + Amodiaquine 76 mg (1/2 tab) daily x 3 days\n- 1 – 6 years: Artesunate 50 mg + Amodiaquine 153 mg (1 tab) daily x 3 days\n- 7 – 13 years: Artesunate 100 mg + Amodiaquine 306 mg (2 tabs) daily x 3 days\n- > 13 years: Artesunate 200 mg + Amodiaquine 612 mg (4 tabs) daily x 3 days\n\nSECOND-LINE TREATMENT (Treatment Failure within 14-28 days):\n[HC3] Dihydroartemisinin / Piperaquine (DHAP) once daily for 3 days, OR:\n[HC3] Oral Quinine tablets 10 mg salt/kg (max 600 mg) 8-hourly for 7 full days.\n\nSUPPORTIVE & SYMPTOMATIC CARE:\n[HC2] Paracetamol 10-15 mg/kg orally every 6-8 hours (adults: 1 g every 6-8 hours, max 4 g/day) for high fever and pain.\n[HC2] Oral Rehydration Salts (ORS) and encourage abundant fluid intake and normal feeding.\n[HC2] Tepid sponging with lukewarm water for children with temperature > 38.5°C.",
+    "medications": [
+      {
+        "drug": "Artemether / Lumefantrine 20/120 mg",
+        "dose": "Weight-based 6-dose regimen at 0h, 8h, 24h, 36h, 48h, 60h with food"
+      },
+      {
+        "drug": "Artesunate / Amodiaquine (ASAQ)",
+        "dose": "Age-based fixed-dose once daily for 3 days"
+      },
+      {
+        "drug": "Dihydroartemisinin / Piperaquine (DHAP)",
+        "dose": "Once daily for 3 days (second line)"
+      },
+      {
+        "drug": "Quinine sulphate tablets",
+        "dose": "10 mg/kg 8-hourly for 7 days (second line alternative)"
+      },
+      {
+        "drug": "Paracetamol tablets / syrup",
+        "dose": "10-15 mg/kg every 6-8 hours for fever"
+      }
+    ],
+    "prevention": "- Sleep under an Insecticide-Treated Mosquito Net (ITN/LLIN) every night.\n- Indoor Residual Spraying (IRS) of houses where implemented.\n- Environmental sanitation: eliminate standing water, clear bushes around domestic dwellings.\n- Intermittent Preventive Treatment in pregnancy (IPTp): Sulfadoxine-Pyrimethamine (SP) monthly from 13 weeks until delivery.",
+    "referral": "REFER URGENTLY TO HOSPITAL / HC4 IF ANY DANGER SIGNS OCCUR:\n- Inability to drink or breastfeed, or vomiting everything.\n- Repeated convulsions or twitching.\n- Lethargy, drowsiness, confusion, coma, or inability to sit/stand.\n- Fast breathing, chest indrawing, or respiratory distress.\n- Severe jaundice, dark/coca-cola urine, or spontaneous bleeding.\n* Pre-referral care: Give single dose of Rectal Artesunate (100 mg for age <3 years, 200 mg for 3-6 years) or IM Artesunate 2.4 mg/kg before immediate transport.",
+    "pregnancy_notes": "In the 1st trimester, use ACT currently recommended by MoH or Quinine 10 mg/kg 8-hourly for 7 days. In the 2nd and 3rd trimesters, Artemether/Lumefantrine is first-line. Ensure prompt treatment to prevent maternal anaemia, low birth weight, and miscarriage.",
+    "children_notes": "Children under 5 are at highest risk of rapid progression to severe malaria. Accurately weigh child to determine correct AL dose. Dissolve dispersible tablets in clean water or milk. If child vomits within 30 minutes, re-administer full dose.",
+    "hiv_notes": "Patients on Efavirenz or Protease Inhibitors require close monitoring due to pharmacokinetic drug interactions with lumefantrine and artemether. Artemether/Lumefantrine remains safe and effective.",
     "full_content": "2.5.2.1 Uncomplicated Malaria                     ICD 10 CODE: B50.9\nCommon symptoms/signs of uncomplicated malaria\n \n• \nFever: above 37.5°C (taken from the axilla ) or history of \nfever.\n \n• \nLoss of appetite, mild vomiting, diarrhoea\n \n• \nWeakness, headache, joint and muscle pain\n \n• \nMild anaemia (mild pallor of palms and mucous mem­\nbranes); occurs commonly in children.\n \n• \nMild dehydration\n\n\n \n• \nEnlarged spleen (in acute malaria it may be minimally en­\nlarged, soft and mildly tender)"
   },
   {
@@ -6434,22 +6558,81 @@
     "chapter_icon": "🔴",
     "chapter_color": "#ec4899",
     "priority": "",
-    "is_category": true,
+    "is_category": false,
     "icd_code": "",
-    "definition": "See section 14.1.2",
-    "overview": "See section 14.1.2",
-    "causes": [],
-    "causes_text": "",
-    "symptoms": [],
-    "signs": [],
-    "clinical_features_text": "",
-    "investigations": "",
+    "definition": "Infection (usually ascending from the vagina) occurring in the uterus, ovary, \nor uterine tubes and leading to salpingitis, endometritis, pelvic peritonitis \nor formation of tubal ovarian abscess.",
+    "overview": "Infection (usually ascending from the vagina) occurring in the uterus, ovary, \nor uterine tubes and leading to salpingitis, endometritis, pelvic peritonitis \nor formation of tubal ovarian abscess.\nRisk factors\n \n• \nPrevious pelvic inflammatory disease infections\n \n• \nPresence of bacterial vaginosis\n \n• \nMultiple or new sexual partners\nHistory of STIs in the patient or her partner\n \n• \nHistory of abortion\n \n• \nYoung age of less than 25 years\n \n• \nPostpartum endometritis\nCauses\n \n• \nOften due to multiple pathogens: Neisseria gonorrhoea, \nChlamydia trachomatis, Mycoplasma, Gardnerella, Bacte­\nroids, Gram-negative bacilli, e.g. Escherichia coli",
+    "causes": [
+      "Risk factors",
+      "Previous pelvic inflammatory disease infections",
+      "Presence of bacterial vaginosis",
+      "Multiple or new sexual partners",
+      "History of STIs in the patient or her partner",
+      "History of abortion",
+      "Young age of less than 25 years",
+      "Postpartum endometritis",
+      "Causes",
+      "Often due to multiple pathogens: Neisseria gonorrhoea,",
+      "Chlamydia trachomatis, Mycoplasma, Gardnerella, Bacte­",
+      "roids, Gram-negative bacilli, e.g. Escherichia coli"
+    ],
+    "causes_text": "Risk factors\n \n• \nPrevious pelvic inflammatory disease infections\n \n• \nPresence of bacterial vaginosis\n \n• \nMultiple or new sexual partners\nHistory of STIs in the patient or her partner\n \n• \nHistory of abortion\n \n• \nYoung age of less than 25 years\n \n• \nPostpartum endometritis\n\nCauses\n \n• \nOften due to multiple pathogens: Neisseria gonorrhoea, \nChlamydia trachomatis, Mycoplasma, Gardnerella, Bacte­\nroids, Gram-negative bacilli, e.g. Escherichia coli",
+    "symptoms": [
+      "Pain in lower abdomen (usually <2 weeks) PLUS",
+      "Dysuria, fever",
+      "Vaginal discharge: could be smelly and mixed with pus",
+      "Painful sexual intercourse (dysperunia)",
+      "Cervical motion tenderness: vaginal examination will pro­",
+      "duce tenderness when the cervix is moved",
+      "Abnormal uterine bleeding",
+      "If severe",
+      "Swellings may be felt if there is pus in the tubes or pelvic",
+      "abscess"
+    ],
+    "signs": [
+      "Complications of PID",
+      "Infertility",
+      "Ectopic pregnancy",
+      "Chronic pelvic pain",
+      "Do Not Treat Chronic Pelvic Pain With Antibiotics"
+    ],
+    "clinical_features_text": "Clinical features\n \n• \nPain in lower abdomen (usually <2 weeks) PLUS\n \n• \nDysuria, fever\n \n• \nVaginal discharge: could be smelly and mixed with pus\n \n• \nPainful sexual intercourse (dysperunia)\n \n• \nCervical motion tenderness: vaginal examination will pro­\nduce tenderness when the cervix is moved\n \n• \nAbnormal uterine bleeding\nIf severe\n \n• \nSwellings may be felt if there is pus in the tubes or pelvic \nabscess\n \n•\n\nSigns of peritonitis (rebound tenderness)\nComplications of PID\n \n• \nInfertility\n \n• \nEctopic pregnancy\n \n• \nChronic pelvic pain\nDo Not Treat Chronic Pelvic Pain With Antibiotics",
+    "investigations": "Differential diagnosis\n \n• \nEctopic pregnancy, threated abortion\n \n• \nOvulation pain\n \n• \nAcute appendicitis\n \n• \nComplicated or twisted ovarian cyst\n \n• \nCancer of the cervix\n\nInvestigations\n \n\nSpeculum examination\n \n\nPregnancy test\n \n\nPus swab: For C&S. Thespeculum protects the sampling item; \nsample  is from endocervix, aspirate from  endometrial cavity/\ncurretings  or an aspirate through the posterior pouch\n \n\nUltrasound (if available) for detection of tubo ovarian masses, \nfree fluid, peritonitis",
     "lab_tests": [],
-    "treatment": "",
-    "medications": [],
+    "treatment": "Management\nTREATMENT\n\nLOC\nTreatment is based on a combination of medicines that cover \nthe multiple microorganisms involved.\nOutpatient treatment\n\t\n• \nCeftriaxone 250 mg IM (or cefixime 400 mg stat if \nceftriaxone is not available)\n\t\n• \nPlus doxycycline 100 mg orally every 12 hours for 14 days\n\t\n• \nPlus metronidazole 400 mg twice daily orally for 14 days\n\t\n• \nTreat sexual partners as for urethral discharge syndrome \nto avoid re-infection\n\nTREATMENT\nLOC\n\t\n• \nIn pregnancy, use erythromycin 500 mg every 6 hours \nfor 14 days instead of doxycycline\n\t\n• \nIf severe or not improving after 7 days\n\t\n• \nRefer for ultrasound scan and parenteral treatment \n\t\n• \nCeftriaxone 1 g IV daily plus metronidazole 500 mg IV \nevery 8 hours until clinical improvement,\n\t\n• \nthen continue oral regimen as above\nHC3\nHC4\nNotes\n \n•  All women with PID should be tested for HIV\n \n•  Abstain from sex or use barrier methods during the \ncourse of treatment\n \n•  Do not take alcohol when taking metronidazole\n \n•  Avoid sex during menstrual period and for 6 weeks \nafter an abortion\n \n•  In IUD users with PID, the IUD need not be removed. \nHowever, if there is no clinical improvement within 48–72 \nhours of initiating treatment, providers should consider \nremoving the IUD and help patient choose an alternative \ncontraceptive method (see chapter 15)",
+    "medications": [
+      {
+        "drug": "Ceftriaxone",
+        "dose": "250 mg IM"
+      },
+      {
+        "drug": "Cefixime",
+        "dose": "400 mg stat"
+      },
+      {
+        "drug": "Plus doxycycline",
+        "dose": "100 mg oral"
+      },
+      {
+        "drug": "Plus metronidazole",
+        "dose": "400 mg twice"
+      },
+      {
+        "drug": "Use erythromycin",
+        "dose": "500 mg every 6 hours"
+      },
+      {
+        "drug": "Ceftriaxone",
+        "dose": "1 g IV"
+      },
+      {
+        "drug": "Plus metronidazole",
+        "dose": "500 mg IV"
+      }
+    ],
     "prevention": "",
     "referral": "",
-    "pregnancy_notes": "",
+    "pregnancy_notes": "pregnancy\n \n• \nChronic pelvic pain\nDo Not Treat Chronic Pelvic Pain With Antibiotics",
     "children_notes": "",
     "hiv_notes": "",
     "full_content": "3.2.3 Pelvic Inflammatory Disease (PID)\nSee section 14.1.2"
@@ -6796,36 +6979,65 @@
   {
     "id": "dis_3_2_8_2",
     "section": "3.2.8.2",
-    "name": "Painful Scrotal Swelling",
+    "name": "Painful Scrotal Swelling (Epididymo-orchitis)",
     "chapter_num": "3",
     "chapter": "HIV/AIDS & STIs",
     "chapter_icon": "🔴",
     "chapter_color": "#ec4899",
     "priority": "",
     "is_category": false,
-    "icd_code": "ICD10 CODE: N45",
+    "icd_code": "N45",
     "definition": "• \nInflammation of epididymis and testis",
-    "overview": "• \nInflammation of epididymis and testis\nCauses\n\t\n• \nUsually caused by N. gonorrhoea, Chlamydia\n\t\n•",
+    "overview": "Acute painful scrotal swelling is inflammation of the epididymis and/or testis (epididymo-orchitis). In sexually active men aged < 35 years, it is predominantly a Sexually Transmitted Infection caused by Neisseria gonorrhoeae and Chlamydia trachomatis. In men > 35 years or boys, it is commonly caused by urinary tract coliforms (E. coli) secondary to bladder outlet obstruction. Must be urgently differentiated from Testicular Torsion.",
     "causes": [
       "Causes",
       "Usually caused by N. gonorrhoea, Chlamydia"
     ],
     "causes_text": "Causes\n\t\n• \nUsually caused by N. gonorrhoea, Chlamydia\n\t\n•",
     "symptoms": [
-      "Acute painful and tender unilateral swelling of epididymus and testis,",
-      "with or without urethral discharge"
+      "Scrotal pain, usually unilateral, with gradual onset over hours to days",
+      "Scrotal swelling, redness, and marked tenderness",
+      "Urethral discharge (purulent or mucoid) in sexually transmitted cases",
+      "Dysuria, urinary frequency, and urgency",
+      "Fever, chills, and malaise"
     ],
-    "signs": [],
+    "signs": [
+      "Enlarged, tense, exquisitely tender epididymis and/or testis",
+      "Erythema and oedema of the overlying scrotal skin",
+      "Prehn's sign positive: physical elevation of the affected scrotum relieves pain (usually negative in testicular torsion)",
+      "Normal cremasteric reflex present (usually absent in testicular torsion)"
+    ],
     "clinical_features_text": "Clinical features\n\t\n• \nAcute painful and tender unilateral swelling of epididymus and testis, \nwith or without urethral discharge",
-    "investigations": "Differential diagnosis\n \n• \nAcute testicular torsion\n \n• \nScrotal hernia, tumors",
-    "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
-    "children_notes": "",
-    "hiv_notes": "",
+    "investigations": "DIAGNOSTIC CRITERIA:\n[HC2] Clinical syndromic assessment:\n- Distinguish between gradual onset (epididymitis) and SUDDEN catastrophic onset < 6 hours (Testicular Torsion - surgical emergency!).\n\n[HC3] Laboratory:\n- Gram stain of urethral discharge: intracellular Gram-negative diplococci confirm N. gonorrhoeae.\n- Urinalysis / Urine dipstick: pyuria (leukocyte esterase) and nitrites indicate urinary tract involvement.\n- Urine microscopy and culture.\n\n[Hospital] Imaging:\n- Doppler Ultrasound of scrotum: shows increased blood flow in epididymo-orchitis vs ABSENT blood flow in testicular torsion.",
+    "lab_tests": [
+      "Gram Stain",
+      "Urinalysis / Urine Dipstick",
+      "Urine Microscopy & Culture"
+    ],
+    "treatment": "UGANDA CLINICAL GUIDELINES STI SYNDROMIC MANAGEMENT:\n\n1. PHARMACOLOGICAL REGIMEN FOR SEXUALLY ACTIVE MALES (< 35 YEARS):\n[HC2] Dual antibiotic therapy covering both Gonorrhoea and Chlamydia:\n- Ceftriaxone 250 mg IM single dose stat PLUS\n- Doxycycline 100 mg orally twice daily (every 12 hours) for 14 days.\n* If Doxycycline contraindicated: Azithromycin 1 g orally stat followed by 500 mg daily for 7 days.\n\n2. PHARMACOLOGICAL REGIMEN FOR OLDER MEN (> 35 YEARS / COLIFORM INFECTION):\n[HC3] Ciprofloxacin 500 mg orally twice daily for 10-14 days, OR:\n[HC3] Co-trimoxazole (TMP/SMX) 960 mg orally twice daily for 14 days.\n\n3. SUPPORTIVE MEASURES:\n[HC2] Bed rest during acute phase.\n[HC2] Scrotal elevation and support with a tight scrotal bandage or athletic supporter to relieve tension and pain.\n[HC2] Analgesia: Ibuprofen 400 mg orally 8-hourly or Paracetamol 1 g 8-hourly.\n[HC2] Ice pack application for 15 minutes several times a day in the first 48 hours.",
+    "medications": [
+      {
+        "drug": "Ceftriaxone IM injection",
+        "dose": "250 mg IM stat single dose"
+      },
+      {
+        "drug": "Doxycycline capsules",
+        "dose": "100 mg orally twice daily for 14 days"
+      },
+      {
+        "drug": "Ciprofloxacin tablets",
+        "dose": "500 mg orally twice daily for 10-14 days (non-STI / older males)"
+      },
+      {
+        "drug": "Ibuprofen tablets",
+        "dose": "400 mg orally 8-hourly after food"
+      }
+    ],
+    "prevention": "- Notification and presumptive syndromic treatment of all sexual partners within the past 60 days.\n- Consistent and correct condom use.\n- Abstain from sexual intercourse until the patient and partners complete therapy and symptoms resolve.",
+    "referral": "EMERGENCY SURGICAL REFERRAL: If sudden onset of severe scrotal pain (< 6 hours duration), especially in adolescents, testicular torsion CANNOT be ruled out. Transfer immediately to hospital with surgical facilities without delay (testicle non-viable after 6 hours). Also refer if abscess or no improvement after 72 hours of antibiotics.",
+    "pregnancy_notes": "Female sexual partners must be screened and treated for Gonorrhoea and Chlamydia (using Cefixime/Ceftriaxone + Azithromycin or Erythromycin; avoid Doxycycline in pregnancy).",
+    "children_notes": "In pre-pubertal boys, acute scrotal pain is Testicular Torsion or Torsion of the appendix testis until proven otherwise. Immediate surgical exploration required.",
+    "hiv_notes": "Screen for other STIs (HIV and Syphilis). HIV-positive men have higher risk of fungal or tuberculous epididymitis.",
     "full_content": "3.2.8.2\t Painful Scrotal Swelling\t                ICD10 CODE: N45\n \n• \nInflammation of epididymis and testis\nCauses\n\t\n• \nUsually caused by N. gonorrhoea, Chlamydia\n\t\n• \nClinical features\n\t\n• \nAcute painful and tender unilateral swelling of epididymus and testis, \nwith or without urethral discharge\n Differential diagnosis\n \n• \nAcute testicular torsion\n \n• \nScrotal hernia, tumors"
   },
   {
@@ -8540,16 +8752,16 @@
   {
     "id": "dis_5_2_9",
     "section": "5.2.9",
-    "name": "Pneumonia",
+    "name": "Pneumonia (Adults & Children Comprehensive Protocol)",
     "chapter_num": "5",
     "chapter": "Respiratory Diseases",
     "chapter_icon": "🫁",
     "chapter_color": "#06b6d4",
     "priority": "",
     "is_category": false,
-    "icd_code": "ICD10 CODE: J13-18",
+    "icd_code": "J13-18",
     "definition": "Acute infection and inflammation of the lungs alveoli. There are two \nmajor types:\n \n• \nBronchopneumonia: involves both the lung parenchyma \nand the bronchi. Common in children and the elderly\n \n• \nLobar pneumonia: involves one or more lobes of the lung. \nCommon in young people",
-    "overview": "Acute infection and inflammation of the lungs alveoli. There are two \nmajor types:\n \n• \nBronchopneumonia: involves both the lung parenchyma \nand the bronchi. Common in children and the elderly\n \n• \nLobar pneumonia: involves one or more lobes of the lung. \nCommon in young people\nCauses\nCausative agents can be viral, bacterial or parasitic. Pathogens vary \naccording  to  age, patient’s  condition and whether infection was ac­\nquired in the community or hospital (Gram negative are more common \nin hospital).\n \n• \nNeonates: group B streptococcus, Klebsiella, E.coli, Chla­\nmydia and S. aureus\n \n• \nChildren <5 years: Pneumococcus, Haemophilus influen­\nzae, less frequently: S. aureus, M. catarrhalis, M. Pneumo­\nniae, viruses (RSV, influenza, measles)\n \n• \nAdults and children >5 years: most commonly S.pneumo­\n\n\nniae, followed by atypical bacteria, e.g. Mycloplasma pneu­\nmoniae, viruses\n \n• \nImmunosuppressed: Pneumocystis (in HIV infected)\nPredisposing factors\n \n• \nMalnutrition\n \n• \nOld age\n \n• \nImmunosuppression (HIV, cancer, alcohol dependence)\n \n• \nMeasles, pertussis\n \n• \nPre-existing lung or heart diseases, diabetes",
+    "overview": "Pneumonia is an acute infection of the lung parenchyma (alveoli and distal airways) caused by bacteria, viruses, or fungi. In Uganda, major bacterial pathogens include Streptococcus pneumoniae, Haemophilus influenzae, Staphylococcus aureus, Klebsiella pneumoniae, and atypical organisms (Mycoplasma, Chlamydia). Pneumonia is a leading killer of children under 5 years.",
     "causes": [
       "Causes",
       "Causative agents can be viral, bacterial or parasitic. Pathogens vary",
@@ -8574,23 +8786,61 @@
     ],
     "causes_text": "Causes\nCausative agents can be viral, bacterial or parasitic. Pathogens vary \naccording  to  age, patient’s  condition and whether infection was ac­\nquired in the community or hospital (Gram negative are more common \nin hospital).\n \n• \nNeonates: group B streptococcus, Klebsiella, E.coli, Chla­\nmydia and S. aureus\n \n• \nChildren <5 years: Pneumococcus, Haemophilus influen­\nzae, less frequently: S. aureus, M. catarrhalis, M. Pneumo­\nniae, viruses (RSV, influenza, measles)\n \n• \nAdults and children >5 years: most commonly S.pneumo­\n\n\nniae, followed by atypical bacteria, e.g. Mycloplasma pneu­\nmoniae, viruses\n \n• \nImmunosuppressed: Pneumocystis (in HIV infected)\n\nPredisposing factors\n \n• \nMalnutrition\n \n• \nOld age\n \n• \nImmunosuppression (HIV, cancer, alcohol dependence)\n \n• \nMeasles, pertussis\n \n• \nPre-existing lung or heart diseases, diabetes",
     "symptoms": [
-      "complications"
+      "Cough (may be productive of purulent, rusty, or green sputum in older children and adults)",
+      "Fast breathing (tachypnoea) and shortness of breath (dyspnoea)",
+      "Fever, chills, and rigors",
+      "Pleuritic chest pain (worse on deep inspiration or coughing)",
+      "Inability to feed, lethargy, or grunting in young infants"
     ],
-    "signs": [],
+    "signs": [
+      "Tachypnoea (fast breathing): > 60 bpm in <2 months; > 50 bpm in 2-11 months; > 40 bpm in 1-5 years; > 20 bpm in adults",
+      "Chest indrawing (subcostal / intercostal recession) indicating severe respiratory distress",
+      "Stridor in calm child, nasal flaring, and central cyanosis",
+      "Auscultation: bronchial breath sounds, coarse crackles / crepitations, localized wheezing",
+      "Percussion: dullness over consolidated lung fields or pleural effusion"
+    ],
     "clinical_features_text": "",
-    "investigations": "Investigations\nIf facilities are available\n\t\n• \nDo a chest X-ray and look for complications, e.g.\n \n- Pneumothorax, pyothorax\n \n- Pneumonitis suggestive of pneumocystis jiroveci pneumonia \n(PCP)\n \n- Pneumatocoeles (cavities filled with air) suggestive of \nstaphylococcal pneumonia\n \n\nSputum: For Gram stain, Ziehl-Neelsen (ZN) stain, culture     for \nAFB\n \n\nBlood: Complete blood count",
+    "investigations": "DIAGNOSTIC CRITERIA & INVESTIGATIONS:\n[HC2] Clinical Assessment & Pulse Oximetry:\n- Measure respiratory rate for a full 60 seconds when calm.\n- Pulse Oximetry: measure SpO2 (SpO2 < 90% in children or < 92% in adults indicates severe pneumonia requiring oxygen).\n\n[HC3] Basic Laboratory:\n- Full Blood Count (FBC): neutrophilic leukocytosis indicates bacterial pneumonia.\n- Sputum microscopy, Gram stain, and culture in older children and adults.\n- GeneXpert MTB/RIF: rule out pulmonary tuberculosis in persistent cough > 2 weeks.\n- Blood glucose and HIV testing.\n\n[HC4/Hospital] Imaging:\n- Chest X-Ray (AP and Lateral): reveals lobar consolidation, patchy bronchopneumonia, cavitations, pneumatoceles (staphylococcal), or pleural effusion / empyema.",
     "lab_tests": [
+      "Pulse Oximetry (SpO2)",
       "Complete Blood Count (CBC)",
       "Chest X-Ray (CXR)",
-      "Gram Stain"
+      "Sputum GeneXpert (TB)",
+      "Gram Stain",
+      "Blood Culture & Sensitivity"
     ],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
-    "children_notes": "in children and the elderly\n \n• \nLobar pneumonia: involves one or more lobes of the lung.",
-    "hiv_notes": "in HIV infected)\nPredisposing factors\n \n•",
+    "treatment": "UGANDA CLINICAL GUIDELINES MANAGEMENT PROTOCOL:\n\n1. INFANTS UNDER 2 MONTHS (Always classified as Severe - Hospitalise):\n[HC4] First-line: Ampicillin 50 mg/kg IV/IM every 8 hours PLUS Gentamicin 5 mg/kg IV/IM once daily for 7-10 days.\n[Hospital] Alternative: Benzylpenicillin 50,000 IU/kg IV/IM every 6-8 hours + Gentamicin.\n[Hospital] Second-line: Ceftriaxone 50 mg/kg IV once daily.\n\n2. CHILDREN AGED 2 MONTHS TO 5 YEARS:\nA. Non-Severe Pneumonia (Fast breathing WITHOUT chest indrawing or danger signs):\n[HC2] First-line: Amoxicillin Dispersible Tablets (DT) 40-50 mg/kg/dose orally twice daily (every 12 hours) for 5 days:\n  • 2 – 11 months (4 - < 10 kg): 250 mg (1 tab of 250mg) twice daily x 5 days\n  • 12 months – 3 years (10 - < 14 kg): 500 mg (2 tabs of 250mg) twice daily x 5 days\n  • 3 – 5 years (14 – 19 kg): 750 mg (3 tabs of 250mg) twice daily x 5 days\nB. Severe Pneumonia (Chest indrawing, nasal flaring, grunting, SpO2 < 90%, or danger signs):\n[HC4] First-line: Ampicillin 50 mg/kg IV/IM every 6 hours PLUS Gentamicin 7.5 mg/kg IV/IM once daily for 5 days.\n[Hospital] Second-line (or if failure to improve in 48 hours): Ceftriaxone 80 mg/kg IV/IM once daily.\n[HC3/HC4] Oxygen Therapy: via nasal prongs at 1-2 L/min to maintain SpO2 >= 90%.\n\n3. CHILDREN > 5 YEARS AND ADULTS:\nA. Ambulatory / Mild to Moderate Pneumonia:\n[HC2] Amoxicillin 500 mg - 1 g orally every 8 hours for 5-7 days, OR:\n[HC2] Azithromycin 500 mg orally once daily for 3 days (or Erythromycin 500 mg 6-hourly).\nB. Severe / Hospitalised Community-Acquired Pneumonia:\n[HC4] Benzylpenicillin 2 - 4 Mega Units (MU) IV every 6 hours (or Ampicillin 1-2 g IV 6-hourly) PLUS Gentamicin 5 mg/kg IV daily, OR:\n[Hospital] Ceftriaxone 1 - 2 g IV once daily for 7-10 days.\nC. Atypical / Staphylococcal Pneumonia (post-measles, pneumatoceles):\n[HC4] Cloxacillin 25-50 mg/kg IV/IM every 6 hours (adults: 1-2 g IV 6-hourly) PLUS Gentamicin.",
+    "medications": [
+      {
+        "drug": "Amoxicillin Dispersible Tablets (DT)",
+        "dose": "40-50 mg/kg/dose twice daily for 5 days (children)"
+      },
+      {
+        "drug": "Amoxicillin capsules / tablets",
+        "dose": "500 mg - 1 g orally 8-hourly for 5-7 days (adults)"
+      },
+      {
+        "drug": "Ampicillin IV/IM injection",
+        "dose": "50 mg/kg 6-hourly (children); 1-2 g 6-hourly (adults)"
+      },
+      {
+        "drug": "Gentamicin IV/IM injection",
+        "dose": "5 - 7.5 mg/kg IV once daily"
+      },
+      {
+        "drug": "Ceftriaxone IV/IM injection",
+        "dose": "80 mg/kg daily (children); 1-2 g IV daily (adults)"
+      },
+      {
+        "drug": "Azithromycin tablets",
+        "dose": "500 mg once daily for 3-5 days"
+      }
+    ],
+    "prevention": "- Routine childhood immunisation: PCV (Pneumococcal Conjugate Vaccine) at 6, 10, 14 weeks; Hib (Pentavalent); Measles vaccine at 9 and 18 months.\n- Exclusive breastfeeding for the first 6 months of life.\n- Adequate complementary feeding and vitamin A supplementation.\n- Reduce indoor air pollution (avoid indoor biomass cooking smoke).\n- Hand hygiene and infection prevention in healthcare settings.",
+    "referral": "Refer urgently to HC4/Hospital if patient has: severe chest indrawing, stridor in calm child, oxygen saturation SpO2 < 90%, inability to drink/breastfeed, altered consciousness, or failure of oral amoxicillin after 48 hours.",
+    "pregnancy_notes": "Pneumonia in pregnancy carries increased risk of maternal hypoxia and preterm labor. Use Penicillins, Ceftriaxone, or Erythromycin/Azithromycin. Avoid Doxycycline and Fluoroquinolones.",
+    "children_notes": "Fast breathing pneumonia in children 2-59 months is treated with high-dose dispersible Amoxicillin at home. Advise mother to bring child back immediately if breathing becomes difficult or child cannot drink.",
+    "hiv_notes": "In HIV-infected patients, consider Pneumocystis jirovecii Pneumonia (PCP) and Tuberculosis. If PCP suspected, treat with high-dose Co-trimoxazole (TMP 15-20 mg/kg/day + SMX 75-100 mg/kg/day) + Prednisolone for 21 days.",
     "full_content": "5.2.9 Pneumonia                 ICD10 CODE: J13-18\nAcute infection and inflammation of the lungs alveoli. There are two \nmajor types:\n \n• \nBronchopneumonia: involves both the lung parenchyma \nand the bronchi. Common in children and the elderly\n \n• \nLobar pneumonia: involves one or more lobes of the lung. \nCommon in young people\nCauses\nCausative agents can be viral, bacterial or parasitic. Pathogens vary \naccording  to  age, patient’s  condition and whether infection was ac­\nquired in the community or hospital (Gram negative are more common \nin hospital).\n \n• \nNeonates: group B streptococcus, Klebsiella, E.coli, Chla­\nmydia and S. aureus\n \n• \nChildren <5 years: Pneumococcus, Haemophilus influen­\nzae, less frequently: S. aureus, M. catarrhalis, M. Pneumo­\nniae, viruses (RSV, influenza, measles)\n \n• \nAdults and children >5 years: most commonly S.pneumo­\n\n\nniae, followed by atypical bacteria, e.g. Mycloplasma pneu­\nmoniae, viruses\n \n• \nImmunosuppressed: Pneumocystis (in HIV infected)\nPredisposing factors\n \n• \nMalnutrition\n \n• \nOld age\n \n• \nImmunosuppression (HIV, cancer, alcohol dependence)\n \n• \nMeasles, pertussis\n \n• \nPre-existing lung or heart diseases, diabetes\nInvestigations\nIf facilities are available\n\t\n• \nDo a chest X-ray and look for complications, e.g.\n \n- Pneumothorax, pyothorax\n \n- Pneumonitis suggestive of pneumocystis jiroveci pneumonia \n(PCP)\n \n- Pneumatocoeles (cavities filled with air) suggestive of \nstaphylococcal pneumonia\n \n\nSputum: For Gram stain, Ziehl-Neelsen (ZN) stain, culture     for \nAFB\n \n\nBlood: Complete blood count"
   },
   {
@@ -8888,22 +9138,62 @@
     "priority": "",
     "is_category": false,
     "icd_code": "",
-    "definition": "Refer to section 3.1.10.2",
-    "overview": "Refer to section 3.1.10.2",
+    "definition": "Interstitial  pneumonitis  caused  by  the  parasite  Pneumocystis jirovecii \n(formerly carinii). It is common in severely immunosuppresed patients \n(e.g. in HIV).\n \n•",
+    "overview": "Interstitial  pneumonitis  caused  by  the  parasite  Pneumocystis jirovecii \n(formerly carinii). It is common in severely immunosuppresed patients \n(e.g. in HIV).\n \n•",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "Fever",
+      "Dry cough",
+      "Shortness of breath (significant hypoxemia)"
+    ],
     "signs": [],
-    "clinical_features_text": "",
-    "investigations": "",
-    "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
+    "clinical_features_text": "Clinical features\n \n• \nFever\n \n• \nDry cough\n \n• \nShortness of breath (significant hypoxemia)\n \n•",
+    "investigations": "Investigations\n \n\nChest x-ray shows characteristic bilateral interstitial infiltrates",
+    "lab_tests": [
+      "Chest X-Ray (CXR)",
+      "Pulse Oximetry (SpO2)"
+    ],
+    "treatment": "Management\nPre-emptive treatment for cryptococcal disease\n\nTREATMENT\nLOC\nPneumocystis Jirovecii pneumonia\n\t\n• \nGive oxygen if SpO2 <94%\n\t\n• \nCotrimoxazole 120 mg/kg/daily in 2-4 divided doses \nfor 21 days\n \n- For example cotrimoxazole 480 mg tablets:\n \n- If patient is < 60 kg: give 3 tablets If patient >60 \nkg: give 4 tablets\n\t\n• \nPlus prednisolone 2 mg/kg daily in 3 divided doses for 5 \ndays, then reduce dose to complete 21 days of treatment\nOr (in patients who cannot tolerate or do not respond \nto cotrimoxazole)\n\t\n• \nPentamidine 4 mg/kg by IV infusion daily for 21 days\n \n- Reduce dose in renal impairment\nHC4\nRR\nH\n\nTREATMENT\nLOC\n \n- Reduce dose in renal impairment\n \n- Avoid direct bolus injections whenever possible \nbut if unavoidable, never give rapidly\nAlternative regimen (21-day course) if above not avail­\nable/ tolerated\n \n- Clindamycin 600 mg every 8 hours\n \n- Plus dapsone 100 mg daily",
+    "medications": [
+      {
+        "drug": "Cotrimoxazole",
+        "dose": "120 mg/kg"
+      },
+      {
+        "drug": "Example cotrimoxazole",
+        "dose": "480 mg"
+      },
+      {
+        "drug": "Plus prednisolone",
+        "dose": "2 mg/kg daily"
+      },
+      {
+        "drug": "Pentamidine",
+        "dose": "4 mg/kg"
+      },
+      {
+        "drug": "Clindamycin",
+        "dose": "600 mg every 8 hours"
+      },
+      {
+        "drug": "Plus dapsone",
+        "dose": "100 mg daily"
+      },
+      {
+        "drug": "Cotrimoxazole",
+        "dose": "960 mg daily"
+      },
+      {
+        "drug": "Dapsone",
+        "dose": "100 mg daily"
+      }
+    ],
+    "prevention": "Prophylaxis\nGive to all patients with history of PCP infection and consider \nalso for severely immunocompromised patients\n \n- Cotrimoxazole 960 mg daily or\n \n- Dapsone 100 mg daily\n \n- Continue until immunity recovers sufficiently",
     "referral": "",
     "pregnancy_notes": "",
     "children_notes": "",
-    "hiv_notes": "",
+    "hiv_notes": "immunocompromised patients\n \n- Cotrimoxazole 960 mg daily or\n \n- Dapsone 100 mg daily\n \n- Continue until immunity recovers sufficiently",
     "full_content": "5.2.9.5\t Pneumocystis jirovecii Pneumonia \nRefer to section 3.1.10.2"
   },
   {
@@ -9529,9 +9819,9 @@
     "chapter_color": "#84cc16",
     "priority": "",
     "is_category": false,
-    "icd_code": "ICD10 CODE: K92.2",
+    "icd_code": "K92.2",
     "definition": "Bleeding from the upper gastrointestinal tract (oesophagus, stomach \nand duodenum). It can be a medical emergency.",
-    "overview": "Bleeding from the upper gastrointestinal tract (oesophagus, stomach \nand duodenum). It can be a medical emergency.\nCause\n \n• \nGastro-oesophageal varices\n \n• \nPeptic ulcer disease/severe gastritis/cancer\n \n• \nMallory Weiss tear (a tear in the oesophageal mucosa \ncaused by forceful retching)",
+    "overview": "Upper gastrointestinal (GI) bleeding originates proximal to the ligament of Treitz (oesophagus, stomach, or duodenum). Common causes in Uganda include peptic ulcer disease (gastric and duodenal ulcers), oesophageal and gastric varices (secondary to liver cirrhosis/portal hypertension from Hepatitis B/Schistosomiasis), acute haemorrhagic gastritis (often NSAID or alcohol-induced), and Mallory-Weiss tears.",
     "causes": [
       "Cause",
       "Gastro-oesophageal varices",
@@ -9541,27 +9831,55 @@
     ],
     "causes_text": "Cause\n \n• \nGastro-oesophageal varices\n \n• \nPeptic ulcer disease/severe gastritis/cancer\n \n• \nMallory Weiss tear (a tear in the oesophageal mucosa \ncaused by forceful retching)",
     "symptoms": [
-      "Vomiting of fresh blood (haematemesis)",
-      "Coffee brown emesis (degraded blood mixed with stomach",
-      "content)",
-      "Melena: passing of soft dark red smelly stool",
-      "Black stools (in case of minor bleeding)",
-      "Complications",
-      "Acute hypovolaemia (if acute and abundant): syncope, hy­",
-      "potension, tachycardia, sweating",
-      "Chronic anaemia (if subacute/chronic loss)"
+      "Haematemesis (vomiting of fresh red blood or \"coffee-ground\" altered blood)",
+      "Melaena (passage of dark, black, tarry, foul-smelling stools)",
+      "Haematochezia (passage of fresh blood per rectum, seen in massive brisk upper GI bleeding)",
+      "Dizziness, lightheadedness, syncope upon standing (orthostatic postural hypotension)",
+      "Epigastric pain or burning discomfort"
     ],
-    "signs": [],
+    "signs": [
+      "Pallor, cold and clammy peripheries, diaphoresis",
+      "Tachycardia (pulse > 100 bpm) and hypotension (systolic BP < 90 mmHg) indicating shock",
+      "Stigmata of chronic liver disease: spider naevi, palmar erythema, jaundice, ascites, splenomegaly, caput medusae",
+      "Digital Rectal Examination (DRE): confirms pitch-black melaena stool on glove"
+    ],
     "clinical_features_text": "Clinical features\n \n• \nVomiting of fresh blood (haematemesis)\n \n• \nCoffee brown emesis (degraded blood mixed with stomach \ncontent)\n \n• \nMelena: passing of soft dark red smelly stool\n \n• \nBlack stools (in case of minor bleeding)\nComplications\n \n• \nAcute hypovolaemia (if acute and abundant): syncope, hy­\npotension, tachycardia, sweating\n \n• \nChronic anaemia (if subacute/chronic loss)",
-    "investigations": "Diagnosis\n \n\nEndoscopy",
-    "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
-    "children_notes": "",
-    "hiv_notes": "",
+    "investigations": "DIAGNOSTIC & RESUSCITATION PROTOCOL:\n[HC3] Bedside & Emergency Lab:\n- Haemoglobin / Complete Blood Count (CBC): assess severity of blood loss (note: initial Hb may be normal prior to hemodilution).\n- Blood grouping and cross-matching: cross-match 2 to 4 units of whole blood immediately.\n\n[HC4/Hospital] Comprehensive Lab & Imaging:\n- Coagulation Profile: Prothrombin Time (PT/INR) and Platelet count (detect coagulopathy in liver disease).\n- Renal Function: Blood Urea Nitrogen (BUN) and Creatinine (disproportionately elevated BUN/Creatinine ratio > 20:1 suggests upper GI bleeding).\n- Liver Function Tests (LFTs): serum albumin, bilirubin, AST, ALT, ALP.\n- Upper GI Endoscopy (Esophagogastroduodenoscopy - EGD): diagnostic and therapeutic modality of choice within 24 hours (band ligation of varices, sclerotherapy, clip/cautery of bleeding ulcers).",
+    "lab_tests": [
+      "Complete Blood Count (CBC)",
+      "Prothrombin Time (PT/INR)",
+      "Liver Function Tests (LFTs)",
+      "Serum Creatinine & Urea",
+      "Endoscopy / Colonoscopy"
+    ],
+    "treatment": "UGANDA CLINICAL GUIDELINES EMERGENCY MANAGEMENT:\n\n1. IMMEDIATE EMERGENCY RESUSCITATION (ABC):\n[HC3/HC4] Establish two large-bore IV cannulae (16G or 18G) immediately.\n[HC3/HC4] Rapid IV fluid replacement with Ringer's Lactate or Normal Saline 0.9% (1-2 litres) to restore circulating volume.\n[HC4/Hospital] Blood Transfusion: transfuse packed red cells or whole blood targeting Hb 7-8 g/dL (target Hb 9 g/dL in cardiovascular disease). Avoid over-transfusion in variceal bleeding (increases portal venous pressure).\n\n2. PHARMACOLOGICAL MANAGEMENT:\nA. For Non-Variceal Bleeding (Peptic Ulcer):\n[HC3/HC4] Omeprazole: 80 mg IV bolus stat, followed by continuous IV infusion of 8 mg/hour for 72 hours, OR Omeprazole 40 mg IV 12-hourly.\n[HC3/HC4] Tranexamic acid: 1 g IV every 8 hours for 24-48 hours.\nB. For Suspected Variceal Bleeding (Liver Cirrhosis / Portal Hypertension):\n[HC4/Hospital] Octreotide: 50 mcg IV bolus, followed by 50 mcg/hour continuous IV infusion for 3-5 days, OR Terlipressin 2 mg IV every 4 hours.\n[HC4/Hospital] Prophylactic Antibiotic (mandatory in cirrhotics): Ceftriaxone 1 g IV once daily for 7 days (reduces re-bleeding and bacterial peritonitis).\n\n3. DEFINITIVE ENDOSCOPIC INTERVENTION:\n[Hospital] Perform emergency diagnostic and therapeutic endoscopy within 12-24 hours for variceal band ligation (EVL) or ulcer haemostasis.",
+    "medications": [
+      {
+        "drug": "Omeprazole IV injection",
+        "dose": "80 mg IV bolus then 8 mg/hr infusion (or 40 mg IV 12-hourly)"
+      },
+      {
+        "drug": "Octreotide IV injection",
+        "dose": "50 mcg IV bolus then 50 mcg/hr infusion (variceal)"
+      },
+      {
+        "drug": "Tranexamic Acid IV injection",
+        "dose": "1 g IV every 8 hours for 24-48 hours"
+      },
+      {
+        "drug": "Ceftriaxone IV injection",
+        "dose": "1 g IV once daily for 7 days (in cirrhotics)"
+      },
+      {
+        "drug": "Ringer Lactate / Normal Saline 0.9%",
+        "dose": "Rapid IV volume resuscitation"
+      }
+    ],
+    "prevention": "- Stop and avoid all NSAIDs, aspirin, steroids, and anticoagulants unless strictly indicated.\n- Eradicate H. pylori infection with triple therapy.\n- Secondary prophylaxis for varices: Propranolol 20-40 mg twice daily titrated to resting heart rate 55-60 bpm, plus repeated endoscopic variceal ligation until obliteration.",
+    "referral": "Refer immediately to a regional referral hospital equipped with blood transfusion facilities and an endoscopy unit as soon as initial IV resuscitation is underway. Patient must be accompanied by trained healthcare staff.",
+    "pregnancy_notes": "Upper GI bleed in pregnancy is most commonly caused by severe hyperemesis (Mallory-Weiss tear) or peptic ulceration. Endoscopy is safe in pregnancy if strongly indicated. Protect maternal airway and hemodynamics.",
+    "children_notes": "Upper GI bleeding in children is most frequently caused by caustic ingestion, severe gastritis, or portal vein thrombosis. Dose Omeprazole at 1 mg/kg IV 12-hourly.",
+    "hiv_notes": "Consider Kaposi sarcoma of the stomach or CMV ulceration in immunocompromised HIV patients with upper GI bleeding.",
     "full_content": "6.1.3 Upper Gastrointestinal Bleeding         ICD10 CODE: K92.2\nBleeding from the upper gastrointestinal tract (oesophagus, stomach \nand duodenum). It can be a medical emergency.\nCause\n \n• \nGastro-oesophageal varices\n \n• \nPeptic ulcer disease/severe gastritis/cancer\n \n• \nMallory Weiss tear (a tear in the oesophageal mucosa \ncaused by forceful retching)\n \nClinical features\n \n• \nVomiting of fresh blood (haematemesis)\n \n• \nCoffee brown emesis (degraded blood mixed with stomach \ncontent)\n \n• \nMelena: passing of soft dark red smelly stool\n \n• \nBlack stools (in case of minor bleeding)\nComplications\n \n• \nAcute hypovolaemia (if acute and abundant): syncope, hy­\npotension, tachycardia, sweating\n \n• \nChronic anaemia (if subacute/chronic loss)\nDiagnosis\n \n\nEndoscopy"
   },
   {
@@ -9988,16 +10306,16 @@
   {
     "id": "dis_6_3_2",
     "section": "6.3.2",
-    "name": "Dyspepsia",
+    "name": "Dyspepsia & Peptic Ulcer Disease",
     "chapter_num": "6",
     "chapter": "Gastrointestinal Diseases",
     "chapter_icon": "🩺",
     "chapter_color": "#84cc16",
     "priority": "",
     "is_category": false,
-    "icd_code": "ICD10 CODE: K30",
+    "icd_code": "K30, K25-K27",
     "definition": "Upper abdominal discomfort arising from the upper gastrointestinal tract \nusually lasting more than 2–4 weeks.",
-    "overview": "Upper abdominal discomfort arising from the upper gastrointestinal tract \nusually lasting more than 2–4 weeks.\nCauses\n \n• \nPeptic ulcer disease\n \n• \nGastroesophageal reflux disease (GERD)\n \n• \nFunctional dyspepsia\n \n• \nGastric or oesophageal cancer\n \n• \nOesophagitis (drugs, candida, and others)\n \n• \nGastroparesis or gastric outlet obstruction\n \n• \nOther motility disorders",
+    "overview": "Dyspepsia is a constellation of symptoms referable to the upper gastrointestinal tract, including epigastric pain or burning, postprandial fullness, early satiety, and nausea. Major organic causes include Peptic Ulcer Disease (gastric and duodenal ulcers), Helicobacter pylori gastritis, gastro-oesophageal reflux disease (GERD), medication-induced gastritis (NSAIDs), and gastric malignancy.",
     "causes": [
       "Causes",
       "Peptic ulcer disease",
@@ -10010,36 +10328,53 @@
     ],
     "causes_text": "Causes\n \n• \nPeptic ulcer disease\n \n• \nGastroesophageal reflux disease (GERD)\n \n• \nFunctional dyspepsia\n \n• \nGastric or oesophageal cancer\n \n• \nOesophagitis (drugs, candida, and others)\n \n• \nGastroparesis or gastric outlet obstruction\n \n• \nOther motility disorders",
     "symptoms": [
-      "Epigastric pain or discomfort, heartburn",
-      "Bloating , early satiety and/or fullness after meals",
-      "Repeated belching or regurgitation (often rumination)",
-      "Nausea",
-      "Dyspepsia alarm features: requires endoscopy–REFER",
-      "Dysphagia",
-      "Odynophagia (among patients who are HIV negative)",
-      "Weight loss",
-      "Abdominal mass or cervical lymphadenopathy",
-      "Evidence of upper GI bleeding",
-      "Iron deficiency anaemia",
-      "Recurrent vomiting",
-      "Recent dyspeptic symptoms or new dyspepsia in individ­",
-      "uals over the age of 40 years",
-      "Other indications for endoscopy",
-      "Persistent dyspepsia despite appropriate treatment (e.g",
-      "Proton-pump inhibitors in GERD)",
-      "Hepatobiliary disease"
+      "Epigastric pain or discomfort: gnawing, aching, or burning sensation",
+      "Duodenal ulcer: pain typically occurs 2-3 hours after meals or at night, relieved by food or antacids",
+      "Gastric ulcer: pain often aggravated by meals, accompanied by food avoidance and nausea",
+      "Postprandial fullness, early satiation, bloating, and excessive belching",
+      "Heartburn and acid regurgitation"
     ],
-    "signs": [],
+    "signs": [
+      "Localized tenderness on deep palpation in the epigastrium",
+      "Absence of rigidity or rebound tenderness (which would indicate ulcer perforation)",
+      "Pallor if chronic occult bleeding has led to iron-deficiency anaemia",
+      "Examine for \"alarm signs\": palpable epigastric mass, left supraclavicular lymphadenopathy (Virchow's node), or cachexia"
+    ],
     "clinical_features_text": "Clinical features\n \n• \nEpigastric pain or discomfort, heartburn\n \n• \nBloating , early satiety and/or fullness after meals\n \n• \nRepeated belching or regurgitation (often rumination)\n \n• \nNausea\nDyspepsia alarm features: requires endoscopy–REFER\n \n• \nDysphagia\n \n• \nOdynophagia (among patients who are HIV negative)\n \n• \nWeight loss\n \n• \nAbdominal mass or cervical lymphadenopathy\n \n• \nEvidence of upper GI bleeding\n \n• \nIron deficiency anaemia\n \n• \nRecurrent vomiting\n \n• \nRecent dyspeptic symptoms or new dyspepsia in individ­\nuals over the age of 40 years\nOther indications for endoscopy\n \n• \nHistory of long term smoking and alcohol misuse\n \n• \nPersistent dyspepsia despite appropriate treatment (e.g \nProton-pump inhibitors in GERD)\n \n• \nHepatobiliary disease",
-    "investigations": "",
-    "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
-    "children_notes": "",
-    "hiv_notes": "",
+    "investigations": "DIAGNOSTIC WORK-UP:\n[HC2] Clinical Assessment & Review of Risk Factors:\n- Detailed history of NSAID, aspirin, steroid, alcohol, and tobacco use.\n- Screen for ALARM FEATURES: age > 55 years, progressive dysphagia, persistent vomiting, unintended weight loss, GI bleeding, palpable mass.\n\n[HC3] Laboratory:\n- Full Blood Count (FBC): assess for iron-deficiency microcytic anaemia.\n- H. pylori Stool Antigen Test (HpSA): rapid, non-invasive, highly sensitive and specific diagnostic test of choice.\n- Stool for Occult Blood (FOBT).\n\n[Hospital] Endoscopy:\n- Esophagogastroduodenoscopy (EGD): mandatory in patients with alarm features or those failing empirical therapy after 4-8 weeks. Allows visualization and biopsy of gastric ulcers to exclude adenocarcinoma.",
+    "lab_tests": [
+      "Complete Blood Count (CBC)",
+      "Stool Analysis / Stool Microscopy",
+      "Endoscopy / Colonoscopy"
+    ],
+    "treatment": "UGANDA CLINICAL GUIDELINES MANAGEMENT:\n\n1. NON-PHARMACOLOGICAL LIFESTYLE MEASURES:\n- Stop NSAIDs, aspirin, and other ulcerogenic medications.\n- Avoid smoking, alcohol, excessive coffee, and aggravating spicy or fatty foods.\n- Eat smaller, regular meals; avoid lying flat within 2-3 hours after eating; elevate head of bed.\n\n2. INITIAL SYMPTOMATIC RELIEF & ACID SUPPRESSION:\n[HC2] Antacids: Magnesium Trisilicate compound tablets: 1-2 tablets chewed 8-hourly after meals and at bedtime, OR:\n[HC2] Magnesium Hydroxide / Aluminium Hydroxide suspension: 10-20 ml orally after meals.\n[HC2] Proton Pump Inhibitor (PPI): Omeprazole 20 mg orally once daily (taken 30 minutes before breakfast) for 2 to 4 weeks.\n\n3. HELICOBACTER PYLORI ERADICATION TRIPLE THERAPY (14-Day Regimen):\n[HC3/HC4] If H. pylori test is positive or in recurrent peptic ulcer disease:\n- Omeprazole 20 mg orally twice daily (BD) for 14 days PLUS\n- Amoxicillin 1 g orally twice daily (BD) for 14 days PLUS\n- Clarithromycin 500 mg orally twice daily (BD) for 14 days.\n* In penicillin-allergic patients: replace Amoxicillin with Metronidazole 400 mg orally twice daily for 14 days.",
+    "medications": [
+      {
+        "drug": "Omeprazole capsules",
+        "dose": "20 mg once daily (or 20 mg twice daily for H. pylori eradication) for 14 days"
+      },
+      {
+        "drug": "Amoxicillin capsules",
+        "dose": "1 g orally twice daily for 14 days (H. pylori triple therapy)"
+      },
+      {
+        "drug": "Clarithromycin tablets",
+        "dose": "500 mg orally twice daily for 14 days (H. pylori triple therapy)"
+      },
+      {
+        "drug": "Magnesium Trisilicate compound",
+        "dose": "1-2 tablets chewed 8-hourly after meals"
+      },
+      {
+        "drug": "Metronidazole tablets",
+        "dose": "400 mg twice daily for 14 days (penicillin allergic)"
+      }
+    ],
+    "prevention": "- Avoid unnecessary or prolonged use of NSAIDs. If NSAIDs essential, co-prescribe Omeprazole 20 mg daily as gastroprotection.\n- Improve water sanitation and personal hygiene to prevent H. pylori transmission.\n- Eradicate H. pylori completely and re-test cure after 4 weeks if symptoms recur.",
+    "referral": "Refer urgently for endoscopy if patient presents with alarm features (unexplained weight loss, dysphagia, persistent vomiting, haematemesis/melaena) or if symptoms persist after completion of 14-day triple therapy.",
+    "pregnancy_notes": "Heartburn and reflux are common in pregnancy due to progesterone-induced sphincter relaxation. Use Antacids (Magnesium/Aluminium hydroxide) or Sucralfate first. Omeprazole can be used if refractory. Avoid Clarithromycin and Metronidazole in 1st trimester.",
+    "children_notes": "Dyspepsia in children requires evaluation for cow's milk protein intolerance, Giardiasis, or systemic illness. Dose Omeprazole at 0.7-1 mg/kg/day.",
+    "hiv_notes": "Opportunistic infections (oesophageal candidiasis, CMV, Herpes simplex) must be considered if patient presents with dyspepsia associated with painful swallowing (odynophagia).",
     "full_content": "6.3.2  Dyspepsia\t\n        ICD10 CODE: K30\nUpper abdominal discomfort arising from the upper gastrointestinal tract \nusually lasting more than 2–4 weeks.\nCauses\n \n• \nPeptic ulcer disease\n \n• \nGastroesophageal reflux disease (GERD)\n \n• \nFunctional dyspepsia\n \n• \nGastric or oesophageal cancer\n \n• \nOesophagitis (drugs, candida, and others)\n \n• \nGastroparesis or gastric outlet obstruction\n \n• \nOther motility disorders\nClinical features\n \n• \nEpigastric pain or discomfort, heartburn\n \n• \nBloating , early satiety and/or fullness after meals\n \n• \nRepeated belching or regurgitation (often rumination)\n \n• \nNausea\nDyspepsia alarm features: requires endoscopy–REFER\n \n• \nDysphagia\n \n• \nOdynophagia (among patients who are HIV negative)\n \n• \nWeight loss\n \n• \nAbdominal mass or cervical lymphadenopathy\n \n• \nEvidence of upper GI bleeding\n \n• \nIron deficiency anaemia\n \n• \nRecurrent vomiting\n \n• \nRecent dyspeptic symptoms or new dyspepsia in individ­\nuals over the age of 40 years\nOther indications for endoscopy\n \n• \nHistory of long term smoking and alcohol misuse\n \n• \nPersistent dyspepsia despite appropriate treatment (e.g \nProton-pump inhibitors in GERD)\n \n• \nHepatobiliary disease"
   },
   {
@@ -13057,20 +13392,44 @@
     "priority": "",
     "is_category": false,
     "icd_code": "",
-    "definition": "Refer to section 16.6.2",
-    "overview": "Refer to section 16.6.2",
-    "causes": [],
-    "causes_text": "",
-    "symptoms": [],
+    "definition": "Ask if current or previous \nsmoking, alochol, drug abuse, \nprevious or current history of \nviolence\nPossible Psycho­\nsocial Problem\n\t\n• \nCounselling and \nrefer for specialist",
+    "overview": "Ask if current or previous \nsmoking, alochol, drug abuse, \nprevious or current history of \nviolence\nPossible Psycho­\nsocial Problem\n\t\n• \nCounselling and \nrefer for specialist",
+    "causes": [
+      "Risk factors",
+      "Previous psychiatric history",
+      "Recent stressful events",
+      "Young age, first baby (primigravida) and associated fear of the",
+      "responsibility for the new baby",
+      "Poor marital relationship, poor social support"
+    ],
+    "causes_text": "Risk factors\n \n\nPrevious psychiatric history\n \n\nRecent stressful events\n \n\nYoung age, first baby (primigravida) and associated fear of the \nresponsibility for the new baby\n \n\nPoor marital relationship, poor social support",
+    "symptoms": [
+      "Starts soon after delivery and may continue for a year or",
+      "more",
+      "Feelings of sadness with episodes of crying, anxiety, marked",
+      "irritability, tension, confusion",
+      "Guilty feeling of not loving baby enough",
+      "Loss of positive feeling towards loved ones",
+      "Refusal to breast feed baby",
+      "Ideas to harm the baby",
+      "Postpartum psychosis",
+      "Distortions of thinking and perception, as well as inappropri­",
+      "ate or narrowed range of emotions (see section 9.1.1.1)"
+    ],
     "signs": [],
-    "clinical_features_text": "",
-    "investigations": "",
+    "clinical_features_text": "Clinical features\n \n\nStarts soon after delivery and may continue for a year or \nmore\n \n\nFeelings of sadness with episodes of crying, anxiety, marked \nirritability, tension, confusion\n \n\nGuilty feeling of not loving baby enough\n \n\nLoss of positive feeling towards loved ones\n \n\nRefusal to breast feed baby\n \n\nIdeas to harm the baby\nPostpartum psychosis\n \n\nDistortions of thinking and perception, as well as inappropri­\nate or narrowed range of emotions (see section 9.1.1.1)",
+    "investigations": "ASSESSMENT\nSIGNS\nCLASSIFY\n\nASSESSMENT\nSIGNS\nCLASSIFY",
     "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
+    "treatment": "management\n\nTREATMENT\n \n\nSeparate the \nlabia and look for \nabnormal vaginal \ndischarge: amount, \ncolour, odour and \nsmell\n \n\nIf no discharge is \nseen, examine with \na gloved finger \nand look at the \ndischarge on the \nglove\n \n\nAbnor­\nmal vag­\ninal dis­\ncharge\nPossible \nBacterial or \nTrichomonas \nInfection (see \nsection 3.2.2)\n \n\nGive metronidazole 2 g \nsingle dose to woman\n \n\nCounsel on safer sex in­\ncluding use of condoms\nCheck for HIV infection\n\nTREATMENT\nDo counseling and testing if \nnever tested before\nSee chapter 3\nHIV Negative\nCounsel on safe sex and staying \nnegative\nEncourage partner testing\nHIV Positive\nManage mother and baby as per \neMTCT guidelines (see section 16.2.2)\n16.6.2     Postnatal Depression\t\n                        \nCondition characterized by persistent low mood developing during the \npuerperium period, usually 1 or 2 weeks following delivery. It needs \nspecialized assessment and treatment.\nMild depressive symptoms (sadness, tearfulness, irritability, anxiety) \ndevelop commonly during the first week after\nthe delivery but resolve within 2 weeks (“baby blues”): it usually needs \nONLY counseling and support.\n\nManagement\nTREATMENT\n\nLOC\n\t\n• \nRoutine assessment for depressive symptoms during post \nnatal visits or at least once at 6 weeks\n\t\n• \nCounselling and reassurance at first contact and review \nafter 2 weeks\n\t\n• \nIf persisting, refer for specialized treatment\n \n-\nPsychotherapy\n \n-\nAntidepressant (see section 9.2.2)\n\t\n• \nIf suicidal thoghts, or any risk for mother and/or baby, \nrefer urgently to hospital\nHC3\nH",
+    "medications": [
+      {
+        "drug": "Give metronidazole",
+        "dose": "2 g"
+      }
+    ],
+    "prevention": "Prevention\n \n\nPostpartum counselling, support, and follow up\n \n\nIdentification of patients at risk\n \n\nMale involvement and support",
+    "referral": "refer urgently to hospital",
+    "pregnancy_notes": "Postnatal Depression\t\n                        \nCondition characterized by persistent low mood developing during the \npuerperium period, usually 1 or 2 weeks following delivery. It needs \nspecialized assessment and treatment.\nMild depressive symptoms (sadness, tearfulness, irritability, anxiety) \ndevelop commonly during the first week after\nthe delivery but resolve within 2 weeks (“baby blues”): it usually needs \nONLY counseling and support.",
     "children_notes": "",
     "hiv_notes": "",
     "full_content": "9.2.2.1\t Postnatal Depression\nRefer to section 16.6.2"
@@ -13532,20 +13891,44 @@
     "priority": "",
     "is_category": false,
     "icd_code": "",
-    "definition": "Refer to section 16.6.2",
-    "overview": "Refer to section 16.6.2",
-    "causes": [],
-    "causes_text": "",
-    "symptoms": [],
+    "definition": "Ask if current or previous \nsmoking, alochol, drug abuse, \nprevious or current history of \nviolence\nPossible Psycho­\nsocial Problem\n\t\n• \nCounselling and \nrefer for specialist",
+    "overview": "Ask if current or previous \nsmoking, alochol, drug abuse, \nprevious or current history of \nviolence\nPossible Psycho­\nsocial Problem\n\t\n• \nCounselling and \nrefer for specialist",
+    "causes": [
+      "Risk factors",
+      "Previous psychiatric history",
+      "Recent stressful events",
+      "Young age, first baby (primigravida) and associated fear of the",
+      "responsibility for the new baby",
+      "Poor marital relationship, poor social support"
+    ],
+    "causes_text": "Risk factors\n \n\nPrevious psychiatric history\n \n\nRecent stressful events\n \n\nYoung age, first baby (primigravida) and associated fear of the \nresponsibility for the new baby\n \n\nPoor marital relationship, poor social support",
+    "symptoms": [
+      "Starts soon after delivery and may continue for a year or",
+      "more",
+      "Feelings of sadness with episodes of crying, anxiety, marked",
+      "irritability, tension, confusion",
+      "Guilty feeling of not loving baby enough",
+      "Loss of positive feeling towards loved ones",
+      "Refusal to breast feed baby",
+      "Ideas to harm the baby",
+      "Postpartum psychosis",
+      "Distortions of thinking and perception, as well as inappropri­",
+      "ate or narrowed range of emotions (see section 9.1.1.1)"
+    ],
     "signs": [],
-    "clinical_features_text": "",
-    "investigations": "",
+    "clinical_features_text": "Clinical features\n \n\nStarts soon after delivery and may continue for a year or \nmore\n \n\nFeelings of sadness with episodes of crying, anxiety, marked \nirritability, tension, confusion\n \n\nGuilty feeling of not loving baby enough\n \n\nLoss of positive feeling towards loved ones\n \n\nRefusal to breast feed baby\n \n\nIdeas to harm the baby\nPostpartum psychosis\n \n\nDistortions of thinking and perception, as well as inappropri­\nate or narrowed range of emotions (see section 9.1.1.1)",
+    "investigations": "ASSESSMENT\nSIGNS\nCLASSIFY\n\nASSESSMENT\nSIGNS\nCLASSIFY",
     "lab_tests": [],
-    "treatment": "",
-    "medications": [],
-    "prevention": "",
-    "referral": "",
-    "pregnancy_notes": "",
+    "treatment": "management\n\nTREATMENT\n \n\nSeparate the \nlabia and look for \nabnormal vaginal \ndischarge: amount, \ncolour, odour and \nsmell\n \n\nIf no discharge is \nseen, examine with \na gloved finger \nand look at the \ndischarge on the \nglove\n \n\nAbnor­\nmal vag­\ninal dis­\ncharge\nPossible \nBacterial or \nTrichomonas \nInfection (see \nsection 3.2.2)\n \n\nGive metronidazole 2 g \nsingle dose to woman\n \n\nCounsel on safer sex in­\ncluding use of condoms\nCheck for HIV infection\n\nTREATMENT\nDo counseling and testing if \nnever tested before\nSee chapter 3\nHIV Negative\nCounsel on safe sex and staying \nnegative\nEncourage partner testing\nHIV Positive\nManage mother and baby as per \neMTCT guidelines (see section 16.2.2)\n16.6.2     Postnatal Depression\t\n                        \nCondition characterized by persistent low mood developing during the \npuerperium period, usually 1 or 2 weeks following delivery. It needs \nspecialized assessment and treatment.\nMild depressive symptoms (sadness, tearfulness, irritability, anxiety) \ndevelop commonly during the first week after\nthe delivery but resolve within 2 weeks (“baby blues”): it usually needs \nONLY counseling and support.\n\nManagement\nTREATMENT\n\nLOC\n\t\n• \nRoutine assessment for depressive symptoms during post \nnatal visits or at least once at 6 weeks\n\t\n• \nCounselling and reassurance at first contact and review \nafter 2 weeks\n\t\n• \nIf persisting, refer for specialized treatment\n \n-\nPsychotherapy\n \n-\nAntidepressant (see section 9.2.2)\n\t\n• \nIf suicidal thoghts, or any risk for mother and/or baby, \nrefer urgently to hospital\nHC3\nH",
+    "medications": [
+      {
+        "drug": "Give metronidazole",
+        "dose": "2 g"
+      }
+    ],
+    "prevention": "Prevention\n \n\nPostpartum counselling, support, and follow up\n \n\nIdentification of patients at risk\n \n\nMale involvement and support",
+    "referral": "refer urgently to hospital",
+    "pregnancy_notes": "Postnatal Depression\t\n                        \nCondition characterized by persistent low mood developing during the \npuerperium period, usually 1 or 2 weeks following delivery. It needs \nspecialized assessment and treatment.\nMild depressive symptoms (sadness, tearfulness, irritability, anxiety) \ndevelop commonly during the first week after\nthe delivery but resolve within 2 weeks (“baby blues”): it usually needs \nONLY counseling and support.",
     "children_notes": "",
     "hiv_notes": "",
     "full_content": "9.2.2.1\t Postnatal Depression\nRefer to section 16.6.2"
@@ -15953,9 +16336,40 @@
     "overview": "Types of Pain\nThere are 2 types of pain that health workers need to be aware of:\nTYPE OF PAIN\nFEATURES\nNociceptive Pain\nThe pain pathways are intact. \nThis kind of pain responds to the \nanalgesic ladder\n \n• \nSomatic Pain (from bones \nand muscles): described as \naching/ throbbing\n \n• \nVisceral Pain: described \nas colicky pain (for hollow \nviscera), pressure, cramp­\ning and ache for solid \nviscera\nNeuropathic Pain\nThere is damage to nerves or the \npathways. The pain responds \nonly partially\nto the analgesic ladder and needs \nadjuvants of amitriptyline or phe­\nnytoin\n \n• \nDescribed as burning, \nprickling, stinging, pins \nand needles, insects crawl­\ning under skin, numbness, \nhypersensitivity,\n \n• \nshooting, or electric shock\nClinical Investigation\nIt is important for health workers to conduct a thorough investigation \nof a patient indicating they are in pain. The following points can be \nused to guide the investigation:\n \n• \nDuration of pain\n \n• \nSeverity: assess using the Numerical Rating Scale, where \nthe patient grades his/her pain on a scale of 0 = no pain \nto 5\n \n• \n= worst pain ever experienced\n \n• \nSite and radiation\n \n• \nNature (e.g., stabbing, throbbing, crushing, cramp-like)\n \n• \nPeriodicity (constant or intermittent)\n \n• \nRelieving or aggravating factors\n \n• \nAccompanying symptoms\n \n• \nAsk the patient for a detailed history for each pain expe­\nrienced, as there may be more than one type of pain and \narea experiencing pain\n \n• \nA targeted physical examination",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "Nociceptive Pain",
+      "The pain pathways are intact.",
+      "This kind of pain responds to the",
+      "analgesic ladder",
+      "Somatic Pain (from bones",
+      "and muscles): described as",
+      "aching/ throbbing",
+      "Visceral Pain: described",
+      "as colicky pain (for hollow",
+      "viscera), pressure, cramp­",
+      "ing and ache for solid",
+      "viscera",
+      "Neuropathic Pain",
+      "There is damage to nerves or the",
+      "pathways. The pain responds",
+      "only partially",
+      "to the analgesic ladder and needs",
+      "adjuvants of amitriptyline or phe­",
+      "nytoin",
+      "Described as burning,",
+      "prickling, stinging, pins",
+      "and needles, insects crawl­",
+      "ing under skin, numbness,",
+      "hypersensitivity,",
+      "shooting, or electric shock",
+      "Clinical Investigation",
+      "It is important for health workers to conduct a thorough investigation",
+      "of a patient indicating they are in pain. The following points can be",
+      "used to guide the investigation:",
+      "Duration of pain"
+    ],
     "signs": [],
-    "clinical_features_text": "",
+    "clinical_features_text": "Nociceptive Pain\nThe pain pathways are intact. \nThis kind of pain responds to the \nanalgesic ladder\n \n• \nSomatic Pain (from bones \nand muscles): described as \naching/ throbbing\n \n• \nVisceral Pain: described \nas colicky pain (for hollow \nviscera), pressure, cramp­\ning and ache for solid \nviscera\nNeuropathic Pain\nThere is damage to nerves or the \npathways. The pain responds \nonly partially\nto the analgesic ladder and needs \nadjuvants of amitriptyline or phe­\nnytoin\n \n• \nDescribed as burning, \nprickling, stinging, pins \nand needles, insects crawl­\ning under skin, numbness, \nhypersensitivity,\n \n• \nshooting, or electric shock\nClinical Investigation\nIt is important for health workers to conduct a thorough investigation \nof a patient indicating they are in pain. The following points can be \nused to guide the investigation:\n \n• \nDuration of pain\n \n• \nSeverity: assess using the Numerical Rating Scale, where \nthe patient grades his/her pain on a scale of 0 = no pain \nto 5\n \n• \n= worst pain ever experienced\n \n• \nSite and radiation\n \n• \nNature (e.g., stabbing, throbbing, crushing, cramp-like)\n \n• \nPeriodicity (constant or intermittent)\n \n• \nRelieving or aggravating factors\n \n• \nAccompanying symptoms\n \n• \nAsk the patient for a detailed history for each pain expe­\nrienced, as there may be more than one type of pain and \narea experiencing pain\n \n• \nA targeted physical examination",
     "investigations": "",
     "lab_tests": [],
     "treatment": "",
@@ -16506,8 +16920,8 @@
     "priority": "",
     "is_category": false,
     "icd_code": "",
-    "definition": "",
-    "overview": "",
+    "definition": "There are two goals of pain management:\n \n• \nDiagnose and treat the disease causing the pain\n \n• \nAchieve total pain relief with minimal side-effects and en­\nable the patient to live as normal a life as possible\n \n• \nPain can be treated through use of medicines and/or non- \ndrug treatment\nNon pharmacological treatment of pain",
+    "overview": "There are two goals of pain management:\n \n• \nDiagnose and treat the disease causing the pain\n \n• \nAchieve total pain relief with minimal side-effects and en­\nable the patient to live as normal a life as possible\n \n• \nPain can be treated through use of medicines and/or non- \ndrug treatment\nNon pharmacological treatment of pain",
     "causes": [],
     "causes_text": "",
     "symptoms": [],
@@ -16515,13 +16929,8 @@
     "clinical_features_text": "",
     "investigations": "",
     "lab_tests": [],
-    "treatment": "TREATMENT\nLOC\nAnxiety and muscle spasm\n\t\n• \nDiazepam 5-10 mg once a day, titrated to three times \na day\nHC2\nExcessive bronchial secretions\n\t\n• \nHyoscine 20 mg once a day titrated to 3 times a day \naccording to response\nHC4\nIntractable cough\n\t\n• \nMorphine as above (see section 13.1.2)\nHC3",
-    "medications": [
-      {
-        "drug": "Hyoscine",
-        "dose": "20 mg once"
-      }
-    ],
+    "treatment": "TREATMENT\nLOC\n\t\n• \nLifestyle adjustment\n\t\n• \nPatient counselling\n\t\n• \nMassage with aromatherapy oils: may be useful for \nneuropathic pain and muscular pain\n\t\n• \nReflexology\nHC2\n\t\n• \nApplication of heat or cold packs\n\t\n• \nRelaxation\n\t\n• \nDistraction (e.g., listening to radio or partaking in a \nnon-invasive hobby)\n\t\n•\n\nNon-pharmacological treatment of underlying cause \n(e.g., surgery or radiotherapy of cancer)\n\t\n• \nSocial and spiritual support\nMedicines-Based Treatment\nThe WHO Analgesic Ladder and the following tables describe the use \nof medicines to relieve pain based on the type and degree of pain.",
+    "medications": [],
     "prevention": "",
     "referral": "",
     "pregnancy_notes": "",
@@ -17485,9 +17894,40 @@
     "overview": "Emergency Contraception can be used to prevent unwanted pregnancy \nafter unprotected sex, rape, defilement or contraceptive method failure. \nMethods available include Emergency Contraceptive Pills and IUDs. \nCaution: Emergency contraceptive methods do not cause abortion.\nRegular Emergency Contraceptive Pill users should be counselled to use \nroutine contraceptive method.\nTYPE\nFEATURES\nE m e r g e n c y \nContraceptive \nPill (ECP)\n \n• \nThe ECP contains a special dose of \nprogestin (Levonorgestrel or LNG): \nmay come as one pill (1.5 mg) or two \npills (0.75 mg). \n \n• \nThe dose (1.5 mg) should be taken as \nsoon as possible within 72 hours, but \ncan be taken up to five days after un­\nprotected sex, or in case of contracep­\ntive method failure, e.g.,\n \n• \ncondom burst, failure to take regular FP \nmethods, or in cases of rape\n \n• \nECPs are NOT regular contraceptive \npills and should not be used as a fam­\nily planning method\nE m e r g e n c y \nContraceptive \nIUD\n \n• \nThis IUD should be inserted as soon as \npossible after penetrative sexual inter­\ncourse but within 5 days\n \n• \nIt is important to monitor side-effects \nthat may occur, as outlined below\nIndications\n \n• \nAll women and adolescents at risk of becoming pregnant \nafter unprotected sex\nAdvantages\n \n• \nPrevents unplanned pregnancy after penetrative sexual \nintercourse\n \n• \nSafe for all women and have no long-term side effects\n \n• \nDo not cause infertility\n \n• \nAble to have on hand in case of emergency\n \n• \nControlled by the woman\nDisadvantages and side effects\n \n• \nDOES NOT PROTECT AGAINST STI\n \n• \nPotential misuse as a regular contraceptive method\n \n• \nMinor, short-term side effects: nausea and vomiting, al­\ntered menstrual bleeding, headaches, abdominal pain \nbreast tenderness, dizziness and fatigue",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "E m e r g e n c y",
+      "Contraceptive",
+      "Pill (ECP)",
+      "The ECP contains a special dose of",
+      "progestin (Levonorgestrel or LNG):",
+      "may come as one pill (1.5 mg) or two",
+      "pills (0.75 mg).",
+      "The dose (1.5 mg) should be taken as",
+      "soon as possible within 72 hours, but",
+      "can be taken up to five days after un­",
+      "protected sex, or in case of contracep­",
+      "tive method failure, e.g.,",
+      "condom burst, failure to take regular FP",
+      "methods, or in cases of rape",
+      "ECPs are NOT regular contraceptive",
+      "pills and should not be used as a fam­",
+      "ily planning method",
+      "E m e r g e n c y",
+      "Contraceptive",
+      "This IUD should be inserted as soon as",
+      "possible after penetrative sexual inter­",
+      "course but within 5 days",
+      "It is important to monitor side-effects",
+      "that may occur, as outlined below",
+      "Indications",
+      "All women and adolescents at risk of becoming pregnant",
+      "after unprotected sex",
+      "Advantages",
+      "Prevents unplanned pregnancy after penetrative sexual",
+      "intercourse"
+    ],
     "signs": [],
-    "clinical_features_text": "",
+    "clinical_features_text": "E m e r g e n c y \nContraceptive \nPill (ECP)\n \n• \nThe ECP contains a special dose of \nprogestin (Levonorgestrel or LNG): \nmay come as one pill (1.5 mg) or two \npills (0.75 mg). \n \n• \nThe dose (1.5 mg) should be taken as \nsoon as possible within 72 hours, but \ncan be taken up to five days after un­\nprotected sex, or in case of contracep­\ntive method failure, e.g.,\n \n• \ncondom burst, failure to take regular FP \nmethods, or in cases of rape\n \n• \nECPs are NOT regular contraceptive \npills and should not be used as a fam­\nily planning method\nE m e r g e n c y \nContraceptive \nIUD\n \n• \nThis IUD should be inserted as soon as \npossible after penetrative sexual inter­\ncourse but within 5 days\n \n• \nIt is important to monitor side-effects \nthat may occur, as outlined below\nIndications\n \n• \nAll women and adolescents at risk of becoming pregnant \nafter unprotected sex\nAdvantages\n \n• \nPrevents unplanned pregnancy after penetrative sexual \nintercourse\n \n• \nSafe for all women and have no long-term side effects\n \n• \nDo not cause infertility\n \n• \nAble to have on hand in case of emergency\n \n• \nControlled by the woman\nDisadvantages and side effects\n \n• \nDOES NOT PROTECT AGAINST STI\n \n• \nPotential misuse as a regular contraceptive method\n \n• \nMinor, short-term side effects: nausea and vomiting, al­\ntered menstrual bleeding, headaches, abdominal pain \nbreast tenderness, dizziness and fatigue",
     "investigations": "",
     "lab_tests": [],
     "treatment": "Management\nINSTRUCTIONS\n\nLOC\n\t\n• \nShould be taken as soon as possible after unprotected \nsex where pregnancy is not desired\n\t\n• \nCan prevent pregnancy if taken anytime within 5 days \nafter unprotected sex (decreasing efficacy over this 5 \nday window)\n\t\n• \nSafe and suitable for all women at risk of an unplanned \npregnancy\n\t\n• \nWomen on ARVs have to take double dose (levonorgestrel \n3 mg = e.g. Postinor 4 tablets)\nHC2\nINSTRUCTIONS\n\nLOC\nNote\n \n•  Warn women against regular/frequent use of \nemergency contraceptive. Advise them to consider \nusing other long- term methods",
@@ -26870,9 +27310,34 @@
     "overview": "TYPE OF LESION\nFEATURES\nFibroepithelial polyp\nOver-vigorous response to low grade \nrecurrent trauma resulting in fibrous \nhyperplasia\n \n• \nWell-localized sessile or \npedunculated lump, usu­\nally located on the palate \nor lateral surface of the \ntongue\nMucocele\nSaliva extravasation into the tissues \nfrom damage to minor salivary gland \nducts. They are commonly seen in \nthe lower labial and ventral lingual \nmucosa\n \n• \nHistory of trauma and \ncharacteristic \nappear­\nance\nRanula\nA mucocele that occurs from the \nsublingual gland\n \n• \nBlue, transparent sublin­\ngual swelling",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "Fibroepithelial polyp",
+      "Over-vigorous response to low grade",
+      "recurrent trauma resulting in fibrous",
+      "hyperplasia",
+      "Well-localized sessile or",
+      "pedunculated lump, usu­",
+      "ally located on the palate",
+      "or lateral surface of the",
+      "tongue",
+      "Mucocele",
+      "Saliva extravasation into the tissues",
+      "from damage to minor salivary gland",
+      "ducts. They are commonly seen in",
+      "the lower labial and ventral lingual",
+      "mucosa",
+      "History of trauma and",
+      "characteristic",
+      "appear­",
+      "ance",
+      "Ranula",
+      "A mucocele that occurs from the",
+      "sublingual gland",
+      "Blue, transparent sublin­",
+      "gual swelling"
+    ],
     "signs": [],
-    "clinical_features_text": "",
+    "clinical_features_text": "Fibroepithelial polyp\nOver-vigorous response to low grade \nrecurrent trauma resulting in fibrous \nhyperplasia\n \n• \nWell-localized sessile or \npedunculated lump, usu­\nally located on the palate \nor lateral surface of the \ntongue\nMucocele\nSaliva extravasation into the tissues \nfrom damage to minor salivary gland \nducts. They are commonly seen in \nthe lower labial and ventral lingual \nmucosa\n \n• \nHistory of trauma and \ncharacteristic \nappear­\nance\nRanula\nA mucocele that occurs from the \nsublingual gland\n \n• \nBlue, transparent sublin­\ngual swelling",
     "investigations": "",
     "lab_tests": [],
     "treatment": "Management\nTREATMENT\n\nLOC\nFibroepithelial polyp\n\t\n• \nExcision biopsy and histological confirmation\nMucocele\n\t\n• \nSurgical removal (recurrence may occur if there is regular \ntrauma)\nRanula\n\t\n• \nExcision of the sublingual gland\nRR",
@@ -26899,9 +27364,34 @@
     "overview": "These simple lesions are often confused for more severe conditions like \nlichen planus, oral candidiasis, pemphigus, erythema multiforme.\nTYPE OF LESION\nFEATURES\nBurns \nMost Commonest after ingestion \nof hot foods, and particularly seen \non the palate or tongue. Chemical \nburns are usually due to analgesics \npositioned next to a painful tooth or \nchemicals used in restorative dentistry\n \n• \nBurns in the palate lo­\ncated in characteristic \nsites related to eating, \nrestored or painful tooth\nSharp teeth and restorations \nTrauma from sharp teeth or restora­\ntions is often worsened in patients \nwith physical or intellectual disability \n[What’s this?] \n \n• \nLesion is site specific and \nis related to a sharp edge\nUlceration due to local anaesthetic \nlceration due to biting the area of \nanaesthetised mucosa\n \n• \nUlcer confined to the \narea of anaesthetised \nmucosa",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "Burns",
+      "Most Commonest after ingestion",
+      "of hot foods, and particularly seen",
+      "on the palate or tongue. Chemical",
+      "burns are usually due to analgesics",
+      "positioned next to a painful tooth or",
+      "chemicals used in restorative dentistry",
+      "Burns in the palate lo­",
+      "cated in characteristic",
+      "sites related to eating,",
+      "restored or painful tooth",
+      "Sharp teeth and restorations",
+      "Trauma from sharp teeth or restora­",
+      "tions is often worsened in patients",
+      "with physical or intellectual disability",
+      "[What’s this?]",
+      "Lesion is site specific and",
+      "is related to a sharp edge",
+      "Ulceration due to local anaesthetic",
+      "lceration due to biting the area of",
+      "anaesthetised mucosa",
+      "Ulcer confined to the",
+      "area of anaesthetised",
+      "mucosa"
+    ],
     "signs": [],
-    "clinical_features_text": "",
+    "clinical_features_text": "Burns \nMost Commonest after ingestion \nof hot foods, and particularly seen \non the palate or tongue. Chemical \nburns are usually due to analgesics \npositioned next to a painful tooth or \nchemicals used in restorative dentistry\n \n• \nBurns in the palate lo­\ncated in characteristic \nsites related to eating, \nrestored or painful tooth\nSharp teeth and restorations \nTrauma from sharp teeth or restora­\ntions is often worsened in patients \nwith physical or intellectual disability \n[What’s this?] \n \n• \nLesion is site specific and \nis related to a sharp edge\nUlceration due to local anaesthetic \nlceration due to biting the area of \nanaesthetised mucosa\n \n• \nUlcer confined to the \narea of anaesthetised \nmucosa",
     "investigations": "",
     "lab_tests": [],
     "treatment": "TREATMENT\nLOC\nBurns\n\t\n• \nReassurance that healing will occur without scarring\n\t\n• \nTopical anaesthetic lidocaine 2% may help\nSharp teeth and restorations\n\t\n• \nSmooth the edge and/or apply a restorative material \nto the tooth\nSharp teeth and restorations\n\t\n• \nSmooth the edge and/or apply a restorative material \nto the tooth\nRR\n\nTREATMENT\nLOC\nUlceration due to local anaesthetic\n\t\n• \nReassurance\n\t\n• \nMay require antibiotic therapy if the area becomes sec­\nondarily infected\n \n- Amoxicillin 500 mg every 8 hours for 5-7 days if \nnecessary\nRR",
@@ -27370,9 +27860,40 @@
     "overview": "Body Part \nAffected\nFeatures\nEquipment\n \n• \nAvailable and in a state of readiness at all \ntimes\n \n• \nAppropriate in quality and quantity\n \n• \nCompatible with safety\nStaff\n \n• \nQualified anaesthesia provider\n \n• \nAn assistant for the anaesthesia provider\n \n• \nAdequate assistance in positioning the pa­\ntient\n \n• \nAdequate technical assistance to ensure \nproper functioning and servicing of all \nequipment\nBefore anaesthesia\n \n• \nRead the notes/medical records of the pa­\ntient\n \n• \nAssess the patient very carefully\n \n• \nThe drugs, equipment, instruments and \nmaterials to be used must be known\n \n• \nProperly prepare workplace and patient\nBody Part \nAffected\nFeatures\nBefore anaesthesia\n \n• \nAnaesthesia is administered (induction and \nmaintenance)\n \n• \nThe patient must be monitored meticu­\nlously to:\n \n• \nEnsure his/her well-being\n \n• \nDetect dangerous signs as soon as they \narise and appropriately treat them\n \n• \nExpertise in resuscitation is obligatory. If \nin trouble, ask for help\n \n• \nKeep an accurate and legible record of the \nanaesthetic and all measured vital signs on \nthe anaesthetic chart/form\nAfter anaesthesia\n \n• \nThe patient:\n \n- Recovers from effects of anaesthesia\n \n- Has stable vital signs\n \n- Is returned to the ward in the fully \nconscious state\n \n• \nFollow-up patient for next 24 hours\nTypes of Anaesthesia\nAnaesthesia may be produced in a number of ways\nGeneral anaesthesia\n \n• \nBasic elements: Loss of consciousness, analgesia, prevention of \nundesirable reflexes, and muscle relaxation\nRegional or local anaesthesia\n \n• \nSensation of pain is blocked without loss of consciousness. The \nconduction of stimulus from a painful site to the brain can be \ninterrupted at one of the many points:\n\t\n• \nSurface anaesthesia\n\t\n• \nInfiltration anaesthesia\n\t\n• \nIntravenous regional anaesthesia\n\t\n• \nNerve block/plexus block\n \n- Epidural anaesthesia\n \n- Spinal anaesthesia",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "Equipment",
+      "Available and in a state of readiness at all",
+      "times",
+      "Appropriate in quality and quantity",
+      "Compatible with safety",
+      "Staff",
+      "Qualified anaesthesia provider",
+      "An assistant for the anaesthesia provider",
+      "Adequate assistance in positioning the pa­",
+      "tient",
+      "Adequate technical assistance to ensure",
+      "proper functioning and servicing of all",
+      "equipment",
+      "Before anaesthesia",
+      "Read the notes/medical records of the pa­",
+      "tient",
+      "Assess the patient very carefully",
+      "The drugs, equipment, instruments and",
+      "materials to be used must be known",
+      "Properly prepare workplace and patient",
+      "Body Part",
+      "Affected",
+      "Features",
+      "Before anaesthesia",
+      "Anaesthesia is administered (induction and",
+      "maintenance)",
+      "The patient must be monitored meticu­",
+      "lously to:",
+      "Ensure his/her well-being",
+      "Detect dangerous signs as soon as they"
+    ],
     "signs": [],
-    "clinical_features_text": "",
+    "clinical_features_text": "Equipment\n \n• \nAvailable and in a state of readiness at all \ntimes\n \n• \nAppropriate in quality and quantity\n \n• \nCompatible with safety\nStaff\n \n• \nQualified anaesthesia provider\n \n• \nAn assistant for the anaesthesia provider\n \n• \nAdequate assistance in positioning the pa­\ntient\n \n• \nAdequate technical assistance to ensure \nproper functioning and servicing of all \nequipment\nBefore anaesthesia\n \n• \nRead the notes/medical records of the pa­\ntient\n \n• \nAssess the patient very carefully\n \n• \nThe drugs, equipment, instruments and \nmaterials to be used must be known\n \n• \nProperly prepare workplace and patient\nBody Part \nAffected\nFeatures\nBefore anaesthesia\n \n• \nAnaesthesia is administered (induction and \nmaintenance)\n \n• \nThe patient must be monitored meticu­\nlously to:\n \n• \nEnsure his/her well-being\n \n• \nDetect dangerous signs as soon as they \narise and appropriately treat them\n \n• \nExpertise in resuscitation is obligatory. If \nin trouble, ask for help\n \n• \nKeep an accurate and legible record of the \nanaesthetic and all measured vital signs on \nthe anaesthetic chart/form\nAfter anaesthesia\n \n• \nThe patient:\n \n- Recovers from effects of anaesthesia\n \n- Has stable vital signs\n \n- Is returned to the ward in the fully \nconscious state\n \n• \nFollow-up patient for next 24 hours\nTypes of Anaesthesia\nAnaesthesia may be produced in a number of ways\nGeneral anaesthesia\n \n• \nBasic elements: Loss of consciousness, analgesia, prevention of \nundesirable reflexes, and muscle relaxation\nRegional or local anaesthesia\n \n• \nSensation of pain is blocked without loss of consciousness. The \nconduction of stimulus from a painful site to the brain can be \ninterrupted at one of the many points:\n\t\n• \nSurface anaesthesia\n\t\n• \nInfiltration anaesthesia\n\t\n• \nIntravenous regional anaesthesia\n\t\n• \nNerve block/plexus block\n \n- Epidural anaesthesia\n \n- Spinal anaesthesia",
     "investigations": "",
     "lab_tests": [],
     "treatment": "",
@@ -27399,9 +27920,40 @@
     "overview": "PREPARATION IN THE OPERATING THEATRE\nShould be in a constant state of preparedness for anaesthesia\nThe following should be available, checked, and ready\n \n• \nOxygen source\n \n• \nOperating table that is adjustable and with its accessories\n \n• \nAnaesthesia machine with accessories\n \n• \nSelf inflating bag for inflating the lungs with oxygen\n \n• \nAppropriate range of face masks\n \n• \nSuction machine with range of suction catheters\n \n• \nAppropriate range of oropharyngeal airways, endotracheal \ntubes, and other airways, e.g., laryngeal mask airway\n \n• \nLaryngoscope with suitable range of blades\n \n• \nMagill’s forceps\n \n• \nIntravenous infusion equipment, appropriate range of cannulae \nand fluids (solutions)\n \n• \nEquipment for regional anaesthesia\n \n• \nAdequate lighting\n \n• \nSafe disposal of items contaminated with body fluids, sharps, \nand waste glass\n \n• \nRefrigeration for storage of fluids, drugs, and blood\n \n• \nAnaesthetic drugs: General and local anaesthetic agents\n \n• \nMuscle relaxants\n \n• \nAppropriate range of sizes of syringes\n \n• \nMonitors: stethoscope, sphygmomanometer, pulse oximeter\n \n• \nAppropriate protection of staff against biological contami­\nnants. This includes: caps, gowns, gloves, masks, footwear \nand eye shields (personal protective equipment)\n \n• \nDrugs necessary for management of conditions, which may \ncomplicate or co-exist with anaesthesia\nPREPARATION IN THE OPERATING THEATRE\nPRE-OPERATIVE MANAGEMENT\nThe aim is to make the patient as fit as possible before surgical operation",
     "causes": [],
     "causes_text": "",
-    "symptoms": [],
+    "symptoms": [
+      "Ketamine",
+      "Solution:50mg/ml,",
+      "mg/ml",
+      "Route: IV or IM",
+      "Dose:",
+      "IV 1-2 mg/kg",
+      "IM. 5-7 mg/kg",
+      "Indication: Induction of anaes­",
+      "thesia, maintenance of anaes­",
+      "thesia (infusion), analgesia",
+      "Contraindication: Hypertension,",
+      "epilepsy,raised intracranial pres­",
+      "sure, e.g., head injury",
+      "Side effects: Emergency delir­",
+      "ium, hallucinations, increased",
+      "salivation, increased muscle tone",
+      "Prevent salivation by atropine",
+      "premedication, treat emergency",
+      "delirium by giving diazepam",
+      "Propofol",
+      "Solution/emulsion:",
+      "% or",
+      "mg/ml",
+      "Route: IV",
+      "Dose: 1-2.5 mg/ kg",
+      "titrated at a rate of 4",
+      "ml per second",
+      "Indications: Induction of anaes­",
+      "thesia, maintenance of anaes­",
+      "thesia"
+    ],
     "signs": [],
-    "clinical_features_text": "",
+    "clinical_features_text": "Ketamine \n \n• \nSolution:50mg/ml, \n10 mg/ml\n \n• \nRoute: IV or IM\n \n• \nDose:\n \n- IV 1-2 mg/kg\n \n- IM. 5-7 mg/kg\n \n• \nIndication: Induction of anaes­\nthesia, maintenance of anaes­\nthesia (infusion), analgesia\n \n• \nContraindication: Hypertension, \nepilepsy,raised intracranial pres­\nsure, e.g., head injury\n \n• \nSide effects: Emergency delir­\nium, hallucinations, increased \nsalivation, increased muscle tone\n \n• \nPrevent salivation by atropine \npremedication, treat emergency \ndelirium by giving diazepam\nPropofol \n \n• \nSolution/emulsion: \n1% or\n \n• \nmg/ml\n \n• \nRoute: IV\n \n• \nDose: 1-2.5 mg/ kg \ntitrated at a rate of 4 \nml per second\n \n• \nIndications: Induction of anaes­\nthesia, maintenance of anaes­\nthesia\n \n• \nContraindication:\n \n• \nHypersensitivity, hypotension\n \n• \nSide effects: Pain at site of in­\njection\nInhalational anaesthetic agents\nHalothane is included in the general essential medicines list but should \nonly be used by health workers confident with the use of this anaesthetic\nMEDICINE\nCHARACTERISTICS AND USE\nHalothane\n \n• \nA volatile liquid at room temperature\n \n• \nIndications\n \n- Induction of anaesthesia (in children, \npatients with airway obstruction)\n \n- Maintenance of anaesthesia\nMEDICINE\nCHARACTERISTICS AND USE\nHalothane\n \n• \nPrecaution: Always use at least 30% oxy­\ngen with halothane\n \n• \nIt is safe to avoid use of adrenaline to pre­\nvent high incidence of arrhythmias\n \n• \nAdverse effects which may occur include:\n \n- Atony of the gravid uterus\n \n- Post-operative shivering\n \n- Severe cardiopulmonary depression\n24.3.1.3 Muscle Relaxants\nThey are used to provide muscle relaxation to facilitate a procedure, and \nused in a patient who is unconscious, e.g. general anaesthesia, or sedated.\n \n• \nPrecaution before using a muscle relaxant: always have means of \nsupporting the airway and respiration",
     "investigations": "Assessment of the patient\n \n- Identify the patient and establish rapport\n \n- A standard history is obtained and an examination done\n \n- Emphasis is on the cardio-respiratory systems\n \n- Investigations appropriately interpreted e.g., Hb\n \n- Health status/condition of the patient\n \n- Classify physical status of the patient according to A.S.A. \n(ASA classification 1-5 with or without E)\n \n- Make a plan for anaesthesia based on the information \nobtained\nPreparation of the patient\n \n- Explain the procedure to the patient and ensure that he/ \nshe has understood\n \n- Ensure informed consent form is signed\n \n- Weight of patient should be taken\n \n- Check site and side of the operation\n \n- Check period of fasting\n \n- Remove: Ornaments/prostheses/dentures that may injure \nthe patient and make-up that may interfere with monitoring\n \n- Any other necessary preparation based on patient’s \ncondition and nature of the operation (condition of deficits/\nimbalances should be corrected, control chronic conditions)\n \n- Ability of the patient to withstand the stresses and adverse \neffects of anaesthesia and the surgical procedure will \ndepend on how well prepared he/she is\n24.3.1.2 General Anaesthetic Agents\nIntravenous agents\nMost anaesthetic agents are included in the specialist essential medicines \nlist meaning that use is restricted to specialised health workers\nTYPE OF LESION\nFEATURES\nKetamine \n \n• \nSolution:50mg/ml, \n10 mg/ml\n \n• \nRoute: IV or IM\n \n• \nDose:\n \n- IV 1-2 mg/kg\n \n- IM. 5-7 mg/kg\n \n• \nIndication: Induction of anaes­\nthesia, maintenance of anaes­\nthesia (infusion), analgesia\n \n• \nContraindication: Hypertension, \nepilepsy,raised intracranial pres­\nsure, e.g., head injury\n \n• \nSide effects: Emergency delir­\nium, hallucinations, increased \nsalivation, increased muscle tone\n \n• \nPrevent salivation by atropine \npremedication, treat emergency \ndelirium by giving diazepam\nPropofol \n \n• \nSolution/emulsion: \n1% or\n \n• \nmg/ml\n \n• \nRoute: IV\n \n• \nDose: 1-2.5 mg/ kg \ntitrated at a rate of 4 \nml per second\n \n• \nIndications: Induction of anaes­\nthesia, maintenance of anaes­\nthesia\n \n• \nContraindication:\n \n• \nHypersensitivity, hypotension\n \n• \nSide effects: Pain at site of in­\njection\nInhalational anaesthetic agents\nHalothane is included in the general essential medicines list but should \nonly be used by health workers confident with the use of this anaesthetic\nMEDICINE\nCHARACTERISTICS AND USE\nHalothane\n \n• \nA volatile liquid at room temperature\n \n• \nIndications\n \n- Induction of anaesthesia (in children, \npatients with airway obstruction)\n \n- Maintenance of anaesthesia\nMEDICINE\nCHARACTERISTICS AND USE\nHalothane\n \n• \nPrecaution: Always use at least 30% oxy­\ngen with halothane\n \n• \nIt is safe to avoid use of adrenaline to pre­\nvent high incidence of arrhythmias\n \n• \nAdverse effects which may occur include:\n \n- Atony of the gravid uterus\n \n- Post-operative shivering\n \n- Severe cardiopulmonary depression\n24.3.1.3 Muscle Relaxants\nThey are used to provide muscle relaxation to facilitate a procedure, and \nused in a patient who is unconscious, e.g. general anaesthesia, or sedated.\n \n• \nPrecaution before using a muscle relaxant: always have means of \nsupporting the airway and respiration",
     "lab_tests": [],
     "treatment": "Dose:\n \n- IV 1-2 mg/kg\n \n- IM. 5-7 mg/kg\n \n• \nIndication: Induction of anaes­\nthesia, maintenance of anaes­\nthesia (infusion), analgesia\n \n• \nContraindication: Hypertension, \nepilepsy,raised intracranial pres­\nsure, e.g., head injury\n \n• \nSide effects: Emergency delir­\nium, hallucinations, increased \nsalivation, increased muscle tone\n \n• \nPrevent salivation by atropine \npremedication, treat emergency \ndelirium by giving diazepam\nPropofol \n \n• \nSolution/emulsion: \n1% or\n \n• \nmg/ml\n \n• \nRoute: IV\n \n• \nDose: 1-2.5 mg/ kg \ntitrated at a rate of 4 \nml per second\n \n• \nIndications: Induction of anaes­\nthesia, maintenance of anaes­\nthesia\n \n• \nContraindication:\n \n• \nHypersensitivity, hypotension\n \n• \nSide effects: Pain at site of in­\njection\nInhalational anaesthetic agents\nHalothane is included in the general essential medicines list but should \nonly be used by health workers confident with the use of this anaesthetic\nMEDICINE\nCHARACTERISTICS AND USE\nHalothane\n \n• \nA volatile liquid at room temperature\n \n• \nIndications\n \n- Induction of anaesthesia (in children, \npatients with airway obstruction)\n \n- Maintenance of anaesthesia\nMEDICINE\nCHARACTERISTICS AND USE\nHalothane\n \n• \nPrecaution: Always use at least 30% oxy­\ngen with halothane\n \n• \nIt is safe to avoid use of adrenaline to pre­\nvent high incidence of arrhythmias\n \n• \nAdverse effects which may occur include:\n \n- Atony of the gravid uterus\n \n- Post-operative shivering\n \n- Severe cardiopulmonary depression\n24.3.1.3 Muscle Relaxants\nThey are used to provide muscle relaxation to facilitate a procedure, and \nused in a patient who is unconscious, e.g. general anaesthesia, or sedated.\n \n• \nPrecaution before using a muscle relaxant: always have means of \nsupporting the airway and respiration",

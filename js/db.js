@@ -3,7 +3,7 @@
  * IndexedDB wrapper for offline data storage
  */
 const DB_NAME = 'vitanova-db';
-const DB_VERSION = 4;  // Direct extraction - zero placeholders
+const DB_VERSION = 5;  // Enriched clinical protocols with direct extraction & cross-references resolved
 const STORE_DISEASES = 'diseases';
 const STORE_SYMPTOM_MAP = 'symptom_map';
 const STORE_CHAPTERS = 'chapters';
@@ -27,11 +27,12 @@ class VitaNovaDB {
           store.createIndex('chapter_num', 'chapter_num', { unique: false });
           store.createIndex('priority', 'priority', { unique: false });
           store.createIndex('name', 'name', { unique: false });
-        } else if (e.oldVersion < 3) {
-          // Clear old partial database to load complete 532 guidelines
+        }
+        if (e.oldVersion < 5) {
+          // Clear older cache so user immediately receives full direct guidelines without stale data
           try {
             const tx = req.transaction;
-            tx.objectStore(STORE_DISEASES).clear();
+            if (db.objectStoreNames.contains(STORE_DISEASES)) tx.objectStore(STORE_DISEASES).clear();
             if (db.objectStoreNames.contains(STORE_DISPENSARY)) tx.objectStore(STORE_DISPENSARY).clear();
             if (db.objectStoreNames.contains(STORE_SYMPTOM_MAP)) tx.objectStore(STORE_SYMPTOM_MAP).clear();
             if (db.objectStoreNames.contains(STORE_META)) tx.objectStore(STORE_META).clear();
