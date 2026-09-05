@@ -1,0 +1,1802 @@
+[
+  {
+    "section": "1.1",
+    "name": "COMMON EMERGENCIES",
+    "page": 67
+  },
+  {
+    "section": "1.1.2.1",
+    "name": "Hypvovolaemic  Shock In Children",
+    "page": 72
+  },
+  {
+    "section": "1.1.3.2",
+    "name": "Dehydration in Older Children and Adults",
+    "page": 79
+  },
+  {
+    "section": "1.1.6",
+    "name": "Hypoglycaemia",
+    "page": 90
+  },
+  {
+    "section": "1.2",
+    "name": "TRAUMA AND INJURIES",
+    "page": 92
+  },
+  {
+    "section": "1.2.1",
+    "name": "Bites and Stings",
+    "page": 92
+  },
+  {
+    "section": "1.2.1.1",
+    "name": "Snakebites",
+    "page": 94
+  },
+  {
+    "section": "1.2.1.5",
+    "name": "Rabies Vaccine Schedules",
+    "page": 108
+  },
+  {
+    "section": "1.2.5.1",
+    "name": "Traumatic Spinal Injury",
+    "page": 125
+  },
+  {
+    "section": "1.3",
+    "name": "POISONING",
+    "page": 131
+  },
+  {
+    "section": "1.3.1.2",
+    "name": "Removal and Elimination of Ingested Poison",
+    "page": 134
+  },
+  {
+    "section": "1.3.4",
+    "name": "Acetylsalicylic Acid (Aspirin) Poisoning",
+    "page": 140
+  },
+  {
+    "section": "1.3.6",
+    "name": "Iron Poisoning",
+    "page": 142
+  },
+  {
+    "section": "1.3.8",
+    "name": "Barbiturate Poisoning",
+    "page": 144
+  },
+  {
+    "section": "1.3.10",
+    "name": "Warfarin Poisoning",
+    "page": 146
+  },
+  {
+    "section": "1.3.11",
+    "name": "Methyl Alcohol (Methanol) Poisoning",
+    "page": 147
+  },
+  {
+    "section": "1.3.12.1",
+    "name": "Acute Alcohol Poisoning",
+    "page": 148
+  },
+  {
+    "section": "1.3.12.2",
+    "name": "Chronic Alcohol Poisoning",
+    "page": 150
+  },
+  {
+    "section": "1.3.13",
+    "name": "Food Poisoning",
+    "page": 151
+  },
+  {
+    "section": "2.1",
+    "name": "BACTERIAL INFECTIONS",
+    "page": 161
+  },
+  {
+    "section": "2.1.5",
+    "name": "Meningitis",
+    "page": 173
+  },
+  {
+    "section": "2.1.5.1",
+    "name": "Neonatal Meningitis",
+    "page": 177
+  },
+  {
+    "section": "2.1.5.3",
+    "name": "TB Meningitis",
+    "page": 179
+  },
+  {
+    "section": "2.1.7",
+    "name": "Septicaemia",
+    "page": 181
+  },
+  {
+    "section": "2.1.7.1",
+    "name": "Neonatal Septicaemia",
+    "page": 183
+  },
+  {
+    "section": "2.1.8",
+    "name": "Tetanus",
+    "page": 185
+  },
+  {
+    "section": "2.1.9",
+    "name": "Typhoid Fever (Enteric Fever)",
+    "page": 190
+  },
+  {
+    "section": "2.1.10",
+    "name": "Typhus Fever",
+    "page": 192
+  },
+  {
+    "section": "2.2",
+    "name": "FUNGAL INFECTIONS",
+    "page": 194
+  },
+  {
+    "section": "2.3",
+    "name": "VIRAL INFECTIONS",
+    "page": 196
+  },
+  {
+    "section": "2.3.3",
+    "name": "Measles",
+    "page": 200
+  },
+  {
+    "section": "2.3.5",
+    "name": "Rabies",
+    "page": 204
+  },
+  {
+    "section": "2.3.6",
+    "name": "VIRAL HAEMORRHAGIC FEVERS",
+    "page": 206
+  },
+  {
+    "section": "2.3.6.1",
+    "name": "Ebola  and  Marburg",
+    "page": 206
+  },
+  {
+    "section": "2.3.6.2",
+    "name": "Yellow Fever",
+    "page": 209
+  },
+  {
+    "section": "2.4",
+    "name": "HELMINTHES PARASITES",
+    "page": 216
+  },
+  {
+    "section": "2.4.1.1",
+    "name": "Taeniasis (Tapeworm)",
+    "page": 219
+  },
+  {
+    "section": "2.4.4",
+    "name": "Lymphatic Filariasis",
+    "page": 223
+  },
+  {
+    "section": "2.5",
+    "name": "PROTOZOAL PARASITES",
+    "page": 228
+  },
+  {
+    "section": "2.5.2",
+    "name": "Malaria",
+    "page": 230
+  },
+  {
+    "section": "2.5.3.3",
+    "name": "Management of Complications of Severe Malaria",
+    "page": 241
+  },
+  {
+    "section": "2.5.3.4",
+    "name": "Malaria Prophylaxis",
+    "page": 245
+  },
+  {
+    "section": "2.5.3.5",
+    "name": "Malaria Prevention and Control",
+    "page": 246
+  },
+  {
+    "section": "2.5.4",
+    "name": "Human African Trypanosomiasis (Sleeping Sickness)",
+    "page": 247
+  },
+  {
+    "section": "3.1.1",
+    "name": "Clinical Features of HIV",
+    "page": 253
+  },
+  {
+    "section": "3.1.2",
+    "name": "Diagnosis and Investigations of HIV",
+    "page": 256
+  },
+  {
+    "section": "3.1.3",
+    "name": "Measures before ARV Treatment",
+    "page": 263
+  },
+  {
+    "section": "3.1.4",
+    "name": "General Principles of Antiretroviral Treatment (ART)",
+    "page": 266
+  },
+  {
+    "section": "3.1.6",
+    "name": "Monitoring of ART",
+    "page": 277
+  },
+  {
+    "section": "3.1.7",
+    "name": "ARV Toxicity",
+    "page": 284
+  },
+  {
+    "section": "3.1.9",
+    "name": "Mother-to-Child Transmission of HIV",
+    "page": 295
+  },
+  {
+    "section": "3.1.9.1",
+    "name": "Management of HIV Positive Pregnant Mother",
+    "page": 297
+  },
+  {
+    "section": "3.1.9.2",
+    "name": "HIV-exposed infant care services",
+    "page": 305
+  },
+  {
+    "section": "3.1.9.3",
+    "name": "Care of HIV Exposed Infant",
+    "page": 314
+  },
+  {
+    "section": "3.1.10",
+    "name": "OPPORTUNISTIC INFECTIONS IN HIV",
+    "page": 318
+  },
+  {
+    "section": "3.1.10.1",
+    "name": "Tuberculosis and HIV Co-Infection",
+    "page": 318
+  },
+  {
+    "section": "3.1.10.4",
+    "name": "Pneumocystis Pneumonia",
+    "page": 329
+  },
+  {
+    "section": "3.1.10.5",
+    "name": "Other Diseases",
+    "page": 330
+  },
+  {
+    "section": "3.1.11",
+    "name": "Prevention of HIV",
+    "page": 330
+  },
+  {
+    "section": "3.1.11.1",
+    "name": "Post-Exposure Prophylaxis",
+    "page": 331
+  },
+  {
+    "section": "3.1.11.2",
+    "name": "Pre-Exposure Prophylaxis (PrEP)",
+    "page": 335
+  },
+  {
+    "section": "3.1.12",
+    "name": "Psychosocial Support for HIV-Positive Persons",
+    "page": 340
+  },
+  {
+    "section": "3.2",
+    "name": "SEXUALLY TRANSMITTED INFECTIONS (STI)",
+    "page": 342
+  },
+  {
+    "section": "3.2.1",
+    "name": "Urethral Discharge Syndrome (Male)",
+    "page": 342
+  },
+  {
+    "section": "3.2.2",
+    "name": "Abnormal Vaginal Discharge Syndrome",
+    "page": 345
+  },
+  {
+    "section": "3.2.3",
+    "name": "Pelvic Inflammatory Disease (PID)",
+    "page": 349
+  },
+  {
+    "section": "2.4",
+    "name": "MU IM single does (half",
+    "page": 350
+  },
+  {
+    "section": "2.4",
+    "name": "MU IM single does (half",
+    "page": 350
+  },
+  {
+    "section": "3.2.5",
+    "name": "Inguinal Swelling (Bubo)",
+    "page": 352
+  },
+  {
+    "section": "3.2.7",
+    "name": "Syphilis",
+    "page": 356
+  },
+  {
+    "section": "3.2.8",
+    "name": "Other Genital Infections",
+    "page": 358
+  },
+  {
+    "section": "3.2.9",
+    "name": "Congenital STI Syndromes",
+    "page": 360
+  },
+  {
+    "section": "3.2.9.1",
+    "name": "Neonatal Conjunctivitis (Ophthalmia Neonatorum)",
+    "page": 360
+  },
+  {
+    "section": "3.2.9.2",
+    "name": "Congenital Syphilis",
+    "page": 361
+  },
+  {
+    "section": "2.4",
+    "name": "MU single dose (half on each buttock)",
+    "page": 362
+  },
+  {
+    "section": "4.1.1",
+    "name": "Thrombosis/Pulmonary Embolism (DVT/PE)",
+    "page": 364
+  },
+  {
+    "section": "4.1.5",
+    "name": "Atrial Fibrillation",
+    "page": 375
+  },
+  {
+    "section": "4.1.6.1",
+    "name": "Hypertensive Emergencies and urgency",
+    "page": 382
+  },
+  {
+    "section": "4.1.7",
+    "name": "Ischaemic Heart Disease (Coronary Heart Disease)",
+    "page": 383
+  },
+  {
+    "section": "4.1.8",
+    "name": "Pericarditis",
+    "page": 386
+  },
+  {
+    "section": "4.1.9",
+    "name": "Rheumatic Fever",
+    "page": 388
+  },
+  {
+    "section": "5.1",
+    "name": "NON-INFECTIOUS RESPIRATORY DISEASES",
+    "page": 395
+  },
+  {
+    "section": "5.1.1.1",
+    "name": "Acute Asthma",
+    "page": 397
+  },
+  {
+    "section": "5.1.1.2",
+    "name": "Chronic Asthma",
+    "page": 403
+  },
+  {
+    "section": "5.1.2",
+    "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "page": 406
+  },
+  {
+    "section": "5.2",
+    "name": "INFECTIOUS RESPIRATORY DISEASES",
+    "page": 410
+  },
+  {
+    "section": "5.2.2",
+    "name": "Acute Bronchitis",
+    "page": 412
+  },
+  {
+    "section": "5.2.3",
+    "name": "Coryza (Common Cold)",
+    "page": 413
+  },
+  {
+    "section": "5.2.7",
+    "name": "Acute Laryngotracheobronchitis (Croup)",
+    "page": 419
+  },
+  {
+    "section": "5.2.9.4",
+    "name": "Pneumonia by Specific Organisms",
+    "page": 430
+  },
+  {
+    "section": "5.2.9.5",
+    "name": "Pneumocystis jirovecii Pneumonia",
+    "page": 431
+  },
+  {
+    "section": "5.2.9.6",
+    "name": "Lung Abscess",
+    "page": 432
+  },
+  {
+    "section": "5.3.1.2",
+    "name": "Drug-Resistant TB",
+    "page": 440
+  },
+  {
+    "section": "5.3.1.3",
+    "name": "Post-TB patient management",
+    "page": 441
+  },
+  {
+    "section": "5.3.2",
+    "name": "Management of TB",
+    "page": 442
+  },
+  {
+    "section": "5.3.2.1",
+    "name": "Anti-TB Drugs Side Effects",
+    "page": 448
+  },
+  {
+    "section": "5.3.2.2",
+    "name": "Prevention and Infection Control of TB",
+    "page": 451
+  },
+  {
+    "section": "5.3.2.3",
+    "name": "Tuberculosis Preventive Treatment",
+    "page": 452
+  },
+  {
+    "section": "5.3.2.5",
+    "name": "TB Preventive Treatment Dosing Chart",
+    "page": 454
+  },
+  {
+    "section": "0.5",
+    "name": "Medicine frequency",
+    "page": 456
+  },
+  {
+    "section": "6.1",
+    "name": "GASTROINTESTINAL EMERGENCIES",
+    "page": 460
+  },
+  {
+    "section": "6.1.1",
+    "name": "Appendicitis (Acute)",
+    "page": 460
+  },
+  {
+    "section": "6.2",
+    "name": "GASTROINTESTINAL  INFECTIONS",
+    "page": 471
+  },
+  {
+    "section": "6.2.1",
+    "name": "Amoebiasis",
+    "page": 471
+  },
+  {
+    "section": "6.3",
+    "name": "GASTROINTESTINAL DISORDERS",
+    "page": 476
+  },
+  {
+    "section": "6.3.2",
+    "name": "Dyspepsia",
+    "page": 478
+  },
+  {
+    "section": "6.4",
+    "name": "ANORECTAL DISORDERS",
+    "page": 487
+  },
+  {
+    "section": "6.4.1",
+    "name": "Constipation",
+    "page": 487
+  },
+  {
+    "section": "6.4.2",
+    "name": "Haemorrhoids (Piles) and Anal Fissures",
+    "page": 489
+  },
+  {
+    "section": "6.5",
+    "name": "HEPATIC AND BILIARY DISEASES",
+    "page": 491
+  },
+  {
+    "section": "6.5.1",
+    "name": "Viral Hepatitis",
+    "page": 491
+  },
+  {
+    "section": "6.5.2",
+    "name": "Chronic Hepatitis B Infection",
+    "page": 494
+  },
+  {
+    "section": "6.5.4.2",
+    "name": "Spontaneous Bacterial Peritonitis (SBP)",
+    "page": 502
+  },
+  {
+    "section": "6.5.4.3",
+    "name": "Hepatic Encephalopathy (HE)",
+    "page": 503
+  },
+  {
+    "section": "6.5.4.3",
+    "name": "Hepatic Encephalopathy (HE)",
+    "page": 504
+  },
+  {
+    "section": "6.5.4.2",
+    "name": "Oesophageal Varices",
+    "page": 505
+  },
+  {
+    "section": "6.5.4.4",
+    "name": "Hepatocellular Carcinoma",
+    "page": 506
+  },
+  {
+    "section": "6.5.5",
+    "name": "Hepatic Schistosomiasis",
+    "page": 507
+  },
+  {
+    "section": "6.5.6",
+    "name": "Drug-Induced Liver Injury",
+    "page": 508
+  },
+  {
+    "section": "7.1",
+    "name": "RENAL DISEASES",
+    "page": 514
+  },
+  {
+    "section": "7.1.1",
+    "name": "Acute Renal Failure",
+    "page": 514
+  },
+  {
+    "section": "7.1.3",
+    "name": "Use of Drugs in Renal Failure",
+    "page": 519
+  },
+  {
+    "section": "7.1.5",
+    "name": "Nephrotic Syndrome",
+    "page": 523
+  },
+  {
+    "section": "7.2",
+    "name": "UROLOGICAL DISEASES",
+    "page": 524
+  },
+  {
+    "section": "7.2.1",
+    "name": "Acute Cystitis",
+    "page": 524
+  },
+  {
+    "section": "7.2.2",
+    "name": "Acute Pyelonephritis",
+    "page": 526
+  },
+  {
+    "section": "7.2.3",
+    "name": "Prostatitis",
+    "page": 529
+  },
+  {
+    "section": "7.2.4",
+    "name": "Renal Colic",
+    "page": 530
+  },
+  {
+    "section": "7.2.6",
+    "name": "Bladder Outlet Obstruction",
+    "page": 532
+  },
+  {
+    "section": "7.2.7",
+    "name": "Urine Incontinence",
+    "page": 533
+  },
+  {
+    "section": "8.1.3",
+    "name": "Diabetes Mellitus",
+    "page": 537
+  },
+  {
+    "section": "8.1.5",
+    "name": "Goitre",
+    "page": 547
+  },
+  {
+    "section": "8.1.6",
+    "name": "Hyperthyroidism",
+    "page": 548
+  },
+  {
+    "section": "9.1",
+    "name": "NEUROLOGICAL DISORDERS",
+    "page": 554
+  },
+  {
+    "section": "9.1.2",
+    "name": "Nodding Disease",
+    "page": 562
+  },
+  {
+    "section": "9.1.3",
+    "name": "Headache",
+    "page": 563
+  },
+  {
+    "section": "9.1.5",
+    "name": "Parkinsonism",
+    "page": 568
+  },
+  {
+    "section": "9.1.6",
+    "name": "Delirium (Acute Confusional State)",
+    "page": 570
+  },
+  {
+    "section": "9.2",
+    "name": "PSYCHIATRIC AND SUBSTANCE USE DISORDERS",
+    "page": 572
+  },
+  {
+    "section": "9.2.2",
+    "name": "Depression",
+    "page": 574
+  },
+  {
+    "section": "9.2.2.1",
+    "name": "Postnatal Depression",
+    "page": 578
+  },
+  {
+    "section": "9.2.4.1",
+    "name": "Postnatal Psychosis",
+    "page": 588
+  },
+  {
+    "section": "9.2",
+    "name": "PSYCHIATRIC AND SUBSTANCE USE DISORDERS",
+    "page": 590
+  },
+  {
+    "section": "9.2.2",
+    "name": "Depression",
+    "page": 592
+  },
+  {
+    "section": "9.2.2.1",
+    "name": "Postnatal Depression",
+    "page": 596
+  },
+  {
+    "section": "9.2.4",
+    "name": "Psychosis",
+    "page": 604
+  },
+  {
+    "section": "9.1.1.1",
+    "name": "Postnatal Psychosis",
+    "page": 607
+  },
+  {
+    "section": "9.1.1",
+    "name": "Alcohol Use Disorders",
+    "page": 609
+  },
+  {
+    "section": "9.1.2",
+    "name": "Substance Abuse",
+    "page": 613
+  },
+  {
+    "section": "10.1",
+    "name": "INFECTIONS",
+    "page": 620
+  },
+  {
+    "section": "10.1.3",
+    "name": "Pyomyositis",
+    "page": 625
+  },
+  {
+    "section": "10.2",
+    "name": "INFLAMMATORY/DEGENERATIVE DISORDERS",
+    "page": 628
+  },
+  {
+    "section": "10.2.1",
+    "name": "Rheumatoid Arthritis",
+    "page": 628
+  },
+  {
+    "section": "11.1",
+    "name": "BLOOD DISORDERS",
+    "page": 634
+  },
+  {
+    "section": "11.1.1.3",
+    "name": "Normocytic Anaemia",
+    "page": 641
+  },
+  {
+    "section": "11.2",
+    "name": "Blood And Blood Products",
+    "page": 654
+  },
+  {
+    "section": "11.2.1",
+    "name": "General Principles of Good Clinical Practice in Transfusion",
+    "page": 655
+  },
+  {
+    "section": "11.2.2.1",
+    "name": "Whole Blood",
+    "page": 656
+  },
+  {
+    "section": "11.2.2.2",
+    "name": "Red Cell Concentrates (packed red cells)",
+    "page": 657
+  },
+  {
+    "section": "11.2.2.3",
+    "name": "Clinical Indications for Blood Transfusion",
+    "page": 658
+  },
+  {
+    "section": "11.2.3",
+    "name": "Adverse Reactions following Transfusion",
+    "page": 661
+  },
+  {
+    "section": "11.2.3.1",
+    "name": "Acute Transfusion Reactions",
+    "page": 664
+  },
+  {
+    "section": "12.1",
+    "name": "INTRODUCTION",
+    "page": 668
+  },
+  {
+    "section": "12.1.1",
+    "name": "Special Groups at Increased Risk of Cancer",
+    "page": 668
+  },
+  {
+    "section": "12.1.2",
+    "name": "Early Signs and Symptoms",
+    "page": 669
+  },
+  {
+    "section": "12.1.2.1",
+    "name": "Urgent Signs and Symptoms",
+    "page": 669
+  },
+  {
+    "section": "12.2",
+    "name": "Prevention of Cancer",
+    "page": 671
+  },
+  {
+    "section": "12.2.1",
+    "name": "Primary Prevention",
+    "page": 671
+  },
+  {
+    "section": "12.2.1.1",
+    "name": "Control of Risk Factors",
+    "page": 672
+  },
+  {
+    "section": "12.2.2",
+    "name": "Secondary Prevention",
+    "page": 675
+  },
+  {
+    "section": "12.3",
+    "name": "Common Cancers",
+    "page": 678
+  },
+  {
+    "section": "12.3.1",
+    "name": "Common Cancers in Children",
+    "page": 678
+  },
+  {
+    "section": "1.1.1",
+    "name": "Common Cancers in Adults",
+    "page": 680
+  },
+  {
+    "section": "13.1",
+    "name": "Pain",
+    "page": 687
+  },
+  {
+    "section": "13.1.1",
+    "name": "Clinical Features and Investigations",
+    "page": 688
+  },
+  {
+    "section": "13.1.2",
+    "name": "Nociceptive Pain Management",
+    "page": 689
+  },
+  {
+    "section": "13.1.2.1",
+    "name": "Pain  Management  In   Adults",
+    "page": 691
+  },
+  {
+    "section": "13.1.2.3",
+    "name": "Pain Management In Children",
+    "page": 693
+  },
+  {
+    "section": "13.1.3",
+    "name": "Neuropathic Pain",
+    "page": 697
+  },
+  {
+    "section": "13.1.4",
+    "name": "Back or Bone Pain",
+    "page": 698
+  },
+  {
+    "section": "13.2",
+    "name": "OTHER CONDITIONS IN PALLIATIVE CARE",
+    "page": 699
+  },
+  {
+    "section": "13.2.2",
+    "name": "Nausea and Vomiting",
+    "page": 700
+  },
+  {
+    "section": "13.2.4",
+    "name": "Fungating Wounds",
+    "page": 701
+  },
+  {
+    "section": "13.2.6",
+    "name": "Hiccup",
+    "page": 703
+  },
+  {
+    "section": "13.2.7",
+    "name": "Dry or Painful Mouth",
+    "page": 704
+  },
+  {
+    "section": "13.2.8",
+    "name": "Other Symptoms",
+    "page": 705
+  },
+  {
+    "section": "13.2.9",
+    "name": "End of Life Care",
+    "page": 705
+  },
+  {
+    "section": "14.1.1",
+    "name": "DYSMENORRHOEA",
+    "page": 709
+  },
+  {
+    "section": "14.1.4",
+    "name": "Menopause",
+    "page": 715
+  },
+  {
+    "section": "15.1",
+    "name": "Key steps to be followed in provision of fp services",
+    "page": 717
+  },
+  {
+    "section": "15.1.2",
+    "name": "Counsel High-Risk Clients",
+    "page": 718
+  },
+  {
+    "section": "15.1.4",
+    "name": "Discuss with PLW HIV Special Consideration for HIV",
+    "page": 720
+  },
+  {
+    "section": "15.1.5",
+    "name": "Educate and Counsel Clients to Make Informed Choice of",
+    "page": 720
+  },
+  {
+    "section": "15.1.6",
+    "name": "Obtain and Record Client History",
+    "page": 721
+  },
+  {
+    "section": "15.1.7",
+    "name": "Perform a Physical Assessment",
+    "page": 723
+  },
+  {
+    "section": "15.1.8",
+    "name": "Perform a Pelvic Examination",
+    "page": 724
+  },
+  {
+    "section": "15.1.9",
+    "name": "Manage Client for Chosen FP Method",
+    "page": 724
+  },
+  {
+    "section": "15.1.10",
+    "name": "Summary of Medical Eligibility for Contraceptives",
+    "page": 725
+  },
+  {
+    "section": "15.2",
+    "name": "Overview Of Key Contraceptive Methods",
+    "page": 730
+  },
+  {
+    "section": "15.2.1",
+    "name": "Condom (Male)",
+    "page": 730
+  },
+  {
+    "section": "15.2.3",
+    "name": "Combined Oral Contraceptive Pill (COC)",
+    "page": 733
+  },
+  {
+    "section": "15.2.4",
+    "name": "Progestogen-Only Pill (POP)",
+    "page": 737
+  },
+  {
+    "section": "15.2.5",
+    "name": "Injectable Progestogen-Only Contraceptive",
+    "page": 740
+  },
+  {
+    "section": "15.2.6",
+    "name": "Progestogen-Only Sub-Dermal Implant",
+    "page": 745
+  },
+  {
+    "section": "15.2.7",
+    "name": "Emergency Contraception (Pill and IUD)",
+    "page": 749
+  },
+  {
+    "section": "16.1.1",
+    "name": "Goal-Oriented Antenatal Care Protocol",
+    "page": 759
+  },
+  {
+    "section": "16.1.2",
+    "name": "Management of Common Complaints during Pregnancy",
+    "page": 764
+  },
+  {
+    "section": "16.2",
+    "name": "MANAGEMENT OF SELECTED CONDITIONS IN",
+    "page": 767
+  },
+  {
+    "section": "16.2.1",
+    "name": "Anaemia in Pregnancy",
+    "page": 767
+  },
+  {
+    "section": "16.2.2",
+    "name": "Pregnancy and HIV Infection",
+    "page": 770
+  },
+  {
+    "section": "16.2.2.1",
+    "name": "Care for HIV Positive Women (eMTCT)",
+    "page": 771
+  },
+  {
+    "section": "16.2.2.2",
+    "name": "Counselling for HIV Positive Mothers",
+    "page": 772
+  },
+  {
+    "section": "16.2.3",
+    "name": "Chronic Hypertension in Pregnancy",
+    "page": 774
+  },
+  {
+    "section": "16.2.4",
+    "name": "Malaria in Pregnancy",
+    "page": 775
+  },
+  {
+    "section": "16.2.5",
+    "name": "Diabetes in Pregnancy",
+    "page": 777
+  },
+  {
+    "section": "16.2.6",
+    "name": "Urinary Tract Infections in Pregnancy",
+    "page": 779
+  },
+  {
+    "section": "16.3",
+    "name": "ANTENATAL COMPLICATIONS",
+    "page": 780
+  },
+  {
+    "section": "16.3.2",
+    "name": "Vaginal Bleeding in Early Pregnancy/ Abortion",
+    "page": 781
+  },
+  {
+    "section": "16.3.3",
+    "name": "Ectopic Pregnancy",
+    "page": 785
+  },
+  {
+    "section": "16.3.5",
+    "name": "Chorioamnionitis",
+    "page": 791
+  },
+  {
+    "section": "16.4.2",
+    "name": "Induction of Labour",
+    "page": 806
+  },
+  {
+    "section": "16.4.3",
+    "name": "Obstructed Labour",
+    "page": 808
+  },
+  {
+    "section": "16.4.5",
+    "name": "Retained Placenta",
+    "page": 811
+  },
+  {
+    "section": "16.4.8",
+    "name": "Care of Mother and Baby Immediately After Delivery",
+    "page": 818
+  },
+  {
+    "section": "16.4.8.1",
+    "name": "Care of Mother Immediately After Delivery",
+    "page": 819
+  },
+  {
+    "section": "16.4.8.2",
+    "name": "Care of Baby Immediately After Delivery",
+    "page": 820
+  },
+  {
+    "section": "16.5",
+    "name": "ESSENTIAL CARE OF THE NEWBORN",
+    "page": 822
+  },
+  {
+    "section": "16.5.2",
+    "name": "General Care of Newborn After Delivery",
+    "page": 825
+  },
+  {
+    "section": "16.5.3",
+    "name": "Extra Care of Small Babies or Twins in the First Days of",
+    "page": 827
+  },
+  {
+    "section": "16.5.4",
+    "name": "Newborn Hygiene at Home",
+    "page": 829
+  },
+  {
+    "section": "16.6",
+    "name": "POSTPARTUM CONDITIONS",
+    "page": 830
+  },
+  {
+    "section": "16.6.1.1",
+    "name": "Postpartum Counselling",
+    "page": 830
+  },
+  {
+    "section": "16.6.2",
+    "name": "Ask if current or previous",
+    "page": 845
+  },
+  {
+    "section": "16.6.2",
+    "name": "Postnatal Depression",
+    "page": 847
+  },
+  {
+    "section": "16.7",
+    "name": "INTRAUTERINE FETAL DEMISE (IUFD) OR FETAL",
+    "page": 854
+  },
+  {
+    "section": "17.1",
+    "name": "SICK NEWBORN",
+    "page": 862
+  },
+  {
+    "section": "17.1.1",
+    "name": "Newborn Examination/Danger Signs",
+    "page": 862
+  },
+  {
+    "section": "17.2.1",
+    "name": "Check for Very Severe Disease and Local Bacterial",
+    "page": 873
+  },
+  {
+    "section": "17.2.2",
+    "name": "Check for Jaundice",
+    "page": 876
+  },
+  {
+    "section": "17.2.3",
+    "name": "Check for Diarrhoea/Dehydration",
+    "page": 877
+  },
+  {
+    "section": "17.2.4",
+    "name": "Check for HIV Infection",
+    "page": 881
+  },
+  {
+    "section": "17.2.5",
+    "name": "Check for Feeding Problem or Low Weight-for-Age",
+    "page": 883
+  },
+  {
+    "section": "17.2.5.1",
+    "name": "All Young Infants Except HIV-exposed Infants Not",
+    "page": 883
+  },
+  {
+    "section": "17.2.5.2",
+    "name": "HIV-exposed Non Breastfeeding Infants",
+    "page": 886
+  },
+  {
+    "section": "17.2.7",
+    "name": "Assess Other Problems",
+    "page": 889
+  },
+  {
+    "section": "17.2.9",
+    "name": "Summary of IMNCI Medicines Used for Young Infants",
+    "page": 889
+  },
+  {
+    "section": "117.2.10",
+    "name": "Counsel the Mother",
+    "page": 890
+  },
+  {
+    "section": "17.3.21",
+    "name": "Check for General Danger Signs",
+    "page": 892
+  },
+  {
+    "section": "17.3.2",
+    "name": "Check for Cough or Difficult Breathing",
+    "page": 893
+  },
+  {
+    "section": "17.3.3",
+    "name": "Child Has Diarrhoea",
+    "page": 896
+  },
+  {
+    "section": "17.3.4",
+    "name": "Check for Fever",
+    "page": 900
+  },
+  {
+    "section": "17.3.5",
+    "name": "Check for Ear Problem",
+    "page": 907
+  },
+  {
+    "section": "17.3.6",
+    "name": "Check for Malnutrition and Feeding Problems",
+    "page": 908
+  },
+  {
+    "section": "17.3.7",
+    "name": "Check for Anaemia",
+    "page": 912
+  },
+  {
+    "section": "17.3.9",
+    "name": "Assess Other Problems",
+    "page": 916
+  },
+  {
+    "section": "17.3.10",
+    "name": "Summary of Medicines Used",
+    "page": 916
+  },
+  {
+    "section": "17.3.10.1",
+    "name": "Medicines Used Only in Health Centers",
+    "page": 917
+  },
+  {
+    "section": "17.3.10.2",
+    "name": "Medicines for Home Use",
+    "page": 917
+  },
+  {
+    "section": "1.1.3",
+    "name": "Rehydration",
+    "page": 921
+  },
+  {
+    "section": "3.1.3",
+    "name": "HIV prophylaxis",
+    "page": 922
+  },
+  {
+    "section": "17.3.10.3",
+    "name": "Treatment of Local Infections at Home",
+    "page": 922
+  },
+  {
+    "section": "17.3.11",
+    "name": "Counsel the Mother",
+    "page": 924
+  },
+  {
+    "section": "17.3.12.1",
+    "name": "Feeding Recommendation during Illness",
+    "page": 924
+  },
+  {
+    "section": "17.3.12.2",
+    "name": "Assessing Appetite and Feeding",
+    "page": 924
+  },
+  {
+    "section": "17.3.12.3",
+    "name": "Feeding Recommendations",
+    "page": 926
+  },
+  {
+    "section": "17.3.12.4",
+    "name": "Counselling for Feeding Problems",
+    "page": 929
+  },
+  {
+    "section": "17.4",
+    "name": "INTEGRATED COMMUNITY CASE MANAGEMENT",
+    "page": 932
+  },
+  {
+    "section": "17.5",
+    "name": "CHILD GROWTH WEIGHT STANDARDS CHARTS",
+    "page": 934
+  },
+  {
+    "section": "18.1",
+    "name": "ROUTINE CHILDHOOD VACCINATION",
+    "page": 941
+  },
+  {
+    "section": "18.1.1",
+    "name": "National Immunization Schedule",
+    "page": 941
+  },
+  {
+    "section": "18.1.2",
+    "name": "Hepatitis B Vaccination",
+    "page": 947
+  },
+  {
+    "section": "18.1.3",
+    "name": "Yellow Fever Vaccination",
+    "page": 948
+  },
+  {
+    "section": "18.1.4",
+    "name": "Tetanus Prevention",
+    "page": 948
+  },
+  {
+    "section": "18.2.3.1",
+    "name": "Prophylaxis Against Neonatal Tetanus",
+    "page": 949
+  },
+  {
+    "section": "19.1",
+    "name": "NUTRITION GUIDELINES IN SPECIAL POPULATIONS",
+    "page": 953
+  },
+  {
+    "section": "19.1.1",
+    "name": "Infant and Young Child Feeding (IYCF)",
+    "page": 953
+  },
+  {
+    "section": "19.1.2",
+    "name": "Nutrition in HIV/AIDS",
+    "page": 954
+  },
+  {
+    "section": "19.1.3",
+    "name": "Nutrition in Diabetes",
+    "page": 955
+  },
+  {
+    "section": "19.2.1",
+    "name": "Introduction on Malnutrition",
+    "page": 956
+  },
+  {
+    "section": "19.2.1.1",
+    "name": "Classification of Malnutrition",
+    "page": 958
+  },
+  {
+    "section": "19.2.2",
+    "name": "Management of Acute Malnutrition in Children",
+    "page": 963
+  },
+  {
+    "section": "19.2.2.1",
+    "name": "Management of Moderate Acute Malnutrition",
+    "page": 963
+  },
+  {
+    "section": "19.2.2.2",
+    "name": "Management of Uncomplicated Severe Acute",
+    "page": 964
+  },
+  {
+    "section": "19.2.2.4",
+    "name": "Treatment of Associated Conditions",
+    "page": 980
+  },
+  {
+    "section": "19.2.2.5",
+    "name": "Discharge from Nutritional Programme",
+    "page": 982
+  },
+  {
+    "section": "20.1.1",
+    "name": "Notes on Use of Eye Preparations",
+    "page": 989
+  },
+  {
+    "section": "20.1.3",
+    "name": "Stye (Hordeolum)",
+    "page": 991
+  },
+  {
+    "section": "20.1.4",
+    "name": "Trachoma",
+    "page": 992
+  },
+  {
+    "section": "20.2",
+    "name": "DECREASED OR REDUCED VISION CONDITIONS",
+    "page": 999
+  },
+  {
+    "section": "20.2.2",
+    "name": "Glaucoma",
+    "page": 1001
+  },
+  {
+    "section": "20.2.4",
+    "name": "Refractive Errors",
+    "page": 1003
+  },
+  {
+    "section": "20.2.25.1",
+    "name": "Vision Loss",
+    "page": 1005
+  },
+  {
+    "section": "20.3",
+    "name": "TRAUMA AND INJURIES TO THE EYE",
+    "page": 1007
+  },
+  {
+    "section": "20.3.2",
+    "name": "Ocular and Adnexa Injuries",
+    "page": 1008
+  },
+  {
+    "section": "20.4",
+    "name": "OCULAR TUMOURS",
+    "page": 1011
+  },
+  {
+    "section": "20.4.2",
+    "name": "Squamous Cell Carcinoma of Conjunctiva",
+    "page": 1012
+  },
+  {
+    "section": "21.1",
+    "name": "EAR CONDITIONS",
+    "page": 1013
+  },
+  {
+    "section": "21.2",
+    "name": "NASAL CONDITIONS",
+    "page": 1021
+  },
+  {
+    "section": "21.2.2",
+    "name": "Epistaxis (Nose Bleeding)",
+    "page": 1023
+  },
+  {
+    "section": "21.2.3",
+    "name": "Nasal Allergy",
+    "page": 1024
+  },
+  {
+    "section": "21.2.4",
+    "name": "Sinusitis (Acute)",
+    "page": 1026
+  },
+  {
+    "section": "21.2.5",
+    "name": "Atrophic Rhinitis",
+    "page": 1028
+  },
+  {
+    "section": "21.2.6",
+    "name": "Adenoid Disease",
+    "page": 1029
+  },
+  {
+    "section": "21.3",
+    "name": "THROAT CONDITIONS",
+    "page": 1031
+  },
+  {
+    "section": "21.3.4",
+    "name": "Pharyngo-Tonsillitis",
+    "page": 1036
+  },
+  {
+    "section": "22.1",
+    "name": "BACTERIAL SKIN INFECTIONS",
+    "page": 1040
+  },
+  {
+    "section": "22.1.1",
+    "name": "Impetigo",
+    "page": 1040
+  },
+  {
+    "section": "22.1.2",
+    "name": "Boils (Furuncle)/Carbuncle",
+    "page": 1042
+  },
+  {
+    "section": "22.1.3",
+    "name": "Cellulitis and Erysipelas",
+    "page": 1043
+  },
+  {
+    "section": "22.2",
+    "name": "VIRAL SKIN INFECTIONS",
+    "page": 1045
+  },
+  {
+    "section": "22.2.1",
+    "name": "Herpes Simplex",
+    "page": 1045
+  },
+  {
+    "section": "22.3",
+    "name": "FUNGAL SKIN INFECTIONS",
+    "page": 1048
+  },
+  {
+    "section": "22.3.1",
+    "name": "Tineas",
+    "page": 1048
+  },
+  {
+    "section": "22.4",
+    "name": "PARASITIC SKIN INFECTIONS",
+    "page": 1053
+  },
+  {
+    "section": "22.4.1",
+    "name": "Scabies",
+    "page": 1053
+  },
+  {
+    "section": "22.4.2",
+    "name": "Pediculosis/Lice",
+    "page": 1055
+  },
+  {
+    "section": "22.4.3",
+    "name": "Tungiasis (Jiggers)",
+    "page": 1057
+  },
+  {
+    "section": "22.5.1",
+    "name": "Acne",
+    "page": 1060
+  },
+  {
+    "section": "22.5.2",
+    "name": "Urticaria/Papular Urticari",
+    "page": 1062
+  },
+  {
+    "section": "22.5.3",
+    "name": "Eczema (Dermatitis)",
+    "page": 1063
+  },
+  {
+    "section": "22.5.4",
+    "name": "Psoriasis",
+    "page": 1065
+  },
+  {
+    "section": "22.6",
+    "name": "SKIN ULCERS AND CHRONIC WOUNDS",
+    "page": 1067
+  },
+  {
+    "section": "22.6.1",
+    "name": "Leg Ulcers",
+    "page": 1067
+  },
+  {
+    "section": "22.7",
+    "name": "DRUG-INDUCED SKIN REACTIONS",
+    "page": 1068
+  },
+  {
+    "section": "22.7.1",
+    "name": "Steven-Johnson Syndrome (SJS) and Toxic Epidermal",
+    "page": 1068
+  },
+  {
+    "section": "22.8",
+    "name": "CONGENITAL DISORDER",
+    "page": 1070
+  },
+  {
+    "section": "23.1",
+    "name": "DENTAL DISORDERS",
+    "page": 1071
+  },
+  {
+    "section": "23.2",
+    "name": "ORO-DENTAL INFECTIONS",
+    "page": 1075
+  },
+  {
+    "section": "23.2.2",
+    "name": "Dental Caries",
+    "page": 1076
+  },
+  {
+    "section": "23.2.2.1",
+    "name": "Nursing Caries",
+    "page": 1077
+  },
+  {
+    "section": "23.2.2.2",
+    "name": "Rampant and Radiation Caries",
+    "page": 1078
+  },
+  {
+    "section": "23.2.3",
+    "name": "Pulpitis",
+    "page": 1078
+  },
+  {
+    "section": "23.2.4.1",
+    "name": "Post-Extraction Bleeding",
+    "page": 1081
+  },
+  {
+    "section": "23.2.5.1",
+    "name": "Chronic Gingivitis",
+    "page": 1083
+  },
+  {
+    "section": "23.2.9.1",
+    "name": "Denture Stomatitis",
+    "page": 1090
+  },
+  {
+    "section": "23.2.11",
+    "name": "Pericoronitis",
+    "page": 1093
+  },
+  {
+    "section": "23.3",
+    "name": "HIV/AIDS ASSOCIATED CONDITIONS",
+    "page": 1096
+  },
+  {
+    "section": "23.3.1",
+    "name": "Oral Candidiasis",
+    "page": 1096
+  },
+  {
+    "section": "23.3.2",
+    "name": "Herpes Infections",
+    "page": 1096
+  },
+  {
+    "section": "23.3.4",
+    "name": "Hairy Leukoplakia",
+    "page": 1098
+  },
+  {
+    "section": "23.4",
+    "name": "ORAL TRAUMA",
+    "page": 1098
+  },
+  {
+    "section": "23.4.1",
+    "name": "Traumatic lesions I",
+    "page": 1098
+  },
+  {
+    "section": "23.4.2",
+    "name": "Traumatic lesions II",
+    "page": 1099
+  },
+  {
+    "section": "23.4.3",
+    "name": "Traumatic lesions III",
+    "page": 1101
+  },
+  {
+    "section": "23.5",
+    "name": "ORAL TUMOURS",
+    "page": 1102
+  },
+  {
+    "section": "24.1",
+    "name": "SURGERY",
+    "page": 1105
+  },
+  {
+    "section": "24.1.1",
+    "name": "Intestinal Obstruction",
+    "page": 1105
+  },
+  {
+    "section": "24.1.2",
+    "name": "Internal Haemorrhage",
+    "page": 1107
+  },
+  {
+    "section": "24.1.3",
+    "name": "Management of Medical Conditions in Surgical Patient",
+    "page": 1108
+  },
+  {
+    "section": "24.1.4",
+    "name": "Newborn with Surgical Emergencies",
+    "page": 1111
+  },
+  {
+    "section": "24.1.5",
+    "name": "Surgical Antibiotic Prophylaxis",
+    "page": 1112
+  },
+  {
+    "section": "24.2",
+    "name": "DIAGNOSTIC IMAGING",
+    "page": 1113
+  },
+  {
+    "section": "24.3",
+    "name": "ANAESTHESIA",
+    "page": 1121
+  },
+  {
+    "section": "24.3.1",
+    "name": "General Considerations",
+    "page": 1121
+  },
+  {
+    "section": "24.3.1.1",
+    "name": "General Anaesthesia",
+    "page": 1123
+  },
+  {
+    "section": "24.3.1.2",
+    "name": "General Anaesthetic Agents",
+    "page": 1124
+  },
+  {
+    "section": "24.3.1.3",
+    "name": "Muscle Relaxants",
+    "page": 1126
+  },
+  {
+    "section": "24.3.3",
+    "name": "Selection of Type of Anaesthesia for the Patient",
+    "page": 1126
+  },
+  {
+    "section": "24.3.3.1",
+    "name": "Techniques of General Anaesthesia",
+    "page": 1126
+  },
+  {
+    "section": "24.1.1.1",
+    "name": "Techniques for Regional Anaesthesia",
+    "page": 1128
+  }
+]
