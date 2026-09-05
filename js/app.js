@@ -328,7 +328,7 @@ const app = {
   },
 
   formatClinicalContent(raw) {
-    if (!raw) return '<p class="text-muted">No specific details recorded in guidelines.</p>';
+    if (!raw) return '';
     let text = this.escapeHtml(raw);
 
     // Format LOC tags (HC2, HC3, HC4, Hospital, RRH)
@@ -404,13 +404,66 @@ const app = {
       priorityBadges.push(`<span class="icd-badge">${this.escapeHtml(disease.icd_code)}</span>`);
     }
 
-    const hasSymptoms = (disease.symptoms && disease.symptoms.length > 0) || (disease.signs && disease.signs.length > 0) || (disease.clinical_features_text && disease.clinical_features_text.length > 20);
+    // Check if category header with child conditions
+    if (disease.is_category) {
+      const childConditions = AppState.diseases.filter(d => 
+        d.id !== disease.id && 
+        d.section.startsWith(disease.section + '.') &&
+        !d.is_category
+      );
+
+      container.innerHTML = `
+        <div class="disease-detail-hero" style="border-left: 5px solid ${disease.chapter_color || '#14b8a6'}">
+          <div class="detail-section-num">Section ${this.escapeHtml(disease.section)} · Uganda Clinical Guidelines 2023</div>
+          <h1 class="detail-name">${this.escapeHtml(disease.name)}</h1>
+          <div class="detail-chapter">${disease.chapter_icon} ${this.escapeHtml(disease.chapter)}</div>
+          ${priorityBadges.length ? `<div class="detail-priority-badges">${priorityBadges.join('')}</div>` : ''}
+        </div>
+
+        <div class="clinical-card">
+          <div class="clinical-card-header">
+            <div class="clinical-card-icon">📂</div>
+            <div class="clinical-card-title">Clinical Topics Under Section ${this.escapeHtml(disease.section)}</div>
+          </div>
+          <p class="clinical-para" style="margin-bottom:var(--space-4)">Select any condition below to open its complete Uganda Clinical Guidelines management protocol:</p>
+          <div style="display:flex; flex-direction:column; gap:var(--space-3)">
+            ${childConditions.length ? childConditions.map(c => `
+              <div class="disease-result-card" onclick="app.showDisease('${c.id}')" role="button" tabindex="0" style="--card-color:${c.chapter_color || '#14b8a6'}">
+                <div class="drc-icon">${c.chapter_icon || '📋'}</div>
+                <div class="drc-content">
+                  <div class="drc-name">${this.escapeHtml(c.name)}</div>
+                  <div class="drc-section">Section ${c.section} · ${this.escapeHtml(c.chapter)}</div>
+                </div>
+                <div class="drc-arrow">→</div>
+              </div>
+            `).join('') : `
+              <div class="clinical-card-body">${this.formatClinicalContent(disease.full_content)}</div>
+            `}
+          </div>
+        </div>
+      `;
+      return;
+    }
+
+    const hasSymptoms = (disease.symptoms && disease.symptoms.length > 0) || (disease.signs && disease.signs.length > 0) || (disease.clinical_features_text && disease.clinical_features_text.trim().length > 10);
+    const hasInvestigations = (disease.investigations && disease.investigations.trim().length > 10) || (disease.lab_tests && disease.lab_tests.length > 0);
+    const hasTreatment = (disease.treatment && disease.treatment.trim().length > 10) || (disease.medications && disease.medications.length > 0);
     const hasMeds = disease.medications && disease.medications.length > 0;
     const hasLabTests = disease.lab_tests && disease.lab_tests.length > 0;
-    const hasPregnancy = disease.pregnancy_notes && disease.pregnancy_notes.length > 10;
-    const hasChildren = disease.children_notes && disease.children_notes.length > 10;
-    const hasHIV = disease.hiv_notes && disease.hiv_notes.length > 10;
+    const hasPrevention = disease.prevention && disease.prevention.trim().length > 10;
+    const hasReferral = disease.referral && disease.referral.trim().length > 10;
+    const hasPrevOrRef = hasPrevention || hasReferral;
+    const hasPregnancy = disease.pregnancy_notes && disease.pregnancy_notes.trim().length > 10;
+    const hasChildren = disease.children_notes && disease.children_notes.trim().length > 10;
+    const hasHIV = disease.hiv_notes && disease.hiv_notes.trim().length > 10;
     const hasSpecial = hasPregnancy || hasChildren || hasHIV;
+
+    // Check for child sections
+    const childSections = AppState.diseases.filter(d => 
+      d.id !== disease.id && 
+      d.section.startsWith(disease.section + '.') &&
+      !d.is_category
+    );
 
     container.innerHTML = `
       <!-- Hero -->
@@ -430,9 +483,11 @@ const app = {
           <button class="action-chip" onclick="window.print()" title="Print this clinical guide">
             🖨️ Print Guide
           </button>
-          <button class="action-chip" onclick="app.openInDispensary('${disease.id}')" title="View drug regimens in dispensary">
-            💊 Dispensary Drugs
-          </button>
+          ${hasMeds ? `
+            <button class="action-chip" onclick="app.openInDispensary('${disease.id}')" title="View drug regimens in dispensary">
+              💊 Dispensary Drugs
+            </button>
+          ` : ''}
         </div>
         <div class="detail-actions-right">
           <button class="action-chip view-mode-toggle" id="btn-toggle-view" onclick="app.toggleDetailViewMode()">
@@ -444,10 +499,10 @@ const app = {
       <!-- Tabs Navigation -->
       <div class="detail-tabs" id="disease-detail-tabs">
         <button class="tab-btn active" onclick="app.switchTab('overview', this)">📖 Overview</button>
-        <button class="tab-btn" onclick="app.switchTab('symptoms', this)">🤒 Signs & Symptoms</button>
-        <button class="tab-btn" onclick="app.switchTab('investigations', this)">🔬 Lab Work</button>
-        <button class="tab-btn" onclick="app.switchTab('treatment', this)">💊 Treatment</button>
-        <button class="tab-btn" onclick="app.switchTab('prevention', this)">🛡️ Prevention & Referral</button>
+        ${hasSymptoms ? `<button class="tab-btn" onclick="app.switchTab('symptoms', this)">🤒 Signs & Symptoms</button>` : ''}
+        ${hasInvestigations ? `<button class="tab-btn" onclick="app.switchTab('investigations', this)">🔬 Lab Work</button>` : ''}
+        ${hasTreatment ? `<button class="tab-btn" onclick="app.switchTab('treatment', this)">💊 Treatment</button>` : ''}
+        ${hasPrevOrRef ? `<button class="tab-btn" onclick="app.switchTab('prevention', this)">🛡️ Prevention & Referral</button>` : ''}
         ${hasSpecial ? `<button class="tab-btn" onclick="app.switchTab('special', this)">👥 Special Populations</button>` : ''}
         <button class="tab-btn" onclick="app.switchTab('full', this)">📄 Full Guidelines</button>
       </div>
@@ -461,7 +516,7 @@ const app = {
               <div class="clinical-card-title">Condition Overview & Definition</div>
             </div>
             <div class="clinical-card-body">
-              ${this.formatClinicalContent(disease.overview || disease.definition || disease.full_content?.substring(0, 800))}
+              ${this.formatClinicalContent(disease.overview || disease.definition || disease.full_content)}
             </div>
           </div>
 
@@ -486,135 +541,170 @@ const app = {
               </div>
             </div>
           ` : '')}
+
+          ${childSections.length > 0 ? `
+            <div class="clinical-card">
+              <div class="clinical-card-header">
+                <div class="clinical-card-icon">📑</div>
+                <div class="clinical-card-title">Specific Protocols & Sub-conditions</div>
+              </div>
+              <p class="clinical-para">Detailed management guidelines for specific sub-categories of this condition:</p>
+              <div style="display:flex; flex-direction:column; gap:var(--space-2); margin-top:var(--space-3)">
+                ${childSections.map(cs => `
+                  <div class="disease-result-card" onclick="app.showDisease('${cs.id}')" role="button" tabindex="0" style="padding:var(--space-3) var(--space-4)">
+                    <div class="drc-content">
+                      <div class="drc-name" style="font-size:0.95rem">${this.escapeHtml(cs.name)}</div>
+                      <div class="drc-section">Section ${cs.section}</div>
+                    </div>
+                    <div class="drc-arrow">→</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
         </div>
 
         <!-- Tab 2: Signs & Symptoms -->
-        <div id="tab-symptoms" class="tab-panel">
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">🤒</div>
-              <div class="clinical-card-title">Clinical Presentation & Symptoms</div>
-            </div>
-            ${disease.symptoms && disease.symptoms.length > 0 ? `
-              <ul class="clinical-bullet-list">
-                ${disease.symptoms.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
-              </ul>
-            ` : ''}
-            ${disease.clinical_features_text ? `
-              <div class="clinical-card-body" style="${disease.symptoms?.length ? 'margin-top:var(--space-4); border-top:1px solid var(--border); padding-top:var(--space-3)' : ''}">
-                ${this.formatClinicalContent(disease.clinical_features_text)}
-              </div>
-            ` : (!disease.symptoms?.length ? `
-              <p class="text-muted">Refer to physical examination and diagnostic criteria in the guidelines below.</p>
-            ` : '')}
-          </div>
-
-          ${disease.signs && disease.signs.length > 0 ? `
+        ${hasSymptoms ? `
+          <div id="tab-symptoms" class="tab-panel">
             <div class="clinical-card">
               <div class="clinical-card-header">
-                <div class="clinical-card-icon">🩺</div>
-                <div class="clinical-card-title">Physical Examination & Signs</div>
+                <div class="clinical-card-icon">🤒</div>
+                <div class="clinical-card-title">Clinical Presentation & Symptoms</div>
               </div>
-              <ul class="clinical-bullet-list">
-                ${disease.signs.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
-              </ul>
+              ${disease.symptoms && disease.symptoms.length > 0 ? `
+                <ul class="clinical-bullet-list">
+                  ${disease.symptoms.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
+                </ul>
+              ` : ''}
+              ${disease.clinical_features_text ? `
+                <div class="clinical-card-body" style="${disease.symptoms?.length ? 'margin-top:var(--space-4); border-top:1px solid var(--border); padding-top:var(--space-3)' : ''}">
+                  ${this.formatClinicalContent(disease.clinical_features_text)}
+                </div>
+              ` : ''}
             </div>
-          ` : ''}
-        </div>
+
+            ${disease.signs && disease.signs.length > 0 ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">🩺</div>
+                  <div class="clinical-card-title">Physical Examination & Signs</div>
+                </div>
+                <ul class="clinical-bullet-list">
+                  ${disease.signs.map(s => `<li>${this.escapeHtml(s)}</li>`).join('')}
+                </ul>
+              </div>
+            ` : ''}
+          </div>
+        ` : ''}
 
         <!-- Tab 3: Lab Work & Investigations -->
-        <div id="tab-investigations" class="tab-panel">
-          ${hasLabTests ? `
-            <div class="clinical-card">
-              <div class="clinical-card-header">
-                <div class="clinical-card-icon">🧪</div>
-                <div class="clinical-card-title">Recommended Diagnostic Tests</div>
+        ${hasInvestigations ? `
+          <div id="tab-investigations" class="tab-panel">
+            ${hasLabTests ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">🧪</div>
+                  <div class="clinical-card-title">Diagnostic Tests Mentioned</div>
+                </div>
+                <div class="diagnostic-tags-container">
+                  ${disease.lab_tests.map(t => `<span class="diag-tag-chip">🔬 ${this.escapeHtml(t)}</span>`).join('')}
+                </div>
               </div>
-              <div class="diagnostic-tags-container">
-                ${disease.lab_tests.map(t => `<span class="diag-tag-chip">🔬 ${this.escapeHtml(t)}</span>`).join('')}
-              </div>
-            </div>
-          ` : ''}
+            ` : ''}
 
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">🔬</div>
-              <div class="clinical-card-title">Investigations Protocol & Criteria</div>
-            </div>
-            <div class="clinical-card-body">
-              ${this.formatClinicalContent(disease.investigations)}
-            </div>
+            ${disease.investigations ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">🔬</div>
+                  <div class="clinical-card-title">Investigations Protocol & Criteria</div>
+                </div>
+                <div class="clinical-card-body">
+                  ${this.formatClinicalContent(disease.investigations)}
+                </div>
+              </div>
+            ` : ''}
           </div>
-        </div>
+        ` : ''}
 
         <!-- Tab 4: Treatment & Management -->
-        <div id="tab-treatment" class="tab-panel">
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">💊</div>
-              <div class="clinical-card-title">Management & Treatment Protocol</div>
-            </div>
-            <div class="clinical-card-body">
-              ${this.formatClinicalContent(disease.treatment)}
-            </div>
-          </div>
+        ${hasTreatment ? `
+          <div id="tab-treatment" class="tab-panel">
+            ${disease.treatment ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">💊</div>
+                  <div class="clinical-card-title">Management & Treatment Protocol</div>
+                </div>
+                <div class="clinical-card-body">
+                  ${this.formatClinicalContent(disease.treatment)}
+                </div>
+              </div>
+            ` : ''}
 
-          ${hasMeds ? `
-            <div class="clinical-card">
-              <div class="clinical-card-header">
-                <div class="clinical-card-icon">💉</div>
-                <div class="clinical-card-title">Key Medicines & Regimens</div>
-              </div>
-              <table class="medicine-table">
-                <thead>
-                  <tr>
-                    <th>Medicine</th>
-                    <th>Dosage & Frequency</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${disease.medications.map(m => `
+            ${hasMeds ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">💉</div>
+                  <div class="clinical-card-title">Key Medicines & Regimens</div>
+                </div>
+                <table class="medicine-table">
+                  <thead>
                     <tr>
-                      <td>${this.escapeHtml(m.drug)}</td>
-                      <td>${this.escapeHtml(m.dose || 'See protocol above')}</td>
+                      <th>Medicine</th>
+                      <th>Dosage & Frequency</th>
                     </tr>
-                  `).join('')}
-                </tbody>
-              </table>
-              <div style="margin-top:var(--space-4); text-align:right;">
-                <button class="action-chip" onclick="app.openInDispensary('${disease.id}')">
-                  💊 Open in Dispensary for Line Regimens →
-                </button>
+                  </thead>
+                  <tbody>
+                    ${disease.medications.map(m => `
+                      <tr>
+                        <td>${this.escapeHtml(m.drug)}</td>
+                        <td>${this.escapeHtml(m.dose || 'See protocol above')}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+                <div style="margin-top:var(--space-4); text-align:right;">
+                  <button class="action-chip" onclick="app.openInDispensary('${disease.id}')">
+                    💊 Open in Dispensary for Line Regimens →
+                  </button>
+                </div>
               </div>
-            </div>
-          ` : ''}
-        </div>
+            ` : ''}
+          </div>
+        ` : ''}
 
         <!-- Tab 5: Prevention & Referral -->
-        <div id="tab-prevention" class="tab-panel">
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">🚑</div>
-              <div class="clinical-card-title">Referral Criteria & Pre-Referral Stabilization</div>
-            </div>
-            <div class="alert-box alert-warning">
-              <span class="alert-icon">⚠️</span>
-              <div class="alert-content-text">
-                ${this.formatClinicalContent(disease.referral)}
+        ${hasPrevOrRef ? `
+          <div id="tab-prevention" class="tab-panel">
+            ${hasReferral ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">🚑</div>
+                  <div class="clinical-card-title">Referral Criteria & Pre-Referral Care</div>
+                </div>
+                <div class="alert-box alert-warning">
+                  <span class="alert-icon">⚠️</span>
+                  <div class="alert-content-text">
+                    ${this.formatClinicalContent(disease.referral)}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            ` : ''}
 
-          <div class="clinical-card">
-            <div class="clinical-card-header">
-              <div class="clinical-card-icon">🛡️</div>
-              <div class="clinical-card-title">Prevention, Prophylaxis & Health Education</div>
-            </div>
-            <div class="clinical-card-body">
-              ${this.formatClinicalContent(disease.prevention)}
-            </div>
+            ${hasPrevention ? `
+              <div class="clinical-card">
+                <div class="clinical-card-header">
+                  <div class="clinical-card-icon">🛡️</div>
+                  <div class="clinical-card-title">Prevention & Prophylaxis</div>
+                </div>
+                <div class="clinical-card-body">
+                  ${this.formatClinicalContent(disease.prevention)}
+                </div>
+              </div>
+            ` : ''}
           </div>
-        </div>
+        ` : ''}
 
         <!-- Tab 6: Special Populations -->
         ${hasSpecial ? `
@@ -672,7 +762,7 @@ const app = {
                 📋 Copy Text
               </button>
             </div>
-            <pre id="full-guide-pre" class="full-content-text" style="white-space: pre-wrap; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.7;">${this.escapeHtml(disease.full_content || 'Full content not available for this section.')}</pre>
+            <pre id="full-guide-pre" class="full-content-text" style="white-space: pre-wrap; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.7;">${this.escapeHtml(disease.full_content || '')}</pre>
           </div>
         </div>
       </div>

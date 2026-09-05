@@ -3,7 +3,7 @@
  * IndexedDB wrapper for offline data storage
  */
 const DB_NAME = 'vitanova-db';
-const DB_VERSION = 3;  // Master Uganda Clinical Guidelines 2023
+const DB_VERSION = 4;  // Direct extraction - zero placeholders
 const STORE_DISEASES = 'diseases';
 const STORE_SYMPTOM_MAP = 'symptom_map';
 const STORE_CHAPTERS = 'chapters';

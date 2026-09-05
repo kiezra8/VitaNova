@@ -3,9 +3,9 @@
  * Provides full offline functionality by caching all app assets
  */
 
-const CACHE_NAME = 'vitanova-v2023-3';
-const STATIC_CACHE = 'vitanova-static-v3';
-const DATA_CACHE = 'vitanova-data-v3';
+const CACHE_NAME = 'vitanova-v2023-4';
+const STATIC_CACHE = 'vitanova-static-v4';
+const DATA_CACHE = 'vitanova-data-v4';
 
 // Assets to cache on install
 const STATIC_ASSETS = [
